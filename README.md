@@ -1,1 +1,2 @@
-# ttds_group_project
+Project Description:
+The purpose of this project is to develop a search engine using Python and relevant libraries such that it can recognise the songs which contain the lyrics provided by the user. The main challenge of this engine will in displaying the right song to the user. There are some cases where factors like multiple songs contain the same lyrics, the popularity of the songs containing those lyrics, the same artist uses these lyrics repetitively in many of their songs, etc come into creating challenges. Our main goal is to develop an engine that can overcome these challenges and return the results desirable to the user’s request.
