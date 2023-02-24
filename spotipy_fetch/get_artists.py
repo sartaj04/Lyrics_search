@@ -49,7 +49,7 @@ def get_artist(page=0):
         for item in flatten_data
     ]
     pd.DataFrame(organized_artists).to_csv(
-        f"artist_id_spotipy{page:02d}.csv", index=False
+        f"./artist_dataset/artist_id_spotipy{page:02d}.csv", index=False
     )
 
 

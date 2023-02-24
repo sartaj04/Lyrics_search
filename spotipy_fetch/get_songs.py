@@ -15,7 +15,9 @@ def create_spotipy():
 
 
 def get_songs(artist_page=0, album_page=0, subpage=0):
-    df = pd.read_csv(f"album_id_spotipy{artist_page:02d}_{album_page:02d}.csv")
+    df = pd.read_csv(
+        f"./album_dataset/album_id_spotipy{artist_page:02d}_{album_page:02d}.csv"
+    )
     album_idxs = list(df["album_idx"])
     album_idxs = sorted(list(set(album_idxs)))
 
@@ -45,7 +47,7 @@ def get_songs(artist_page=0, album_page=0, subpage=0):
                     }
                 )
         # print(len(tmp_track_results))
-        # TODO: get features
+        # get features
         track_limit = 50
         partition_tracks = [
             tmp_track_results[i * track_limit : (i + 1) * track_limit]
@@ -78,10 +80,10 @@ def get_songs(artist_page=0, album_page=0, subpage=0):
 
         print(count, "end!")
     pd.DataFrame(track_results).to_csv(
-        f"track_id_spotipy{artist_page:02d}_{album_page:02d}.csv",
+        f"./song_dataset/track_id_spotipy{artist_page:02d}_{album_page:02d}.csv",
         index=False,
     )
 
 
 # TODO: specify the pages
-get_songs(0, 0)
+get_songs(1, 1)
