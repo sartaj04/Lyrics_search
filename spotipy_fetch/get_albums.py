@@ -7,8 +7,8 @@ artist_limit = 250
 
 # Current your account to fetch data. These info should be private.
 def create_spotipy():
-    client_id = "8aa464cad6524f3bb664c009125bc1e3"
-    client_secret = "41a8b8604d3f41079e9303a937f108ee"
+    client_id = ""
+    client_secret = ""
 
     client_credentials_manager = SpotifyClientCredentials(
         client_id=client_id, client_secret=client_secret
