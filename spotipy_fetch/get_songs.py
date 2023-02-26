@@ -4,8 +4,8 @@ import pandas as pd
 
 # Current your account to fetch data. These info should be private.
 def create_spotipy():
-    client_id = ""
-    client_secret = ""
+    client_id = "8aa464cad6524f3bb664c009125bc1e3"
+    client_secret = "41a8b8604d3f41079e9303a937f108ee"
 
     client_credentials_manager = SpotifyClientCredentials(
         client_id=client_id, client_secret=client_secret
@@ -86,4 +86,4 @@ def get_songs(artist_page=0, album_page=0, subpage=0):
 
 
 # TODO: specify the pages
-get_songs(1, 1)
+get_songs(1, 7)
