@@ -1,0 +1,451 @@
+artists_idxs,album_idx,album_name,album_release_year,album_release_month,album_release_day
+['7v3klaxOWbKij4kNWrCZcm'],4U4L5GmxEHHk50O8lCKZ6p,Netherworld,2021,10.0,1.0
+"['5MgkJZtiA3UwDWCg3d7c9f', '1P2QbCWRfx3t99tZSUdL18', '0MvSBMGRQJY3mRwIbJsqF1', '6tmD8b0VdHX1k3RVDf1krI', '2YyyRcMjrl3vk2PGrtIOgN', '7ulqhu6HLzHgjGp8ttouDv', '15TbaQl7va7MrUviXt4l7M', '06SmXq2XbSzEvxNtu7pvDt', '5pF76lplGIvEFGb8lI48hA', '6GmRYX8RJYEyDO7OsyPz2m', '5TnuO3xdLjIg3owQZQzks1', '7o7D77HMHvg1sAmtryKoVy', '3Vfvyx6OouTxYU3emXonW7', '27Lo7MgYoKCW9KFoLcN0u6', '15QTSK7NBFJawaoxQALt9s', '6RpuMVeaE12wAFAYIZHXSB', '7vEPPI71V8dEHtEhPMAxWT', '5gW8Y6gdgr5rix5lWFud8g', '0yqwhapWYzRkT5u7fcI5Ai', '30CWkYT1xe1SxXH7uvERZY', '1Xw28dK9PzkDagTyuRRnGd', '5J4H8Y348MUCgJnk0tmceZ', '54edDnaH16RgDKgozwxJKU', '1T44kWQsaCh6VLltor1DFk', '6RCQGQhDCTlEHyB8mBcjs9']",4SmdnS3LHeqguty8aKX4ZQ,Sleep Music,2022,12.0,14.0
+"['5wTAi7QkpP6kp8a54lmTOq', '7vEPPI71V8dEHtEhPMAxWT']",42FmbF2sWmPltwHi0aYbQm,Staatskapelle Berlin - Brahms,2022,12.0,3.0
+"['7vEPPI71V8dEHtEhPMAxWT', '3PfJE6ebCbCHeuqO4BfNeA', '2CFaOiHKik5FgNGzZJ08sx']",7v3EGCI7raPqDcKvWQMjzn,"Brahms, Schubert & Others: Orchestral Works (Remastered 2022)",2022,11.0,18.0
+"['2UqjDAXnDxejEyE0CzfUrZ', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",0mPFNFmftItN3rF566s1nM,Schumann: The Symphonies,2022,11.0,4.0
+"['4NJhFmfw43RLBLjQvxDuRS', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '38ghpVkkvBf5wugUg4HW4G', '7GqzUP7TApb2wPZ7pxlDeN', '0C2pfDSe4uoEySnSAnLtWV']",1QtEZNfoi53IGMuWmc5WTB,Mozart: Così fan Tutte (Sung in Italian),2022,1.0,6.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",4Hdt5I7oByo5PvuZl9Cbo7,Dvořák: Sinfonie No. 1,2021,8.0,6.0
+"['5ihY290YPGc3aY2xTyx7Gy', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",2i1GZaBu6U0DaQf3FxzARP,Grieg: Orchestral Pieces,2021,8.0,6.0
+"['1Uff91EOsvd99rtAupatMP', '78sEozQOEJxzXegUuqRSgH', '66MvLAvLznk5UOvASVGjk4', '5q3izGxzdw6r6FBkRK7A7k', '6TPa1gvIk1h4Iv1zJ2WUYQ', '7vEPPI71V8dEHtEhPMAxWT']",62gx1Tcv01zltxFwcHSquS,"Debussy: Fantaisie, Violin Sonata, Cello Sonata, La mer",2021,6.0,4.0
+"['39FC9x5PaTNYHp5hwlaY4q', '0HdNDZaNm7xLt18v9aWDfe', '7vEPPI71V8dEHtEhPMAxWT', '6FJhq00q4bwqNGjxLt41wd', '6tdexW8bZTG8NgOFUCYQn1', '3naY4Tq98GRh9K8xOsINyv', '32i0ni9RO8Q7T7T7ZqkGU2', '7KKscZTeDLz1g0QthWCMQV', '0dJAyXNNIi2i8AkyqOuxHY', '0dVvQn1DJ7OGJttZ4xfVes']",1aF6Ba9CWnDOmkK38qvDed,Fake Paganini Recordings 1936 - 1943,2021,3.0,19.0
+"['7vEPPI71V8dEHtEhPMAxWT', '2KQPdfve5c9TzVYSEXU8Bh', '3LyEQYjL4IKwxa6XVGXEky']",6fwQoVEPB38yHxFGoOv5hU,Beethoven & Tchaikovsky: Symphonies,2021,1.0,15.0
+"['2wOqMjp9TyABvtHdOSOTUS', '3Vfvyx6OouTxYU3emXonW7', '3H5lFsmGtr8CoZexz2rznB', '5gW8Y6gdgr5rix5lWFud8g', '5pF76lplGIvEFGb8lI48hA', '4TWzdKT6XMuddLAoj6PgXi', '7vEPPI71V8dEHtEhPMAxWT', '1WI76F5lXa0FssEbnpF4to']",4HQu2o5dW1M4R4sE4gN22U,Heroic Beethoven,2020,12.0,2.0
+"['3iC45HcbQN9jtqfT7meNld', '7vEPPI71V8dEHtEhPMAxWT', '6FJhq00q4bwqNGjxLt41wd']",0Mg176Ce6eUyxUKDFIuiMr,"Mozart, Bach & Others: Piano Works",2020,11.0,20.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",2zYqSRci7di98sxd2IAMkl,Dvorak: Symphony No. 9,2020,10.0,7.0
+"['7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV', '1eqqyXFOa1ig4AroJALywV']",2MKqME74XiSw2d6ytDAg7M,Staatskapelle Berlin Legendary Eterna Recordings,2020,9.0,25.0
+"['6n7nd5iceYpXVwcx8VPpxF', '6TPa1gvIk1h4Iv1zJ2WUYQ', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",2DkUvnxlZmEMBmPOmzC4lE,Dvořák: Cello Concerto,2020,8.0,7.0
+"['430byzy0c5bPn5opiu0SRd', '74qCFeNvjcO4R0cRXik17C', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",0cuvO6uoV4xZhq40EFayUa,Elgar: Sea Pictures. Falstaff,2020,7.0,24.0
+"['430byzy0c5bPn5opiu0SRd', '74qCFeNvjcO4R0cRXik17C', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",1Kfgg0b6QnoS6WRyIpfGxi,Elgar: Sea Pictures. Falstaff,2020,7.0,24.0
+"['2wOqMjp9TyABvtHdOSOTUS', '4kcSoMrN00g3B6BCp0VCio', '3bC7MOJjPodrPM1LAQ4yqi', '7vEPPI71V8dEHtEhPMAxWT', '1RkAKrHWpc4fxEGhqSlzZT', '63arh3ta3ZUlRGvoVI2jJ8', '1eqqyXFOa1ig4AroJALywV', '3KNdzmBWFZRrP2umUqKzou']",57YtvfV1KC6cD4uQhsHeuf,"Beethoven: Unknown Masterworks, Vol. 5",2019,12.0,27.0
+"['2wOqMjp9TyABvtHdOSOTUS', '2jwG3IEeqaPEqKOcl06Fx7', '2ShDyKYF88Wb13uxkP6ngb', '4AQSOPmi2ky2sJPs0YoVts', '5RLMa74fb4nRTudIDWh9rx', '7vEPPI71V8dEHtEhPMAxWT']",2vRSApgMqtukT2IM2l8osK,"Beethoven: Unknown Masterworks, Vol. 2",2019,11.0,8.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",7dIBNEe7wQGsKfDIbOnkdx,Quintessence Dvorák: Complete Symphonies,2019,10.0,1.0
+"['3MKCzCnpzw3TjUYs2v7vDA', '7vEPPI71V8dEHtEhPMAxWT', '4McPsNyIfAxc6ejigjzWQl']",2NmjFwdhlGFhKltJbKY3hH,"Tchaikovsky: Symphony No.5, Op. 64 - Serenade for String Orchestra, Op.48 - Italian Capriccio, Op. 45",2019,7.0,25.0
+"['5wTAi7QkpP6kp8a54lmTOq', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",0b0rUR3Hjhb2IJSBPRFBlH,Brahms: Symphonies,2018,7.0,13.0
+"['0MvSBMGRQJY3mRwIbJsqF1', '7vEPPI71V8dEHtEhPMAxWT', '2DNJyRdbh97Nw4hFtcLXT0']",45ZquQotiEfXbqz5dIak3W,The Best Classical Workout Music,2018,5.0,25.0
+"['430byzy0c5bPn5opiu0SRd', '2Yx6iuxQCLQ69mfliLeLh6', '5omCjH0phptEBl1o0CggN7', '6pxEWWaFpWFJGEZK6dOzsF', '42hPmvcLsb1h2MpMtFcW2I', '2UVXU77knJMYOM6Avvw6Yx', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",4VHg3CWBwd2lsXAx0FvJK7,"Elgar: The Dream Of Gerontius, Op.38",2017,7.0,1.0
+"['430byzy0c5bPn5opiu0SRd', '2Yx6iuxQCLQ69mfliLeLh6', '5omCjH0phptEBl1o0CggN7', '6pxEWWaFpWFJGEZK6dOzsF', '42hPmvcLsb1h2MpMtFcW2I', '2UVXU77knJMYOM6Avvw6Yx', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",4QBafDwmf1UziQVk0ySJxn,"Elgar: The Dream Of Gerontius, Op.38",2017,7.0,1.0
+['7vEPPI71V8dEHtEhPMAxWT'],3BmwsW53UL8mjNBOmEShii,Gala unter den Linden,2017,2.0,24.0
+"['2ANtgfhQkKpsW6EYSDqldz', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT']",7eUyOaqgCLNcioHZ3fYm6w,Mahler: Symphony No. 5 & Songs,2017,2.0,24.0
+"['7nstqHP5wRNlaUeSByC86I', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH', '7jzR5qj8vFnSu5JHaXgFEr', '3MKCzCnpzw3TjUYs2v7vDA']",7fsPBYAA69HYhaZC9vCl8j,"Tchaikovsky, Sibelius: Violin Concertos",2016,11.0,4.0
+"['430byzy0c5bPn5opiu0SRd', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",0W6adR5V3SSo7EwGVTbXsD,"Elgar: Symphony No.1 in A Flat Major, Op.55",2016,3.0,11.0
+"['2bM3j1JQWBkmzuoZKu4zj2', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",2sYQrrdBWXXnHRfWc1Z6oZ,Bruckner: Symphonies 4-9,2016,1.0,1.0
+"['2bM3j1JQWBkmzuoZKu4zj2', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",3gGKmo7LTNC3XgFG1VtesU,Bruckner: The Complete Symphonies,2016,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV', '7oFubvRIriTCF1yfzJm5RC', '7qs9lBPZgZzLAYAWfHLAll', '3kBrUZAp2FVhkN5bcTu0QL', '2YyyRcMjrl3vk2PGrtIOgN']",5ADW9zoheuwgIx7iTdlUHF,"Dvorak: Complete Symphonies, Slavonic Dances, Overtures, Symphonic Poems",2015,11.0,6.0
+"['5wTAi7QkpP6kp8a54lmTOq', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT', '0cxXnDhpgxcMMkKddhORHY']",1O3vGsDRm5Lu9QBNg3OejC,Brahms: The Piano Concertos (Live),2015,8.0,7.0
+"['5wTAi7QkpP6kp8a54lmTOq', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT', '0cxXnDhpgxcMMkKddhORHY']",7xJxWppBRjnapn0v22jUdH,Brahms: The Piano Concertos (Live),2015,8.0,7.0
+"['5fKj8IWs9IV1F2xerI6SGD', '7vEPPI71V8dEHtEhPMAxWT', '7AKRF57V1mYqufJJyS7a5V', '0C2pfDSe4uoEySnSAnLtWV']",5kwKr1x9HxhUAsjZq3XhRG,Pfitzner: Palestrina,2015,3.0,1.0
+"['1JOQXgYdQV2yfrhewqx96o', '6elpmIDuaxq3RDYe3DmxtS', '7vEPPI71V8dEHtEhPMAxWT']",6S5o4m6N9VYeSo64RwL8DO,Verdi: Don Carlos (Sung in German),2015,3.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '1PcmDPoDizKeZDOjdWfuTD', '1NviTqhjBT6XcDVgIwR2FS']",3OcppJLoigr8WcFOY2wAge,Wagner: Tristan und Isolde,2015,1.0,15.0
+"['1fiVwfyL3nKnmVz7580kET', '7vEPPI71V8dEHtEhPMAxWT', '4GHqXZ3T0o9Ul681G5Iw5T', '0hrVe30cEV1RSrsDMYZ388', '7lBlMbbvU4x2tV3zTplzYn']",2o33zRxU7BmSGqWmR5rAMr,Flotow: Martha,2014,12.0,5.0
+"['5U827e4jbYz6EjtN0fIDt9', '7t7wDH8ENcpOvvsqknPfOX', '2stUd4tmwi4JSUSfd2DqAX', '4uG1za8qxBGK7yzOriC7wI', '5EMijG4wKSVPJIOQhD4nWX', '7vEPPI71V8dEHtEhPMAxWT']",6qprjkeTWRRgsHKRw5RbLz,Arnold Schoenberg: Moses und Aron,2014,9.0,13.0
+"['5Cnc0noHxdjlRyiRPPvvjq', '7vEPPI71V8dEHtEhPMAxWT', '4bjRI3wsomaM57eqU80IgG', '4jQX5Konre50RoAALghvvH', '5fBz4sPueOJhRvdbsV0RDB']",4oZJ8w10Cmq3SvmSwawXWo,Nicolai: Die lustigen Weiber von Windsor,2014,9.0,5.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT']",31bQRRP4GKpNp03xfTEfTr,Symphonies No. 5 & 7,2014,7.0,17.0
+['7vEPPI71V8dEHtEhPMAxWT'],6L524IB8ehRbI8IcLFljoe,Beethoven: Symphony Nos. 3 & 7 - Tchaikovsky: Symphony No. 6,2014,7.0,11.0
+"['1N72vLsnz1rjm05JHvCH02', '7vEPPI71V8dEHtEhPMAxWT', '1W6Wgt9XFyQBHRhqkdy2GB']",0JTAOsKACwgeI6JAINxYbM,Lortzing: Der Wildschütz,2014,4.0,4.0
+"['430byzy0c5bPn5opiu0SRd', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",4M34RvDp9DphsXqL2HEG2c,Elgar: Symphony No.2,2014,1.0,1.0
+"['430byzy0c5bPn5opiu0SRd', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",0fiTSQdwcMu8xbvdiTkvDW,Elgar: Symphony No.2,2014,1.0,1.0
+"['6pAwHPeExeUbMd5w7Iny6D', '5moBlpk9BYtujdRW6VLepL', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",7vgUpW5MllSVaL3YgT7ge1,"Strauss, R.: Vier letzte Lieder; Ein Heldenleben (Live)",2014,1.0,1.0
+"['6pAwHPeExeUbMd5w7Iny6D', '5moBlpk9BYtujdRW6VLepL', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",1yMrEQQMiFRD1rxjkCwsLj,"Strauss, R.: Vier letzte Lieder; Ein Heldenleben (Live)",2014,1.0,1.0
+"['2p0UyoPfYfI76PCStuXfOP', '7vEPPI71V8dEHtEhPMAxWT', '1XxKMSllE9z9zoKecUYJKs', '5RLMa74fb4nRTudIDWh9rx']",4XSNOmOXQ67LGmUjwOcpmq,"Schubert: Lazarus, D. 689",2013,11.0,1.0
+"['5Cnc0noHxdjlRyiRPPvvjq', '63jASK5GkDHb5f9zCsOyem', '7vEPPI71V8dEHtEhPMAxWT', '1W6Wgt9XFyQBHRhqkdy2GB']",3l7PvY2yOT0GCXhJJ7AX1F,Nicolai: Die lustigen Weiber von Windsor,2013,9.0,20.0
+"['7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '7drPVBAlMSneq1rZuNM3FQ']",1LX6gaSZvS9yxdGSiLtoRk,"Nessun dorma, Vol. 4",2013,7.0,9.0
+"['003f4bk13c6Q3gAUXv7dGJ', '0C1Kx461LWZhyurRWR4T8w', '3X9T5qpavOOovdQBr528Sw', '7vEPPI71V8dEHtEhPMAxWT', '3oLKocKU2vgprWeskj53Fo']",1xV21NhAu5nOsCNi5idHlO,Bach & Tchaikovsky: Violin Concertos - Lalo: Symphonie espagnole,2013,4.0,24.0
+"['1fiVwfyL3nKnmVz7580kET', '7vEPPI71V8dEHtEhPMAxWT', '4GHqXZ3T0o9Ul681G5Iw5T', '0hrVe30cEV1RSrsDMYZ388', '4KdBiGytmjdltFXcEXBay5', '3xJkH9q79Q5XqCRGC6Wgv2', '7lBlMbbvU4x2tV3zTplzYn', '2vZXFmXCmzwuS35JDToX7t', '5NFzQfsxmlNx8zTeXq5bVL', '2FBPLNI3b0QVahCOhyl2Ej']",2opidlzpXxfz3mfu4DstA0,Flotow: Martha,2013,4.0,4.0
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '6elpmIDuaxq3RDYe3DmxtS', '7AKRF57V1mYqufJJyS7a5V', '0vdCkgwogObHpxvKDMpWGr']",3f8xKyUo25SCvz9J7E9TLj,Wagner: Der Fliegende Holländer,2013,4.0,1.0
+"['7vEPPI71V8dEHtEhPMAxWT', '69Mpk8SNTFx6QUWj0RQVFw']",0QNpsaz9yCLoQ1hsfW6jd9,The Great Conductors: Hermann Abendroth,2013,1.0,29.0
+"['1C1x4MVkql8AiABuTw6DgE', '5jSyEHI4tPkBgp84luyqpO', '6uRJnvQ3f8whVnmeoecv5Z', '7vEPPI71V8dEHtEhPMAxWT', '74gWOpgM97HU3Mn8A8d0Vm', '0gVO4VlBsDIMFrMIAJJzD3', '4tvRZdoY4H9Wgcf0w1rZqs', '6pkOp4PgHXN7BRIEMEi1wt', '7wKsVgkzcVUVERxZMEn9Mm', '6XVxGOzn7c2rLi1GpXxm5v']",6wVPdVSAHGL4M9jGJpYa5O,Great Wagner Conductors,2013,1.0,1.0
+"['3PfJE6ebCbCHeuqO4BfNeA', '7vEPPI71V8dEHtEhPMAxWT', '4McPsNyIfAxc6ejigjzWQl']",1RsjXCefNGN51333CxBlDP,Kreisler Plays Beethoven & Mendelssohn,2012,10.0,13.0
+"['4tvRZdoY4H9Wgcf0w1rZqs', '7vEPPI71V8dEHtEhPMAxWT', '6uRJnvQ3f8whVnmeoecv5Z']",3TuDK51RiEB6eSv19jxdzi,Wilhelm Furtwängler: Wagner & Strauss,2012,5.0,2.0
+['7vEPPI71V8dEHtEhPMAxWT'],3LrWIP27Iok8Jyfbqlvb5W,"The Young Karajan: The First Recordings, Vol. 3",2012,4.0,28.0
+"['2wOqMjp9TyABvtHdOSOTUS', '5yoK1WIR8YxebzUx2wN1pC', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",4xXZ6wqcA9UigoJTMYqBIF,"Beethoven For All - Music Of Power, Passion & Beauty",2012,1.0,1.0
+"['2bM3j1JQWBkmzuoZKu4zj2', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",1QeVagAPUAyzbiRGF4wK0e,Bruckner: Symphony No.7,2012,1.0,1.0
+"['342cJoM4xzPrRfLb8fYkuh', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",0O62RntbSupfaZeryUMml5,Elgar & Carter Cello Concertos,2012,1.0,1.0
+"['342cJoM4xzPrRfLb8fYkuh', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH', '430byzy0c5bPn5opiu0SRd', '7IqwNdpG9USkkEH36pkKEB', '0521x50ZcNqqT1fKMJg5c5']",34uMEeeg7KI1mWcN3hdc0C,Elgar & Carter Cello Concertos,2012,1.0,1.0
+['7vEPPI71V8dEHtEhPMAxWT'],3jzmdfbBjY68hP8pusw2Ge,Richard Wagner Antonin Dvorak Johann Strauss II,2012,1.0,1.0
+['7vEPPI71V8dEHtEhPMAxWT'],1UjN54q17McZULj5uAVQno,Mozart Verdi Cherubini Tchaikovsky,2012,1.0,1.0
+['7vEPPI71V8dEHtEhPMAxWT'],2fiPKPxyHmrqMEiX0AEcMG,Beethoven Verdi Semtana Rossini,2012,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT']",3IEUIQjNygqdVExzkTEbsN,Beethoven : Symphony No. 5 & 7,2011,10.0,31.0
+['7vEPPI71V8dEHtEhPMAxWT'],5fx6XncZIiJaPPTp9vSDPn,A Midsummer Night's Dream,2011,6.0,12.0
+"['7y97mc3bZRFXzT2szRM4L4', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT', '6fkV4LaygxybcMjo4cJLrI']",6kTQXBTxyJsDPCLA2KO20A,The Chopin Concertos (Live),2011,1.0,1.0
+"['7y97mc3bZRFXzT2szRM4L4', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT', '6fkV4LaygxybcMjo4cJLrI']",4edeZP9GvzgryNJpt2qnXj,The Chopin Concertos,2011,1.0,1.0
+"['1385hLNbrnbCJGokfH2ac2', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT', '2prZJWfQMnIgwUKxKcBxH7']",4EaXVOeFTD2gXqg71WH2uA,The Liszt Concertos,2011,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '4H643hPA44WZRSbvXiYwQ5', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",7I1yy6YOIx3BZF1XEKGLbB,Wagner,2011,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '4H643hPA44WZRSbvXiYwQ5', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",2Q19gtWyYwWrIz8NWsvde2,Wagner,2011,1.0,1.0
+"['0HdNDZaNm7xLt18v9aWDfe', '7vEPPI71V8dEHtEhPMAxWT']",6dXcmutw576oPl8ENdEHgX,"Beethoven: Violin Concerto in D Major, Op. 61",2010,7.0,1.0
+['7vEPPI71V8dEHtEhPMAxWT'],61lhfoJLuDH4Cgj0d6ZPof,"Beethoven: Symphony No. 7 in A Major, Op. 92",2010,2.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '5UlxV9XPbZZX4d8HTdFO7P']",31MbrZPCpaGkXLanNapRil,"Beethoven: Symphonies No. 2, 5 & 9",2010,1.0,1.0
+"['5wTAi7QkpP6kp8a54lmTOq', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",5qXkPWw8af7SOfDkL0p6tx,Brahms: Hungarian Dances,2010,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",3JPdenN8be8xjORqyxTld2,Denon Max Value. Beethoven: Symphonies No. 3 & 5,2010,1.0,1.0
+"['2p0UyoPfYfI76PCStuXfOP', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",5qKaGkuJ7YPphFkD9bquvK,Franz Schubert: Symphony No. 3 & No. 6,2010,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT']",40fREeEK0TwC1wPoOmDD0p,Dvořák: The Symphonies - Die Sinfonien,2009,10.0,6.0
+['7vEPPI71V8dEHtEhPMAxWT'],5jYRXriJgxikoTCgA4ilrH,Herbert von Karajan - The Early Recordings Vol. 1,2009,10.0,2.0
+['7vEPPI71V8dEHtEhPMAxWT'],4jyFNmlEnfLsMiramGLPdQ,Herbert von Karajan - The Early Recordings Vol. 2,2009,8.0,28.0
+"['7vEPPI71V8dEHtEhPMAxWT', '7FlcQTYhF7cgBOkaq1Dtly']",2eckLVuJV9ccOD9sF7efBR,Herbert von Karajan - The Early Recordings Vol. 3,2009,8.0,28.0
+"['5zCaQxjl110XTrm4LQ1CxY', '7vEPPI71V8dEHtEhPMAxWT']",2dfZSRrOqRxjVoPmO7d7lO,Overtures,2009,1.0,7.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",6LsTSFEr64SmPenecjRyIg,Beethoven: Symphonies No. 9 & 7,2009,1.0,1.0
+"['2p0UyoPfYfI76PCStuXfOP', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",7yk58QM5mricWx6LISh3co,"Franz Schubert: Symphony No. 4 in C Minor, D 417 ""Tragic"" Music to ""Rosamunde""",2009,1.0,1.0
+['7vEPPI71V8dEHtEhPMAxWT'],6YzDLmU5oAqan4N3mBMK0J,Brahms: Symphony No. 1 / Wagner: Siegfried Idyll (Klemperer) (1927-28),2008,2.0,26.0
+"['5pF76lplGIvEFGb8lI48hA', '03C9IJtseK0NX9zw53URjF', '1eqqyXFOa1ig4AroJALywV', '67rGmcc43nVQOMYp782dAp', '6XCooPNQ2PpgwJaXggWFek', '1RkAKrHWpc4fxEGhqSlzZT', '37Lr1lIJy824MQIENRUnZn', '0C2pfDSe4uoEySnSAnLtWV', '3TRLbu1HiKgouyapoZE421', '3EtufKY05Q7LhfoncRzxRw', '7vEPPI71V8dEHtEhPMAxWT', '3Vfvyx6OouTxYU3emXonW7']",3mlS6uiXuswzLU5FtmJMFK,"Bach, Mozart, Brahms, Grieg, Ravel, Satie, Debussy & Sibelius: Unfold your Mind",2007,9.0,21.0
+"['78sEozQOEJxzXegUuqRSgH', '6TD08jYeuN128P2MZTbc8E', '2thIN2TDSmbYcqkHm6nQ6b', '0iERWmMl3nIvcDxnJsKZBd', '7vEPPI71V8dEHtEhPMAxWT', '5yoK1WIR8YxebzUx2wN1pC']",2aq1JeYNh9dbCzqhL8lUQ7,Daniel Barenboim - The Conductor [65th Birthday Box],2007,9.0,4.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",1Uj8RJQj3gmDnt25PKxtkp,Beethoven For All - The Piano Concertos,2007,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",4hsSBlmCPeSFjsSKAz7Y8t,Beethoven For All - The Piano Concertos,2007,1.0,1.0
+"['2ANtgfhQkKpsW6EYSDqldz', '7vEPPI71V8dEHtEhPMAxWT', '2prZJWfQMnIgwUKxKcBxH7']",4y5c2HeVg0YOf7ZRzFrIFk,Mahler: Symphony No. 8,2007,1.0,1.0
+"['2ANtgfhQkKpsW6EYSDqldz', '7vEPPI71V8dEHtEhPMAxWT', '2prZJWfQMnIgwUKxKcBxH7']",7Kz0SeKyrx9yJAZbpSHfti,Mahler: Symphony No. 8,2007,1.0,1.0
+"['0VkQgzGZUmazUc7ouT5S79', '2J7jiJ5cdLieortTaN6yMT', '37Lr1lIJy824MQIENRUnZn', '4cIRgxH6tNb73qtbQ0LuV9', '20iZXzMb8LoWXOeca32i82', '1w77QW6t2p7zrCEbgwk256', '49TgMBH68KIFiOmLMoUOWY', '3gacryguGmpmCvgPGt2CBI', '09KZU0NsS7jRa5p0SflmGY', '7vEPPI71V8dEHtEhPMAxWT']",6dmbjm96apGJwsljgyvzBV,The Collected Recordings of Hélène Grimaud,2006,7.0,3.0
+"['7vEPPI71V8dEHtEhPMAxWT', '2CqKSV1qX3wQIYesfsBaex']",60Ny1VIUv1MD9fV26oYiS3,"Graun, Bach, Haydn: Orchestral Music",2006,,
+"['25Eab1kIY1gh0Yo1oV04G4', '71RNoILaVxAicVGoIWnlNN', '3i3fzCE5RlDGN5HSshHe4B', '2C9FzEV35VXPSk4VU8Bbaz', '04kScQiBaLpLuCR1rh20Dd', '1QzQvfhVsCBcim0YOM31t0', '3PfJE6ebCbCHeuqO4BfNeA', '7vEPPI71V8dEHtEhPMAxWT']",31JzivxBxeKggTvfJMqun9,Bedrich Smetana: Die verkaufte Braut,2005,1.0,1.0
+"['7y97mc3bZRFXzT2szRM4L4', '03wQEnXSEAI6GmOKZ90G25', '5JoXc1lfPleYU84DrQoY3t', '3iOYUsYOHClEl4doqq4GdZ', '6kXKagsHbL72rOv1TNrkOh', '7vEPPI71V8dEHtEhPMAxWT']",3eBS6w9vgwaXLHYUfq57CV,Chopin: The Piano Concertos,2005,1.0,1.0
+"['4pU3BpenOZFEBzORx2YBJW', '4KZwQdGgLn54iXbmFEN8WJ', '78sEozQOEJxzXegUuqRSgH', '2cBDNCWJR1YBWMGBxZDPgW', '3oqxBzBkG6Q2xFAAM1c9pl', '3FEd0qHPFOgcpfw7bCXB4x', '6TD08jYeuN128P2MZTbc8E', '4UH0f8KeI9GR9H403vxsNO', '5UFYrc7bnGpaojNag3Bv8M', '7vEPPI71V8dEHtEhPMAxWT']",2lpmVCOiNsMGVksiOZOgxc,Artist Portrait,2004,6.0,1.0
+"['6zp4xVjpNvgoZwD85Gh9kz', '4aIxbB7La1pL9xJTChaiBg', '5Yz0goXyMv9NPLUgnkpmNw', '6kXKagsHbL72rOv1TNrkOh', '4GOMpA0MHkWexjqdqM4mf2', '4dYoxyPcKB86r7YPWzcO3c', '1QzQvfhVsCBcim0YOM31t0', '7vEPPI71V8dEHtEhPMAxWT', '2hfysg8jcEDADnpgSXknkL']",5vx9hSr9RlBmuGU6pJMTGY,Gerhard Hüsch (Recorded 1928 - 1940),2004,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",7xmZz7YfEtVN787Ygs3tGW,Wagner: Der fliegende Holländer (The Flying Dutchman),2002,9.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '0gVO4VlBsDIMFrMIAJJzD3', '7E5ERwS48NkSPVGYBVc16D', '7vEPPI71V8dEHtEhPMAxWT', '6uRJnvQ3f8whVnmeoecv5Z']",6O0cU2f9xIPIgSL47Oqcb9,"Beethoven: Symphonies Nos. 2, 3, 7, 8",2002,8.0,11.0
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '2mEveHHGI25DLRXka7AlzS']",54xlcotSvq7Dspr3Q64DwP,"Wagner, R.: Overtures and Preludes (Muck) (1927-1929)",2002,8.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",1qoD0ck30xIlVZZu0PTO1l,Beethoven: Symphonies Nos. 4 & 5,2001,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",3oCBGx54FLyyUkWe6rBVFd,Wagner: Tannhäuser,2001,,
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",1vRQfrvKQsgHDkhpzU8vsr,Beethoven: Complete Symphonies,2000,8.0,18.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '5fKj8IWs9IV1F2xerI6SGD']",2bdjwRBFztvb1uy0iiXiNf,Beethoven: Symphonies Nos. 1 and 6 (Pfitzner) (1928-1930),2000,8.0,18.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '5fKj8IWs9IV1F2xerI6SGD']",55KMlehhe2F1W05P8JFRxe,Beethoven: Symphonies Nos. 1 and 6 (Pfitzner) (1928-1930),2000,8.0,18.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '6pAwHPeExeUbMd5w7Iny6D']",2RlcMHdsQSIjtfYtDynzAu,Beethoven: Symphonies Nos. 5 and 7 (R. Strauss) (1926-1928),2000,7.0,9.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '6pAwHPeExeUbMd5w7Iny6D']",5QZm54pODRpiCoEaMyDk4B,Beethoven: Symphonies Nos. 5 and 7 (R. Strauss) (1926-1928),2000,7.0,9.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",4JnScqLcVMYQkEKUADnP3F,Beethoven: Symphonies Nos. 1 & 2,2000,6.0,30.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",2JqCcOej8L4n5MK8wVrMaX,Beethoven: Symphonies Nos. 7 & 8,2000,6.0,30.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",3wQsqVACqzoke5xaElVB5L,Beethoven: Symphony No. 3 'Eroica',2000,6.0,30.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",0TAjcInvTRNotj8mY9yywT,"Beethoven: Symphony No. 6 ""Pastoral""",2000,6.0,30.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",2ZolZ8lCOsgQ222xFzsj1W,"Beethoven: Symphony No. 9 ""Choral""",2000,6.0,30.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '3LyEQYjL4IKwxa6XVGXEky', '5fKj8IWs9IV1F2xerI6SGD']",5NXHdUhhMifzXI0yVL8qeQ,Beethoven: Symphonies Nos. 2 and 4 (Kleiber / Pfitzner) (1928-1929),2000,6.0,12.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '3LyEQYjL4IKwxa6XVGXEky', '5fKj8IWs9IV1F2xerI6SGD']",0ezkvpC6E0IV9hPlQ9OdAU,Beethoven: Symphonies Nos. 2 and 4 (Kleiber / Pfitzner) (1928-1929),2000,6.0,12.0
+"['2p0UyoPfYfI76PCStuXfOP', '3JvFTHGx6J55BUnjL8l04T', '7zoDQuL6y4ZedbUAIE9Wba', '7vEPPI71V8dEHtEhPMAxWT', '6oFy096gnLm5ncyUZMSGwN']",2kGAlE2wl9D10Ugm6M502O,Alexander Kipnis Sings a Selection,2000,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",33D14z8BcDXqLsNXqexubb,Beethoven: Complete Symphonies,2000,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",0gZEacljRZtchTsX8znR8s,"Beethoven: Symphony No. 2, Op. 36",2000,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",2e9Ock8gC9i6Tm9PKyMYIn,"Beethoven: Symphony No. 3, Op. 55 ""Eroica""",2000,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",3ie0GyXsYtWLwlXmVUzWSH,"Beethoven: Symphony No. 4, Op. 60",2000,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",6gn1U03EHyhiM6eOKfgZbX,"Beethoven: Symphony No. 5, Op. 67",2000,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",6VLhW90knYvUso5k1dLHdK,"Beethoven: Symphony No. 6, Op. 68 ""Pastoral""",2000,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",45PLQloOUssa3oit4YGqLD,"Beethoven: Symphony No. 7, Op. 92",2000,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",7xeeRbM0mGWGAsjfZBxH4U,"Beethoven: Symphony No. 9, Op. 125 ""Choral""",2000,1.0,1.0
+"['44lMIc4WPA5SLDxhLjWno2', '43SyhDqcYTGix0urBbSWVp', '2mEveHHGI25DLRXka7AlzS', '7vEPPI71V8dEHtEhPMAxWT']",3MwidGDnsIYXuOsYTACHRi,Berta Morena Court Opera Classics,2000,1.0,1.0
+"['6dCkSukXfELCUncrN0Znki', '2R4PqpfBFxdGcrkSJ3GZJf', '7vEPPI71V8dEHtEhPMAxWT', '4McPsNyIfAxc6ejigjzWQl']",4GuFqkXfuZVT1EpBEdAkXe,Court Opera Classics Maria Ivogun,2000,1.0,1.0
+"['2D7RkvtKKb6E5UmbjQM1Jd', '72auy9NefUbGecYVrTiPzq', '2vedxcgUX1uom0dCE4xTTj', '1oMEl4x8B9KTutB0fRqcvA', '7vEPPI71V8dEHtEhPMAxWT', '1UmXXzLSgZlX1gh7zjT730']",3khmzbvCJokracGTFTzOIc,"Giovanni Zenatello, Vol. 1",2000,1.0,1.0
+"['3O3SOoPYtUSjajTdIag0nT', '3i3fzCE5RlDGN5HSshHe4B', '7vEPPI71V8dEHtEhPMAxWT', '2psEoEQG6t6MfClOP6jEJL']",2w6vzovW6OE1fGJJvJQhvc,Great Tauber Songs,2000,1.0,1.0
+"['42Vmza0WYHdhsgxFmf9Tui', '4uBaV1yGPvqkNYNz2gcKBi', '6aItH4tJHWc4wKwlDXkJrc', '2jCGEMSZXMSOImpD8sqo56', '6Gj36PJfajjbtsqlisqOw8', '5jPslEqO0MoZWmXspsbQLO', '2R4PqpfBFxdGcrkSJ3GZJf', '7vEPPI71V8dEHtEhPMAxWT', '4McPsNyIfAxc6ejigjzWQl']",7j37MGlLWwrNUQoQcZQUSb,Great Voices Of The Century,2000,1.0,1.0
+"['0roWUeP7Ac4yK4VN6L2gF4', '1jsEtCJBlpg64ilWwNXtqB', '3GtU1O2V8snd7EP5ySYLqN', '3ZXZN86zspTIIkwbzlkDwf', '7vEPPI71V8dEHtEhPMAxWT', '1PEKp7rSgEXNuB3eTx8tOj', '5vv6n5YBVxwtH431Nt23tQ', '1usYDtmAEDQ1ycZzneMxeH', '6FrkYmhwEqShwoVb4jIIPG', '5tLXFltqEExJBHPzh8ekoF', '0BD0yexvRf2lNmTwda3DvU']",3ynGjTQBjKmBZP8ttCy254,Hans Hotter,2000,1.0,1.0
+"['3L1iFJfRzE7yzilr2yGl6t', '69RwyCtPRB9H7aIgwBsqtA', '2jCGEMSZXMSOImpD8sqo56', '6aItH4tJHWc4wKwlDXkJrc', '5qhLx6gTn34XYUOcUSqwV8', '6944rd7x26dRMIFDHOFPFK', '6AphpMkKDU4I3Z6XaGu1UV', '3ELktghnE5zeabnHdNycyh', '7mWFp7NLj1jdHAycP5z5kH', '21PzY5i7Sig0b85729YrXZ', '7vEPPI71V8dEHtEhPMAxWT']",67Wy8bmTzC1zQYb6sHjlH8,"Jose Mardones, Vol. 2",2000,1.0,1.0
+"['0OzxPXyowUEQ532c9AmHUR', '7vEPPI71V8dEHtEhPMAxWT', '6CE4cIwcw734npMumn6wr7', '3gdchu3GRExh4tF8ypQc9Y', '0gO52wRLxLFlQXVYjisqnB', '0hrVe30cEV1RSrsDMYZ388', '3GHtcJitc8SrCorLYRI0bV', '1Qrx6cwzpAcE9CDWIWxcCH', '2O8OZAZBdDpV4nxqvzmdpP']",679eAZdevDfUuK2W2s6Zhp,La Boheme,2000,1.0,1.0
+"['1JOQXgYdQV2yfrhewqx96o', '7fwmOFe3TpU3sUFTnufqEK', '6MO3RpWBXLjFyRSCEhYGCY', '7vEPPI71V8dEHtEhPMAxWT', '5v8LSlCKBZg04bWp2DMKMP', '6xa2f7SH1mXjwiKVY2HoD7', '5tIjxR2iK827vCvS82mqSe']",1Lw1DYAKIcmOveGnxpUiTH,La Traviata,2000,1.0,1.0
+"['6aItH4tJHWc4wKwlDXkJrc', '6gbskVvGYepLyWEjlLKJHu', '5Cwm14LRKhTgJfFhJpfIKZ', '1QzQvfhVsCBcim0YOM31t0', '7vEPPI71V8dEHtEhPMAxWT']",7zhEtnSWW5EQCmW9gjIIid,Lebendige Vergangenheit II,2000,1.0,1.0
+"['4NJhFmfw43RLBLjQvxDuRS', '6aItH4tJHWc4wKwlDXkJrc', '72auy9NefUbGecYVrTiPzq', '4fLPgKlwrwpdgPVuZW6rTC', '04IfxJ0jPlnLUxyMpzVe6G', '7vEPPI71V8dEHtEhPMAxWT', '2mtJvPx2KIQiwn6tSlYgUt']",4uAhSZqxRXKsWc3HuiVi3d,"Marcel Wittrisch, Vol. 2",2000,1.0,1.0
+"['10MxBHzo0yJhqRLUcjLSL2', '5TJ0yvLvBR3r9TC2sW1M4c', '2kq31y5Wta1aVv4Xw5JmMU', '5lP2uOb8BNFPjtjuiarVAL', '3NTNqUD4MMdlOwgqWsJhNx', '0saY1OFASKxGUfEYwQyze5', '0Yy8ebHB2Ubh1xVIdddNYF', '2QABNemNuO9P664wsXGLvs', '3DpIeSvjWPiwFxLKjyJH88', '3O3SOoPYtUSjajTdIag0nT', '04IfxJ0jPlnLUxyMpzVe6G', '7vEPPI71V8dEHtEhPMAxWT', '6Hhxzje2JoecZnhRiP9NlZ']",7040M70TPH4BvkmORM9tjK,Marcel: Witterisch,2000,1.0,1.0
+"['4NJhFmfw43RLBLjQvxDuRS', '7vEPPI71V8dEHtEhPMAxWT', '6UjYADdIeOPbkG9zA9qWIQ', '5v8LSlCKBZg04bWp2DMKMP']",60yDZmW0EQxFCUEotuTG64,Maria Cebotari: Soprano,2000,1.0,1.0
+"['2p0UyoPfYfI76PCStuXfOP', '1usYDtmAEDQ1ycZzneMxeH', '7vEPPI71V8dEHtEhPMAxWT']",6RS1nb3oTNZNhwk7tWp4JK,Mendelssohn: A Midsummer Night's Dream,2000,1.0,1.0
+"['1QL7yTHrdahRMpvNtn6rI2', '6aItH4tJHWc4wKwlDXkJrc', '6AphpMkKDU4I3Z6XaGu1UV', '1MfGjo5n4S42qQJNetbjZ8', '7vEPPI71V8dEHtEhPMAxWT', '2mEveHHGI25DLRXka7AlzS', '5h6vFs8wvrudZJFin6yjaA']",29q7UiuO5OZF4RWZfRGUsz,Operatic Recital,2000,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '2jAAk83zOncGIKGMT9PXm3', '0gO52wRLxLFlQXVYjisqnB', '7vEPPI71V8dEHtEhPMAxWT', '2GMrfhRwCW2rFkI8SQzuMB', '6elpmIDuaxq3RDYe3DmxtS']",7hU41Ig7GguBPdfNK0Avaf,Tannhauser & Gotterdammerung,2000,1.0,1.0
+"['1JOQXgYdQV2yfrhewqx96o', '1PcmDPoDizKeZDOjdWfuTD', '6MO3RpWBXLjFyRSCEhYGCY', '7vEPPI71V8dEHtEhPMAxWT', '0oDcyjX5WyJOIzXRJPKDEq']",7LG9VOTRIsDRPI1Ik2j6gW,Verdi: Rigoletto Highlights,2000,1.0,1.0
+"['78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",7mJ50aka3z9GUPg8grAizs,Beethoven : Symphonies Nos 1 - 9 & Overtures,2000,,
+"['5NQ3MRv3HCYUP2DiT6bfwc', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",7wP3tdsOGI2FtikIG9mnqE,Beethoven : Fidelio,1999,11.0,5.0
+"['1C1x4MVkql8AiABuTw6DgE', '0gVO4VlBsDIMFrMIAJJzD3', '6uRJnvQ3f8whVnmeoecv5Z', '003f4bk13c6Q3gAUXv7dGJ', '4NzLn7UyhvBlgzhF7WwMM1', '3PfJE6ebCbCHeuqO4BfNeA', '6XB7gCSvNN5AkoAhEFv7Cg', '3ZXZN86zspTIIkwbzlkDwf', '02sU6bnuc2DUZoZp52wBol', '7vEPPI71V8dEHtEhPMAxWT']",3OEuT3eh9Q50qK7PNnL3Ou,"Knappertsbusch Conducts Wagner: Rienzi, Der Fliegende Holländer, Tannhäuser and Others",1999,9.0,30.0
+"['6xa2f7SH1mXjwiKVY2HoD7', '0mQIy8QeYzZRrCkPIL01Jb', '1QzQvfhVsCBcim0YOM31t0', '2LwO0UPiBg9RQUZ5Vob5S6', '2JY7D15ZLEE1YmOvXntJBZ', '7vEPPI71V8dEHtEhPMAxWT', '0jeb3MEmvwDcz9W4PZLnhV', '003f4bk13c6Q3gAUXv7dGJ']",7DICwxEqT2WkK3hD0B2VfT,Helge Roswaenge (Recorded 1933 - 1942),1999,1.0,1.0
+"['7xH3VOMwOjnqGu7NERNUx1', '2mlPQHBhBnaFnJomdIAvNi', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",72awvVcAIbrKJCuUTL4ZKe,Busoni : Die Brautwahl,1999,,
+"['1C1x4MVkql8AiABuTw6DgE', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",2EOvmNPqjI4Y7RFcpH2Zb9,Wagner: Lohengrin,1998,,
+"['1C1x4MVkql8AiABuTw6DgE', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",6B3yDNtYhPuOWhLlhtgyGI,Wagner : Lohengrin,1998,,
+"['7zoDQuL6y4ZedbUAIE9Wba', '6eYNTQjA4Is9cG5UQPMJs2', '75qjZWvJvJf7JDCLwXoZ81', '6oFy096gnLm5ncyUZMSGwN', '3VmYZl5ooq5EV3WI3LI1kg', '4McPsNyIfAxc6ejigjzWQl', '6HjftNkzQx9VtHUo7xpYN1', '7vEPPI71V8dEHtEhPMAxWT', '2thIN2TDSmbYcqkHm6nQ6b']",6aZ6c7mIGmwdPcUp1yEaaO,Alexander Kipnis in Opera and Lieder,1997,1.0,1.0
+"['60ju8DuNEmkdLw3ymddLje', '4irur0XnWruVmdJKoIp2d6', '4ZJwwr3Zm3y3i9VXOGZFUh', '7vEPPI71V8dEHtEhPMAxWT', '78sEozQOEJxzXegUuqRSgH']",3tEziE9lfG7lBggF2clHBe,"Berg: Wozzeck, Op. 7",1996,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",1uVhP6HNSlGaATY4YvGSyC,"Beethoven: Symphony No. 9 ""Choral""",1995,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '78sEozQOEJxzXegUuqRSgH', '2thIN2TDSmbYcqkHm6nQ6b', '7vEPPI71V8dEHtEhPMAxWT', '6uRJnvQ3f8whVnmeoecv5Z']",7ka7vMOC7RZEtPKWFZQjhD,Barenboim - Complete Wagner Operas,1995,,
+"['0VkQgzGZUmazUc7ouT5S79', '2J7jiJ5cdLieortTaN6yMT', '4cIRgxH6tNb73qtbQ0LuV9', '3jTQCiYN0Y1GhW0NmGIXC8', '7vEPPI71V8dEHtEhPMAxWT']",6duJvXAmH1bdPhm6PWoP93,"Brahms : Piano Concerto No.1 & Strauss, Richard : Burleske (Maestro)",1995,,
+"['0VkQgzGZUmazUc7ouT5S79', '2J7jiJ5cdLieortTaN6yMT', '4cIRgxH6tNb73qtbQ0LuV9', '3jTQCiYN0Y1GhW0NmGIXC8', '7vEPPI71V8dEHtEhPMAxWT']",36gORRLMQbDTO6K1mLpJgs,"Brahms : Piano Concerto No.1 & Strauss, Richard : Burleske - Elatus",1995,,
+"['7vEPPI71V8dEHtEhPMAxWT', '3Vfvyx6OouTxYU3emXonW7', '3EtufKY05Q7LhfoncRzxRw', '2GMCWpTEGU85LkUtoBDFGX', '0C2pfDSe4uoEySnSAnLtWV', '1W6Wgt9XFyQBHRhqkdy2GB', '6XCooPNQ2PpgwJaXggWFek']",7ki2W9s5yzRATWayDMM22I,"Opera Arias (Tenor): Schreier, Peter -Wolfgang Amadeus Mozart/ Otto Nicolai/ Georg Friedrich Händel / Richard Strauss / Gioacchino Rossini/ Albert Lortzing/ Claudio Monteverdi/",1995,,
+"['5wTAi7QkpP6kp8a54lmTOq', '7lEGjTH4urCMdqGvIQ9opR', '6uRJnvQ3f8whVnmeoecv5Z', '7vEPPI71V8dEHtEhPMAxWT', '6ShzLrcIsXtGLAnT2BCN7j']",1ZcV5m7jloajYyYc9V0NqU,"Brahms: Symphonies Nos. 2 & 4, Piano Concerto No. 2 & Academic Festival Overture",1994,8.0,17.0
+"['6pAwHPeExeUbMd5w7Iny6D', '2TR2POxA4xGZCMcpMSBwvM', '78sEozQOEJxzXegUuqRSgH', '7vEPPI71V8dEHtEhPMAxWT']",7xhjqkyeTVXRvc0TnAVUx4,"Strauss, Richard : Elektra",1994,,
+"['5qezAr7oGGzgdsFKscKcNh', '7vEPPI71V8dEHtEhPMAxWT', '1PcmDPoDizKeZDOjdWfuTD', '4GHqXZ3T0o9Ul681G5Iw5T', '3BkF8yVkD05uUYfruX1tCy', '4tZ9Ws3xHWCNETcTkQa67Z', '04wWx8RN3ieWNY2mNDoVqM', '6UjYADdIeOPbkG9zA9qWIQ']",3Udx3VAGhzKNTaYC8rH8Oc,"Vocal Recital: Anders, Peter, Vol. 3",1994,,
+"['0hrVe30cEV1RSrsDMYZ388', '0xtVzzrwYxh7o2WMUzEMMJ', '04IfxJ0jPlnLUxyMpzVe6G', '1QzQvfhVsCBcim0YOM31t0', '7cel6MtfqW0LHaqRU1DFB3', '23RPP6vFpQrU75aA3rETRr', '4McPsNyIfAxc6ejigjzWQl', '3Gb2dsGiKKpWbhJ9NVrD3y', '3VmYZl5ooq5EV3WI3LI1kg', '4GHqXZ3T0o9Ul681G5Iw5T', '4GOMpA0MHkWexjqdqM4mf2', '6oFy096gnLm5ncyUZMSGwN', '0BD0yexvRf2lNmTwda3DvU', '7vEPPI71V8dEHtEhPMAxWT', '5yxyJsFanEAuwSM5kOuZKc']",1y5QOHX6che5o5hNatDGk4,Great Singers at the Berlin State Opera,1993,1.0,1.0
+"['1JOQXgYdQV2yfrhewqx96o', '7zq51KTICz3nhHbk3NjB6U', '2UL3ob989gucFstYnWl1Cy', '1ZqKq8KZz5xlXqLmWn5tdM', '6Hs5g6M9pTrR2Z7WZcHV20', '3qOlbb0x5LJsXZZ4iXI5Ir', '0ep1vIQAYzJL4zGVz9eGf5', '7cel6MtfqW0LHaqRU1DFB3', '1UmXXzLSgZlX1gh7zjT730', '0KIwMoAf3M1ON2Du6PbnQv', '1NRC70mai1z1qawnUNBlL3', '6mJk25TqF2FIvnBg4XjBhD', '5SNoeY6sP0Vb4G23nNGfvI', '7vEPPI71V8dEHtEhPMAxWT']",1B7NB4ULjstFrKyqxqJTZy,Lauri-Volpi Sings Verdi,1993,1.0,1.0
+"['7vEPPI71V8dEHtEhPMAxWT', '6uRJnvQ3f8whVnmeoecv5Z', '003f4bk13c6Q3gAUXv7dGJ', '5zCaQxjl110XTrm4LQ1CxY']",10en9KpaW72L5n5YKs97hu,The Artist's Album - Herbert von Karajan,1992,5.0,12.0
+"['2R4PqpfBFxdGcrkSJ3GZJf', '4WzV1tLyUlHcKcYHWlArsn', '4McPsNyIfAxc6ejigjzWQl', '7vEPPI71V8dEHtEhPMAxWT']",6XmL0x5TCX5026TMQczq2b,Maria Ivogün (Recorded 1916 - 1932),1992,1.0,1.0
+"['3i3fzCE5RlDGN5HSshHe4B', '0l1r8tNVQOx006uHf7VTY2', '3O3SOoPYtUSjajTdIag0nT', '3jITPa4gnQdIk9b6PHQz3q', '35oqxVJotjAJlbXCYjYvvw', '2psEoEQG6t6MfClOP6jEJL', '3UaJz1tq0BBPzJBPgkBarb', '2keuezVwjnkv5f3sa8bwVm', '7vEPPI71V8dEHtEhPMAxWT', '2W7QrbxmJxQCHINCs6vdDB', '2W0sJwinE6fq0DNShmHWtp', '6YCUDPfOxs2M0wBrG8f0vc']",3YbvUWwYTHecE0tqKcWTlX,Schöne and Tauber in Operetta,1992,1.0,1.0
+"['3i3fzCE5RlDGN5HSshHe4B', '0i7t7proUCY5mbKZCMLsM5', '1nAxvX7HzcwjPYpV595Y3y', '3jITPa4gnQdIk9b6PHQz3q', '2psEoEQG6t6MfClOP6jEJL', '6MO3RpWBXLjFyRSCEhYGCY', '7vEPPI71V8dEHtEhPMAxWT', '2W0sJwinE6fq0DNShmHWtp']",0MVYFsw4XmET5erOKZs2jC,Tauber in Opera,1992,1.0,1.0
+"['7vEPPI71V8dEHtEhPMAxWT', '4A4svVPv1xNWVnxmBUGqOa']",1L2bWa71rFPc5A6ZzjJlgx,"Trombone Concertos - Ferdinand David./ Ernst Sachse / Friedebald Gräfe / Eugen Reiche (Heinel, Berlin Staatskapelle, Fricke)",1992,,
+"['4NJhFmfw43RLBLjQvxDuRS', '7vEPPI71V8dEHtEhPMAxWT', '6pAwHPeExeUbMd5w7Iny6D']",6pE6ZcN92tH4ei1rcUBiGH,Mozart: Symphonies Nos.40 & 41,1991,1.0,1.0
+"['2bM3j1JQWBkmzuoZKu4zj2', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT']",7yCJRaunGG5FC5DER7IBpX,"Anton Bruckner: Symphony No. 4, ""Romantic"" (Berlin Staatskapelle, Suitner)",1990,,
+"['0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT', '6MO3RpWBXLjFyRSCEhYGCY']",3ZCbz503Rw4paYBAjjGjsN,Pfitzner: Palestrina,1990,,
+"['5wTAi7QkpP6kp8a54lmTOq', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",24EPJ3N9hckZ2IBhZAESnh,Brahms: Symphony No. 4,1989,1.0,1.0
+"['2oV3TuQMsgrqPhEDTzh9Od', '7vEPPI71V8dEHtEhPMAxWT', '4H643hPA44WZRSbvXiYwQ5', '4A4svVPv1xNWVnxmBUGqOa', '2FBPLNI3b0QVahCOhyl2Ej']",5jQyLOpdzs5hDBOotdJQ0J,Matthus: Graf Mirabeau,1989,1.0,1.0
+"['6qPIa32FqrkXOCqCa02iCA', '3EtufKY05Q7LhfoncRzxRw', '7vEPPI71V8dEHtEhPMAxWT']",1xEzqpedxo124jw9yzZygZ,Opera Arias: Ute Trekel-Burckhardt,1989,1.0,1.0
+"['5wTAi7QkpP6kp8a54lmTOq', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",5emdE04uepzj1dJiJptTYt,Brahms: Symphony No. 1,1988,1.0,1.0
+"['5wTAi7QkpP6kp8a54lmTOq', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",3G3wXuA8w73Nhp9wuuxpLO,Brahms: Symphony No. 2,1988,1.0,1.0
+"['5wTAi7QkpP6kp8a54lmTOq', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",1c3WATmixEfYJFR4cOXceE,Brahms: Symphony No. 3,1988,1.0,1.0
+"['5wTAi7QkpP6kp8a54lmTOq', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",2F037EWEEy1pCI92YhLnNB,Brahms: Symphonies Nos. 1 - 4,1988,,
+"['2ANtgfhQkKpsW6EYSDqldz', '7vEPPI71V8dEHtEhPMAxWT', '2STYCI1vifLsLtiXJuRUE9', '0C2pfDSe4uoEySnSAnLtWV']",12HUXrb2hSypxGrSnOCnaH,"Mahler: Symphony No. 5 & 4 Songs from ""Des Knaben Wunderhorn""",1986,1.0,1.0
+"['2ANtgfhQkKpsW6EYSDqldz', '0C2pfDSe4uoEySnSAnLtWV', '2FBPLNI3b0QVahCOhyl2Ej', '7vEPPI71V8dEHtEhPMAxWT']",2D87x800KjOVSJziR6Zyp0,"Mahler: Symphony No. 2, ""Resurrection""",1985,1.0,22.0
+"['2ANtgfhQkKpsW6EYSDqldz', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '0C2pfDSe4uoEySnSAnLtWV']",5jRtOAY6zD9OlybKZtgLQC,Mahler: Symphony No. 2 (Resurrection),1985,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '4XHW4DkRwxsD4OTe7oIiPE', '7vEPPI71V8dEHtEhPMAxWT', '4A4svVPv1xNWVnxmBUGqOa']",1MbtroGU4Kw2BLDP7yeuga,Simon Estes Sings Wagner,1984,6.0,1.0
+"['2ANtgfhQkKpsW6EYSDqldz', '2STYCI1vifLsLtiXJuRUE9', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV', '0EoQ7lnGn4QGVkt35zp3FT', '1eqqyXFOa1ig4AroJALywV']",0LIArmsKDigHoUpGsKmVZK,"Mahler: Fünf Lieder nach Friedrich Rückert / Vier Lieder aus ""Des Knaben Wunderhorn""",1984,1.0,1.0
+"['6MF58APd3YV72Ln2eVg710', '3XKpIwa3KEaO1VE3YrKlL1', '7vEPPI71V8dEHtEhPMAxWT']",3UVTeF4jaLAfCBWHEoPuMQ,"Mendelssohn: Symphony No. 3, ""Scottish"" / The Hebrides, ""Fingal's Cave""",1983,1.0,22.0
+"['7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",6VmFtFSKdxBzfZWtIlcFUr,"Wolf: Penthesilea / Pfitzner: Musik zu Kleists ""Käthchen von Heilbronn""",1983,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",7qkDJk99xU9tuNPNa5ekqX,Dvořák: Symphony No. 4 / In Nature's Realm,1982,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",4xIuKeVZrEqqZiv2rANMyl,Dvořák: Symphony No. 6 & Othello Overture,1982,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",0sgl4Oy7XsCljyU4xLW1Ay,Dvořák: Symphony No. 7 & Carnival Overture,1982,1.0,1.0
+"['2p0UyoPfYfI76PCStuXfOP', '7vEPPI71V8dEHtEhPMAxWT', '4DqlvoyKHnvnT4lvFmTSkG', '38ghpVkkvBf5wugUg4HW4G', '3gdchu3GRExh4tF8ypQc9Y', '7GqzUP7TApb2wPZ7pxlDeN', '0C2pfDSe4uoEySnSAnLtWV']",5iQgINGYFpw9DTozKglnFu,Schubert: Alfonso & Estrella,1982,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",5kYBxWFr99LskFT9k3mp4G,Dvořák: Sinfonie No. 2,1981,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",2YwKFYOHGYr5E5WSCEFF61,Dvořák: Sinfonie No. 3 & Husitská,1981,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",0krWZBJiglqar5hmQv60zE,Dvořák: Symphony No. 3 & Hussite Overture,1981,1.0,1.0
+"['1akEXB2e2ObGj1Exx4Xf20', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '0C2pfDSe4uoEySnSAnLtWV']",61G9ANbHKFLNgO7JVSVB5A,Nova: Dessau: Leonce und Lena,1981,1.0,1.0
+"['15QTSK7NBFJawaoxQALt9s', '67rGmcc43nVQOMYp782dAp', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",0T8YIPIknc5InoFTDfNENr,"Pfitzner & Strauss: Preludes to ""Palestrina"" & The Woman without a Shadow",1980,10.0,25.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",6hLdPPvJvzpXeoFidZI563,Dvořák: Sinfonie No. 9,1980,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT']",0BVlBIZNpeWDSJwZz5ilL9,"Antonin Dvorak: Symphony No. 9, ""From the New World"" / Hussite Overture (Berlin Staatskapelle, Suitner)",1980,,
+"['2ANtgfhQkKpsW6EYSDqldz', '37Lr1lIJy824MQIENRUnZn', '1eqqyXFOa1ig4AroJALywV', '5pF76lplGIvEFGb8lI48hA', '7vEPPI71V8dEHtEhPMAxWT', '3hW0B3rp5YQYKV4Kial1II', '0C2pfDSe4uoEySnSAnLtWV']",0TQ2ZT6jnyUYKSAUaEbxnq,Mahler: Kindertotenlieder / Lieder eines fahrenden Gesellen / Ruckert-Lieder / Des Knaben Wunderhorn (Excerpts),1980,,
+"['2ANtgfhQkKpsW6EYSDqldz', '7vEPPI71V8dEHtEhPMAxWT', '0SlNRZ8zBLAgyB1lsoYxAa', '5pF76lplGIvEFGb8lI48hA', '37Lr1lIJy824MQIENRUnZn', '3Yjg0D4ZKf060awLcVvcph', '0C2pfDSe4uoEySnSAnLtWV']",2qFzKrTML1WiirYxL6tpxJ,Mahler: Orchesterlieder,1980,,
+"['1LBpCi5TInmTkWqoHZfUzB', '6ZaLKB4qu2NZMN8vbBbFmo', '7nQV7NHPAGUinHmpRi05XU', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT']",4mXmzjWc29fRabWIoocrbC,"WOLF, H.: Penthesilea / PFITZNER, H.: Das Kathchen von Heilbronn / STRAUSS, R.: Fantasy (Berlin Staatskapelle, Suitner)",1980,,
+"['6n7nd5iceYpXVwcx8VPpxF', '5tQs2q4OYuqqHL2a5u4B61', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT', '3hW0B3rp5YQYKV4Kial1II']",1IiMcoRjvq6DtEn4dU71rg,Dvořák: Symphony No. 9 & Slavonic Dances,1980,,
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",5uerRxCSsv5eGTWIwQFvD9,Dvořák: Symphony No. 5 & My Home,1979,10.0,28.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",0Ouq3Y9uaY3g6omdZTcTTE,Dvořák: Sinfonie No. 5 & Mein Heim,1979,10.0,28.0
+"['7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '4daUwKborwfoCmgkl4kW3R', '0C2pfDSe4uoEySnSAnLtWV']",4l6IrfkPIIZsmjHZJR6spA,Chöre aus italienischen und französischen Opern,1979,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",5tbWZVB49fgTcIjqMMeznA,Dvořák: Sinfonie No. 8,1979,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",70YVNPAfjeOCWrBbpES8wW,"Dvorák: Symphony No. 8, My Home & Husitská",1979,,
+"['2FBPLNI3b0QVahCOhyl2Ej', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",4ssJaBKi0gaEmg5erEyKHQ,Chöre aus deutschen Opern,1978,1.0,1.0
+"['3rpg4ZYZD022PbJxXLUJ8z', '5A1t5A2iPzN7bvlGDnUn6y', '7KTFZSAt2pE7UwCLseG81I', '1w324VbUHTUFmPyPdXUO9Q', '7vEPPI71V8dEHtEhPMAxWT', '1XxKMSllE9z9zoKecUYJKs']",1A8nMqWbF1OxL8jdjjXTns,Eisler: Tagebuch / Suite No. 1 / Tempo der Zeit,1978,1.0,1.0
+"['5Cnc0noHxdjlRyiRPPvvjq', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '38ghpVkkvBf5wugUg4HW4G', '1W6Wgt9XFyQBHRhqkdy2GB']",14NVDEkBeMR9he2pNqysFJ,Nicolai: Die lustigen Weiber von Windsor,1978,1.0,1.0
+"['5Cnc0noHxdjlRyiRPPvvjq', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '38ghpVkkvBf5wugUg4HW4G', '1W6Wgt9XFyQBHRhqkdy2GB']",4RdKZylHhPe8GKz2Vtrerr,Nicolai: Die lustigen Weiber von Windsor (Highlights),1978,1.0,1.0
+"['1akEXB2e2ObGj1Exx4Xf20', '7vEPPI71V8dEHtEhPMAxWT', '38ghpVkkvBf5wugUg4HW4G', '7GqzUP7TApb2wPZ7pxlDeN', '0C2pfDSe4uoEySnSAnLtWV', '2FBPLNI3b0QVahCOhyl2Ej']",55XjLX3TfsLxbxnxuOyneh,Nova: Dessau: Einstein,1978,1.0,1.0
+"['2p0UyoPfYfI76PCStuXfOP', '7vEPPI71V8dEHtEhPMAxWT', '1w324VbUHTUFmPyPdXUO9Q', '1XxKMSllE9z9zoKecUYJKs']",3CzPtWoXhc4lI1P2EE04P5,Schubert: Lazarus (Die Feier der Auferstehung),1978,1.0,1.0
+"['0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT', '7AKRF57V1mYqufJJyS7a5V']",3nRJsbpuoOEigqQaO7ETKk,"Beethoven, Mozart, Nicolai, Weber, Flotow & Wagner: German Opera Choruses (KulturSpiegel - Eterna - Über Grenzen Hinaus)",1978,,
+"['5Cnc0noHxdjlRyiRPPvvjq', '1W6Wgt9XFyQBHRhqkdy2GB', '7vEPPI71V8dEHtEhPMAxWT', '6MO3RpWBXLjFyRSCEhYGCY']",0UHi8SBuXGDzoYzUdlZLNE,Otto Nicolai: Lustigen Weiber von Windsor,1978,,
+"['5Cnc0noHxdjlRyiRPPvvjq', '7vEPPI71V8dEHtEhPMAxWT']",4VEJxxdwtTRSpHiDv3MikF,"NICOLAI, O.: Lustigen Weiber von Windsor (Die) [The Merry Wives of Windsor] [Highlights] [Moll, Mathis, Schwarz, Donath]",1978,,
+"['5ihY290YPGc3aY2xTyx7Gy', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",7vXh4zxU7rR89o32FLnG9f,Grieg: Orchestral Pieces,1977,1.0,1.0
+"['6MF58APd3YV72Ln2eVg710', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '1eqqyXFOa1ig4AroJALywV']",5bnUJMatPtxVKGHoJzxzT4,Mendelssohn: A Midsummer Night's Dream,1977,1.0,1.0
+"['5RLMa74fb4nRTudIDWh9rx', '7vEPPI71V8dEHtEhPMAxWT', '4A4svVPv1xNWVnxmBUGqOa']",1zRxdTU6XkzO3C4knsIb7O,Opera Arias: Eberhard Büchner,1977,1.0,1.0
+"['5ihY290YPGc3aY2xTyx7Gy', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT']",6Rv05Bd2MxTBn09M0OWi1v,"GRIEG, E.: Orchestral Music - Opp. 56, 54, 35, 40 (Berlin Staatskapelle, Suitner)",1977,,
+"['4NJhFmfw43RLBLjQvxDuRS', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT']",49E4wX37cC86JjcwOVMpRS,Mozart: Overtures (KulturSpiegel - Eterna -Über Grenzen Hinaus),1977,,
+"['7vEPPI71V8dEHtEhPMAxWT', '7cqPRCrwbsqYEw0RurLb6x', '3sHuMdPp3RW26RMOYChyKA', '4A4svVPv1xNWVnxmBUGqOa']",7eDpnDVbUoOkgI9ntMm9iu,"Mozart, Verdi & Strauss: Opera Duets",1976,1.0,1.0
+"['4NJhFmfw43RLBLjQvxDuRS', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",4Lf6ry4W5Ite0HA51fjd7k,Mozart: Overtures,1976,1.0,1.0
+"['1p6wR69pnH9LBWZvwliuz2', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",47VlRYfw7Wty8K2j7YX9eT,Weber: Ouvertüren,1976,1.0,1.0
+"['1p6wR69pnH9LBWZvwliuz2', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",7wX5oiu7HfkkMk2IlTBLEo,Weber: Overtures,1976,1.0,1.0
+"['6MF58APd3YV72Ln2eVg710', '5MD2aNoIC8h0l9u5ZPB9DY', '7vEPPI71V8dEHtEhPMAxWT', '1eqqyXFOa1ig4AroJALywV', '0SlNRZ8zBLAgyB1lsoYxAa', '37Lr1lIJy824MQIENRUnZn']",4bfearaBc0ZsYizXL132ms,"Mendelssohn: A Midsummers Night's Dream - Incidental Music, Op. 61 (Schätze der Klassik)",1976,,
+"['6MF58APd3YV72Ln2eVg710', '5MD2aNoIC8h0l9u5ZPB9DY', '7vEPPI71V8dEHtEhPMAxWT', '1eqqyXFOa1ig4AroJALywV', '0SlNRZ8zBLAgyB1lsoYxAa', '37Lr1lIJy824MQIENRUnZn']",2y5dsBv3mWqQAYmED8MpfR,"Mendelssohn Bartholdy: A Midsummers Night's Dream, The Fair Melusina & Calm Sea and Prosperous Voyage",1976,,
+"['1C1x4MVkql8AiABuTw6DgE', '0saY1OFASKxGUfEYwQyze5', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",6gouQ0JBKb7vXKuDBYPi1E,Wagner: Opera Arias sung by René Kollo 2,1975,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '0saY1OFASKxGUfEYwQyze5', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",45DORPdIn908egCvE8KYCW,Wagner: Opera Arias sung by René Kollo 1,1975,1.0,1.0
+"['6PKIkvC04g27pZCv8B5gik', '7o2OjTu0Ls0xiWl3RzjdVp', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",1G2eTJcAUcspFjd07PsE2w,Ernst Hermann Meyer: Violinconcerto,1974,1.0,1.0
+"['656RXuyw7CE0dtjdPgjJV6', '7vEPPI71V8dEHtEhPMAxWT', '1eqqyXFOa1ig4AroJALywV']",0yi7twBOk8zCLS6D5moY5Y,"Haydn: Symphonies Nos. 4, 5, 9 & 10",1974,1.0,1.0
+"['656RXuyw7CE0dtjdPgjJV6', '7vEPPI71V8dEHtEhPMAxWT', '1eqqyXFOa1ig4AroJALywV']",4MclIALJRu6iVJSiJ2wDdN,Haydn: Symphonies Nos. 6-8,1974,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '0C2pfDSe4uoEySnSAnLtWV']",5CABNpQpux3U7IxbPvGlWL,Wagner: Lohengrin (Highlights),1974,1.0,1.0
+"['656RXuyw7CE0dtjdPgjJV6', '1eqqyXFOa1ig4AroJALywV', '7vEPPI71V8dEHtEhPMAxWT']",4xu08zzbjswfXMIZnoqnm8,"Haydn: Symphonies Nos. 6, 7 & 8",1974,,
+"['7vEPPI71V8dEHtEhPMAxWT', '7AKRF57V1mYqufJJyS7a5V', '0C2pfDSe4uoEySnSAnLtWV']",3p88lPyS7o2evx4fCEjGV1,Wagner: Lohengrin (Highlights),1974,,
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '1eqqyXFOa1ig4AroJALywV']",2QX3KUqo9ASExxMk3N8tj6,Beethoven: The Creatures of Prometheus / Music for a ballet of Knights,1973,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '2jwG3IEeqaPEqKOcl06Fx7', '4AQSOPmi2ky2sJPs0YoVts']",0Vsx56p7d5DfhfgKaRDRu7,Beethoven: Italian Arias,1972,1.0,1.0
+"['6n7nd5iceYpXVwcx8VPpxF', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '7GqzUP7TApb2wPZ7pxlDeN', '4AQSOPmi2ky2sJPs0YoVts']",3QJvxh6ZnZym2myla4vREL,Dvořák: Rusalka (Highlights),1972,1.0,1.0
+"['1akEXB2e2ObGj1Exx4Xf20', '3ENmUwGx8rxEPxeFJ06P18', '6MO3RpWBXLjFyRSCEhYGCY', '04wWx8RN3ieWNY2mNDoVqM', '7vEPPI71V8dEHtEhPMAxWT', '4B2J0fM4IU1z3p5LaIz5iE', '0C2pfDSe4uoEySnSAnLtWV']",3hYAepil8ZSRHJYtT3SndU,"Paul Dessau: Orchestral Music, Vol. 2 - Symphony No. 2 / Symphonic Adaptation / Orchestermusik No. 3, ""Lenin""",1972,,
+"['4NJhFmfw43RLBLjQvxDuRS', '38ghpVkkvBf5wugUg4HW4G', '1hlNHzgLsqzIncibIVqg49', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",7KVzhx6Cm6ccKFqmXfQWZY,Mozart: Italian Opera Arias,1971,3.0,12.0
+"['1akEXB2e2ObGj1Exx4Xf20', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",7GbnCrWPTblmsufjqMGDjS,Dessau: Lenin & Mozart Adaptations,1971,1.0,1.0
+"['2jCGEMSZXMSOImpD8sqo56', '2FBPLNI3b0QVahCOhyl2Ej', '7vEPPI71V8dEHtEhPMAxWT', '5ZJ9PMKBpN56YhrhFzAR5o']",5mLjzv4CwomaYTRMRHQtF2,Donizetti: Lucia di Lammermoor (Highlights - Sung in Italian),1971,1.0,1.0
+"['4OihBPCQzR4GfbzqOY69Xm', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '2YnrqbIZYBDN2LKLiH8KPr']",1bD6hOmIq9KUaOblVUg4V8,Offenbach: Salon Pitzelberger (M. Choufleuri restera chez lui le...),1971,1.0,1.0
+"['5aIqB5nVVvmFsvSdExz408', '26uMjSyTAF4BU3PKhrzJtd', '7vEPPI71V8dEHtEhPMAxWT', '6elpmIDuaxq3RDYe3DmxtS']",6bx9lCs3Gkn1jyh96Bchd4,Bach: Violin Concertos No. 2 & D Minor,1970,1.0,1.0
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '1WI76F5lXa0FssEbnpF4to']",3VxTlzirfBJP4EQAO7wXlb,Beethoven: Egmont (Musik zu Goethes Trauerspiel),1970,1.0,1.0
+"['4NJhFmfw43RLBLjQvxDuRS', '7vEPPI71V8dEHtEhPMAxWT', '38ghpVkkvBf5wugUg4HW4G', '7GqzUP7TApb2wPZ7pxlDeN', '0C2pfDSe4uoEySnSAnLtWV']",1MpfFjtyzEAkO015HQ9miA,Mozart: Così fan tutte (Highlights - Sung in German),1970,1.0,1.0
+"['4NJhFmfw43RLBLjQvxDuRS', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '38ghpVkkvBf5wugUg4HW4G', '7GqzUP7TApb2wPZ7pxlDeN', '0C2pfDSe4uoEySnSAnLtWV']",0Wveiiws5y5TFSCiabh1Vy,Mozart: Così fan tutte (Highlights - Sung in Italian),1970,1.0,1.0
+"['4NJhFmfw43RLBLjQvxDuRS', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '38ghpVkkvBf5wugUg4HW4G', '7GqzUP7TApb2wPZ7pxlDeN', '0C2pfDSe4uoEySnSAnLtWV']",3zrXxb3DhVXhNtGlwto5QW,Mozart: Così fan tutte (Sung in Italian),1970,1.0,1.0
+"['4DbJoGzXH9z7pHBeQDKYum', '7vEPPI71V8dEHtEhPMAxWT', '4A4svVPv1xNWVnxmBUGqOa']",1E1IEEbDc30lvOp9FXYlx0,Opera Arias: Reiner Süß,1970,1.0,1.0
+"['4NJhFmfw43RLBLjQvxDuRS', '0C2pfDSe4uoEySnSAnLtWV', '7vEPPI71V8dEHtEhPMAxWT', '38ghpVkkvBf5wugUg4HW4G', '7GqzUP7TApb2wPZ7pxlDeN', '4wNOTbz747NyaVl8s3xp3Y', '24EezopxC40vYAawXSzfsV', '2zCZBL5mKZKYYDY0bAlj5e', '1sCr0XM1vS3zbG5okf4Kos', '1hlNHzgLsqzIncibIVqg49', '7AKRF57V1mYqufJJyS7a5V']",44mzsQKFoTqYKt1THLbYCC,"Mozart: Così fan tutte, K. 588",1970,,
+"['7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",3D2Erb7eNcgX17F9UfB6Bp,Mozart: Italian Opera Arias,1970,,
+"['4NJhFmfw43RLBLjQvxDuRS', '0C2pfDSe4uoEySnSAnLtWV', '6MO3RpWBXLjFyRSCEhYGCY', '7vEPPI71V8dEHtEhPMAxWT']",1OvNHhC0dk1UWviPToxUVC,Wolfgang Amadeus Mozart: Cosi fan tutte (Highlights) [Suitner],1970,,
+"['1akEXB2e2ObGj1Exx4Xf20', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej']",2k8hDzDBLKErcavmOVzlVP,Dessau: Puntila,1969,1.0,1.0
+"['7vfydQ0nVBVgJ0ajs8EtRM', '7jM5d1l2t2UVa3mDT9eXXZ', '7vEPPI71V8dEHtEhPMAxWT', '4AQSOPmi2ky2sJPs0YoVts']",2ABTF3yVm1w62e08qEYg0P,Gluck: Music from Operas,1969,1.0,1.0
+"['3rpg4ZYZD022PbJxXLUJ8z', '6A8If241GLd95nEi8Xmpbi', '6cUYZJqxCW99qLCxZv6xpU', '2HW4KPDKfkj7Q3T8F5jw6i', '7vEPPI71V8dEHtEhPMAxWT']",1cFgjUjO34MueKb3pCr0zp,Eisler: Nonett No. 1 & 2 / Vierzehn Arten den Regen zu beschreiben,1968,8.0,8.0
+"['7GqzUP7TApb2wPZ7pxlDeN', '7vEPPI71V8dEHtEhPMAxWT', '37Lr1lIJy824MQIENRUnZn']",6P87ue6oTLE9d7yyRprz7m,Theo Adam singt aus russischen und italienischen Opern,1968,1.0,1.0
+"['72auy9NefUbGecYVrTiPzq', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '3U3J7QBEVYXjfoKsNPjFiU']",6J2r8uVTQ1eA8UeDlBQih2,Leoncavallo: Der Bajazzo (Highlights - Sung in German),1967,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '7GqzUP7TApb2wPZ7pxlDeN', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",08oiERJIOhvxt59NYdA6Uu,Theo Adam in Opernszenen von Richard Wagner,1967,1.0,1.0
+"['7vEPPI71V8dEHtEhPMAxWT', '3Vfvyx6OouTxYU3emXonW7', '0C2pfDSe4uoEySnSAnLtWV']",0rK5CJIh6TjF3QeN6inirj,Wagner & Strauss: Famous Opera Scenes (KulturSpiegel - Eterna - Über Grenzen Hinaus),1967,,
+"['0roWUeP7Ac4yK4VN6L2gF4', '7vEPPI71V8dEHtEhPMAxWT', '7JmTkt7IiJhrl60ngVw5JS', '38ghpVkkvBf5wugUg4HW4G', '3gdchu3GRExh4tF8ypQc9Y', '0C2pfDSe4uoEySnSAnLtWV']",79nNzLQ205sir8b1bZVz0c,Rossini: Der Barbier von Sevilla (Highlights),1966,1.0,1.0
+"['1JOQXgYdQV2yfrhewqx96o', '7vEPPI71V8dEHtEhPMAxWT', '4A4svVPv1xNWVnxmBUGqOa']",6oyGwHOh1BxhifILQGAv6r,Verdi: Don Carlos (Highlights),1966,1.0,1.0
+"['1akEXB2e2ObGj1Exx4Xf20', '1eqqyXFOa1ig4AroJALywV', '6FtkHbuiDvmjL84LQPEIFA', '3lUTFoSxhZ8fIwmOnNGXwt', '7vEPPI71V8dEHtEhPMAxWT', '3hW0B3rp5YQYKV4Kial1II']",1gL0JgjSeJrM7XrN7FVoI8,"Dessau: Orchestral Music, Vol. 1 (KulturSpiegel - Eterna - Über Grenzen Hinaus)",1966,,
+"['1akEXB2e2ObGj1Exx4Xf20', '1eqqyXFOa1ig4AroJALywV', '6FtkHbuiDvmjL84LQPEIFA', '3lUTFoSxhZ8fIwmOnNGXwt', '7vEPPI71V8dEHtEhPMAxWT', '0SlNRZ8zBLAgyB1lsoYxAa']",3N06MNAppi81ghdAPyrPpI,"DESSAU, P.: Orchestral Music, Vol. 1 - In memoriam Bertolt Brecht / Bach Variations / Orchestermusik No. 2, ""Meer der Sturme"" (Dessau, Kegel, Herbig)",1966,,
+"['6n7nd5iceYpXVwcx8VPpxF', '0C2pfDSe4uoEySnSAnLtWV', '5tQs2q4OYuqqHL2a5u4B61', '0SlNRZ8zBLAgyB1lsoYxAa', '7vEPPI71V8dEHtEhPMAxWT']",6IQ6O4gzEB9QtDNiLDFvq2,Dvořák: Symphony No. 9 & Slavonic Dances (Schätze der Klassik),1966,,
+"['3Vfvyx6OouTxYU3emXonW7', '7vEPPI71V8dEHtEhPMAxWT', '0C2pfDSe4uoEySnSAnLtWV']",1ZsiGshbtSFx4kh3EfStHZ,"Otmar Suitner - Kapellmeister-Edition, Vol. 5",1966,,
+"['2fg5h5pzleqI4RjFopWroj', '7vEPPI71V8dEHtEhPMAxWT', '6XCooPNQ2PpgwJaXggWFek', '7uh9909Ar6wEIcjidg15IG', '4DbJoGzXH9z7pHBeQDKYum']",6naGBgogC7p1MoRPF8mtRH,Telemann: Pimpinone (oder Die ungleiche Heirat),1965,1.0,1.0
+"['7vEPPI71V8dEHtEhPMAxWT', '3dxW3ddXhprOEgMA8luTZz', '0C2pfDSe4uoEySnSAnLtWV']",2HW6lEdjCiRY8Y9gJWk0XT,"STRAVINSKY, I.: Rite of Spring (The) / PROKOFIEV, S.: Scythian Suite",1964,3.0,10.0
+"['1N72vLsnz1rjm05JHvCH02', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '4A4svVPv1xNWVnxmBUGqOa']",1FLE2BdXekejGDU7ZIZXtd,Lortzing: Der Waffenschmied,1964,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '1cBihwZ8egt2SssqmEzDAL', '1Txb4H69qwYQj2ZysUnIPW', '0U6zTVT8xMUjYi3CMRUqJd']",5JeJNXD3yFeOJF6r8JH7oY,"Wagner: Tannhäuser, Extracts (Mono Version)",1963,1.0,1.0
+"['0OzxPXyowUEQ532c9AmHUR', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '6wrYpseoCGos4kKpX5KGgI', '3U3J7QBEVYXjfoKsNPjFiU']",45T1vLVegVSTGzEWQYguwm,Puccini: Tosca (Sung in German),1962,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '6elpmIDuaxq3RDYe3DmxtS']",1xIEqu3u3mJWyDl8bZePOv,Wagner: Der fliegende Holländer (Highlights),1962,1.0,1.0
+"['1fiVwfyL3nKnmVz7580kET', '4GHqXZ3T0o9Ul681G5Iw5T', '6MO3RpWBXLjFyRSCEhYGCY', '7vEPPI71V8dEHtEhPMAxWT']",1JpOzPmE8WFMEMhxiYWpxB,"FLOTOW, F. Von: Martha (Opera) [Schuler] [1944]",1962,,
+"['1C1x4MVkql8AiABuTw6DgE', '6elpmIDuaxq3RDYe3DmxtS', '7vEPPI71V8dEHtEhPMAxWT', '0IHKIQSidnh9uNNNl8UzAJ']",7LeEyWbYp1lbl8Hhzy24lY,Richard Wagner: Fliegende Hollander (Der) [The Flying Dutchman] [Opera Excerpts] [Konwitschny],1962,,
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '6elpmIDuaxq3RDYe3DmxtS', '4CBoMjf2tMOqEeROUXh0QT']",2Cci2NXZfjGDbupTEE3EDM,Wagner: Der fliegende Holländer (Mono Version),1962,,
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '6elpmIDuaxq3RDYe3DmxtS', '4CBoMjf2tMOqEeROUXh0QT']",0aFx4JnWcUJegKH2Rc0LLk,Wagner: Der fliegende Holländer (Stereo Version),1962,,
+"['0OzxPXyowUEQ532c9AmHUR', '0KLsfTW9toRLas36xEOdgC', '4dW7VH5quGKmezSgxMLc0g', '0ae6kKxCxMKpuNSquHuJQL', '10CN8N2O3FlGlPVJWBiu5D', '54EeO4W6f2vD5Q3xMWLVdH', '40FaSOClo0EIcHf8rt7LqE', '2stUd4tmwi4JSUSfd2DqAX', '7vEPPI71V8dEHtEhPMAxWT', '3oMVmRtKDs3zgLiuU8tyr8', '6cpYyAUU7Lk5cgd70bbtlF', '2FBPLNI3b0QVahCOhyl2Ej']",1py6EEywtGjwyiurRv6QWK,Puccini: La Bohème - Highlights (Sung in German),1961,8.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '0zTyIQF8geFUI5op5Ocimg']",0oK9G2PqcIKiVjey1FN6xP,Wagner: Das Rheingold (Highlights),1961,1.0,1.0
+"['1C1x4MVkql8AiABuTw6DgE', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '6elpmIDuaxq3RDYe3DmxtS']",62Ouz8FuQWwwcNxXOEcknN,Wagner: The Flying Dutchman (Sung in German),1961,1.0,1.0
+"['6XCooPNQ2PpgwJaXggWFek', '3EtufKY05Q7LhfoncRzxRw', '6FtkHbuiDvmjL84LQPEIFA', '0C2pfDSe4uoEySnSAnLtWV', '4MKDrJjAKlesy91eGPSHIK', '3UvGtrFjZQLFRwn9bVEZ86', '4c8PTNXKpQpQ68894cqA8K', '15QTSK7NBFJawaoxQALt9s', '3Vfvyx6OouTxYU3emXonW7', '03C9IJtseK0NX9zw53URjF', '6BDj7fivtyk9tZMcBwmywK', '7vEPPI71V8dEHtEhPMAxWT', '40dM0igFWtZBWlQHSm7Ppj', '7JmTkt7IiJhrl60ngVw5JS', '7uvtOxN9rtpkwRZ7YSfH9R', '5pdCZaDIJipH7hKPVDpctz', '76HODsD07qiiAFoxCaMVIz', '7AKRF57V1mYqufJJyS7a5V']",7eHRTib5NrbUHhOlKlMVTE,Song of Joy (The finest choirs),1961,,
+"['0zTyIQF8geFUI5op5Ocimg', '7vEPPI71V8dEHtEhPMAxWT']",6mnjMUlj9LPvV7YXaJU46G,Wagner: The Rhinegold,1961,,
+"['72auy9NefUbGecYVrTiPzq', '2FBPLNI3b0QVahCOhyl2Ej', '7vEPPI71V8dEHtEhPMAxWT', '3U3J7QBEVYXjfoKsNPjFiU']",2n1nbbxGwig8VC29xnWP5l,Leoncavallo: Der Bajazzo (Pagliacci - Sung in German),1960,1.0,1.0
+"['7vEPPI71V8dEHtEhPMAxWT', '3oMVmRtKDs3zgLiuU8tyr8', '2FBPLNI3b0QVahCOhyl2Ej']",0FoICy5Xxtwx22LajSB8Of,Puccini: La Boheme,1960,1.0,1.0
+"['1JOQXgYdQV2yfrhewqx96o', '7vEPPI71V8dEHtEhPMAxWT', '2FBPLNI3b0QVahCOhyl2Ej', '1PcmDPoDizKeZDOjdWfuTD']",04g9X51xxxuMSfGGSsOL3M,Verdi: Rigoletto,1960,1.0,1.0
+"['3hW0B3rp5YQYKV4Kial1II', '7vEPPI71V8dEHtEhPMAxWT', '6elpmIDuaxq3RDYe3DmxtS']",1Y81dvvy6g7UK5NSBjvBU6,"Bach: Violin Concertos BWV 1042, 1043, 1052 & Vivaldi: Concerto for 2 Violins",1960,,
+"['1C1x4MVkql8AiABuTw6DgE', '3lUTFoSxhZ8fIwmOnNGXwt', '7vEPPI71V8dEHtEhPMAxWT', '6elpmIDuaxq3RDYe3DmxtS', '6FtkHbuiDvmjL84LQPEIFA', '3Vfvyx6OouTxYU3emXonW7', '4d9YDMvrULZ7CQrONKAs5N', '0C2pfDSe4uoEySnSAnLtWV']",5dzaFhYcnFj3s60G9FuAQf,Wagner: Opera Overtures,1960,,
+"['1C1x4MVkql8AiABuTw6DgE', '4d9YDMvrULZ7CQrONKAs5N', '0C2pfDSe4uoEySnSAnLtWV', '6elpmIDuaxq3RDYe3DmxtS', '6FtkHbuiDvmjL84LQPEIFA', '3Vfvyx6OouTxYU3emXonW7', '7vEPPI71V8dEHtEhPMAxWT', '7gzOe7Xcjnq7qrq1Sa34yj']",0HMvRo13y1Wiqf6RBuMXJY,Wagner: Overtures (Schätze der Klassik),1960,,
+"['2wOqMjp9TyABvtHdOSOTUS', '7vEPPI71V8dEHtEhPMAxWT', '5fKj8IWs9IV1F2xerI6SGD']",6t3xChpHMaTn9L9VZkUUXF,"Beethoven: Symphony No. 6 in F Major, Op. 68 ""Pastoral""",1930,1.0,1.0
+['7vGn3agBBvJGpBaM44r2w0'],4jgDc9FYCZUY80rVBTKYQ2,Galaxy,2023,1.0,25.0
+['7vGn3agBBvJGpBaM44r2w0'],0HBtvzCPu501kN2MSZUiT1,Gravity Zero,2021,10.0,14.0
+['7vjRpVXoecwKTEsrb9iscj'],2N2D3TzH9vw0kUu4UOpezT,Derealised,2023,1.0,23.0
+['7vjRpVXoecwKTEsrb9iscj'],08oR5PmpCJQ9FfWjsQtpXc,Hyper Romance,2020,9.0,25.0
+['7vjRpVXoecwKTEsrb9iscj'],4aakJBO52AmbAK0sMy8blA,Melt Away,2019,8.0,16.0
+['7vjRpVXoecwKTEsrb9iscj'],4EkqE2JXRncij9Yu4EPtv0,Wanderflower,2016,4.0,7.0
+"['1H4OM3G1SuVqCSCghcRTf7', '7vmPMgMgEfADh0OqICwLyS']",33V414VkmxFiSXVoHLK88P,Third Stone,2021,11.0,19.0
+['7vmPMgMgEfADh0OqICwLyS'],0bY6oQ9tmpwYdXVNY85RLm,Deemix Instrumentals,2019,7.0,22.0
+['7vmPMgMgEfADh0OqICwLyS'],5Bv1b2827cCLqWxbSoDpF6,33 and a Third,2013,7.0,23.0
+"['7vmPMgMgEfADh0OqICwLyS', '7iqa9qaxW2qS9ZrVs9w8sj']",3BtYV5O1ynh8IFAuHc6W7t,Gravity,2010,4.0,1.0
+['7vmPVxp5ezmkecYoL1z9Pe'],0gzXnR5aNxMdxAAWCZaRvE,That's Just Me,2018,3.0,20.0
+['7w8MO4I9IZiRvjyBkFaNjp'],0OC5oP8dCAAfbzJ3EJfW1Z,Tales of Interest,2017,2.0,21.0
+['7w8MO4I9IZiRvjyBkFaNjp'],67wl1bqZe1drwb08tluBKn,Vices,2012,,
+['7w8MO4I9IZiRvjyBkFaNjp'],41oxNS6eSgmF7JlRA9fe7m,Expect the Worst,2010,6.0,28.0
+['7w8MO4I9IZiRvjyBkFaNjp'],0YqKNGuLEYu99Ipl9tESFU,The Dopamines,2008,6.0,15.0
+['7w8xMJxmzaZeeHRV8eToLT'],69MhDrxXT730rSnZ6nmXpt,Just Called to Say,2021,6.0,18.0
+['7w8xMJxmzaZeeHRV8eToLT'],71cmPnGco8aZf43LoNPW4X,Just Called To Say,2021,6.0,17.0
+['7wBfoMAxS8VHDwIFnh6cVi'],7jJSqaFwQ8Z4Yk03sF8nRd,The Acoustic Sessions,2019,8.0,20.0
+['7wBfoMAxS8VHDwIFnh6cVi'],2MYHRtEYGCnaiuZ5mR1h4I,Nothing Can Save Us Now,2011,12.0,6.0
+['7wBfoMAxS8VHDwIFnh6cVi'],5Btln5dwcFwLFOS0HIRNgp,Archetypes and Repetition,2007,,
+['7wVuZwAlAYSuSs0LbFOZRT'],5hB8Ev5a6VpGQ32arUt7fn,Full Length Album,2019,7.0,29.0
+['7waAdUdVySPnnQcHbj1rwv'],2ZHqe1ygbdPvLBa7Nb5FdB,Distance: Lost Tapes,2021,4.0,2.0
+['7waAdUdVySPnnQcHbj1rwv'],5pIavZRIGX9Hx7aQssYODA,Tides,2020,11.0,11.0
+['7xN8vFwslE67EC3DhgB9Ip'],5c4PIc375Qao2jz3pqgydG,This One's For Chuck Brown: Doug E. Fresh Salutes The Godfather of Go-Go (Live),2021,9.0,24.0
+"['1uUD5SMoYm4StT8W3ZE5Lq', '7xN8vFwslE67EC3DhgB9Ip']",7yo9P6ovwIIOTi2hHDoPyf,Too Playa,2020,7.0,24.0
+['7xN8vFwslE67EC3DhgB9Ip'],5vENggvAF47Nn791ufeWTX,Play,1995,9.0,26.0
+"['7xN8vFwslE67EC3DhgB9Ip', '0wEy2FAP7OnwwxIlcWtOXK']",3jaA1U67ty5UsP8ZMBHykG,The World's Greatest Entertainer,1988,5.0,31.0
+"['7xN8vFwslE67EC3DhgB9Ip', '0wEy2FAP7OnwwxIlcWtOXK']",5Qm3NGTMokkS3uT9mD4pO0,"Oh, My God!",1986,7.0,7.0
+['7xTKLpo7UCzXSnlH7fOIoM'],2V8J1sTedyR0Ucuhq1zcEQ,Mudface,2015,11.0,13.0
+['7xTKLpo7UCzXSnlH7fOIoM'],5LBNlqSF7Ejm50wFcZ83zN,Mudface,2015,11.0,13.0
+['7xTKLpo7UCzXSnlH7fOIoM'],2NUagqIK3CI0DtZrqMtbPT,Redman Presents...Reggie,2010,12.0,7.0
+['7xTKLpo7UCzXSnlH7fOIoM'],4VENqymNKYBIblYSdg9vrT,Redman Presents...Reggie,2010,12.0,7.0
+"['4VmEWwd8y9MCLwexFMdpwt', '7xTKLpo7UCzXSnlH7fOIoM']",1MJ7sx0uZvNZlSTVSiEVGR,Blackout! 2,2009,1.0,1.0
+"['4VmEWwd8y9MCLwexFMdpwt', '7xTKLpo7UCzXSnlH7fOIoM']",3q3WGuQFwBMwoiWkIyZwVP,Blackout! 2,2009,1.0,1.0
+"['4VmEWwd8y9MCLwexFMdpwt', '7xTKLpo7UCzXSnlH7fOIoM']",1JtoN6UDMJczkjKnZJDzy6,Blackout! 2,2009,1.0,1.0
+['7xTKLpo7UCzXSnlH7fOIoM'],6By53is534hLrE8PLSVjt5,Red Gone Wild,2007,3.0,27.0
+['7xTKLpo7UCzXSnlH7fOIoM'],2lZ0gOTFfKALaArDm5brJD,Red Gone Wild,2007,3.0,27.0
+['7xTKLpo7UCzXSnlH7fOIoM'],3OccL9684tABKQvidYBulW,Malpractice,2001,5.0,22.0
+['7xTKLpo7UCzXSnlH7fOIoM'],0PMUPc7P3VM5mrrNCGA6ZJ,Malpractice,2001,5.0,22.0
+['7xTKLpo7UCzXSnlH7fOIoM'],1jfbIAan8jY1f7k44QF7lF,Malpractice,2001,5.0,22.0
+"['4VmEWwd8y9MCLwexFMdpwt', '7xTKLpo7UCzXSnlH7fOIoM']",5K9kD50P66neofCR8BoYxg,Blackout!,1999,1.0,1.0
+"['4VmEWwd8y9MCLwexFMdpwt', '7xTKLpo7UCzXSnlH7fOIoM']",3xhWXc2sc3msZvumTowPur,Blackout!,1999,1.0,1.0
+['7xTKLpo7UCzXSnlH7fOIoM'],1VgJ9FxJXQBbr0rXrTTiER,Doc's Da Name 2000,1998,12.0,8.0
+['7xTKLpo7UCzXSnlH7fOIoM'],1vq6dXbQO4zjnww7q1HPDs,Doc's Da Name 2000,1998,12.0,8.0
+['7xTKLpo7UCzXSnlH7fOIoM'],5iluV9CqP7Wl9wjubwdw5h,Muddy Waters,1996,12.0,10.0
+['7xTKLpo7UCzXSnlH7fOIoM'],08UhV7fX8X4wrSNLMVQ5H5,Dare Iz A Darkside,1994,11.0,22.0
+['7xTKLpo7UCzXSnlH7fOIoM'],3FsCGJY0JqSxvgezoMWYzF,Whut? Thee Album,1992,9.0,22.0
+['7xYldHloSckuP93hORkq8v'],4vEUkaZyhtmzqYq9Xt0W9f,"Alleine auf Parties – 18 gewöhnliche ""Hits""",2022,7.0,1.0
+['7xYldHloSckuP93hORkq8v'],0idUTPSy6sADhEt24n11p0,Gschichterln aus dem Park Cafe,2021,7.0,9.0
+['7xYldHloSckuP93hORkq8v'],1GHRQSAYGmTySqGDwVFmi2,"Fuck Dance, Let's Art",2019,8.0,23.0
+['7xYldHloSckuP93hORkq8v'],1g4DvWW8Byyiza72s1OExJ,It's OK to Love DLDGG,2017,7.0,14.0
+['7xYldHloSckuP93hORkq8v'],0z7AeEYiPPZnZoJXMns4uo,"Rüttel mal am Käfig, die Affen sollen was machen!",2016,1.0,15.0
+['7xYldHloSckuP93hORkq8v'],0HYlIvlbqACXSWKXrjMp0C,Alle Ampeln auf Gelb!,2014,,
+['7xYldHloSckuP93hORkq8v'],0214e0B9mPXehZLKjERLtK,Jeder auf Erden ist wunderschön,2012,,
+['7y70dch6JuuuNnwlsOQvwW'],4F0CjdewrCbNZ5k13SOs3T,Dirt Does Dylan,2022,5.0,20.0
+['7y70dch6JuuuNnwlsOQvwW'],0gKGJoymTgT8bVZKOIscl5,The Nitty Gritty Dirt Band The Rarities (Live),2022,4.0,14.0
+['7y70dch6JuuuNnwlsOQvwW'],1I402tvHVDB7VdZ9LVN7NQ,"Great American Radio, Vol. 9",2021,9.0,24.0
+['7y70dch6JuuuNnwlsOQvwW'],35vujsF1TMVuNHXe8aS5Ld,Steel Guitars And Stars (Live 1984),2021,7.0,27.0
+['7y70dch6JuuuNnwlsOQvwW'],4eAxfyc4g5QT20h3i6GDVt,Ultrasonic Studios '74 (Live WLIR Broadcast),2020,8.0,11.0
+['7y70dch6JuuuNnwlsOQvwW'],3eI6PUZit1cF2ty6l7sXjI,Anthology,2017,9.0,29.0
+['7y70dch6JuuuNnwlsOQvwW'],2Wjlh7SC5R4sEJrlCm5N8l,Circlin' Back - Celebrating 50 Years (Live),2016,9.0,30.0
+['7y70dch6JuuuNnwlsOQvwW'],2SMkMfQ1BF2CarmSdqGq50,"Dirt, Silver & Gold",2014,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],5zz4f8S0eQa8IcFUzLNWQ0,The Christmas Album,2012,10.0,7.0
+['7y70dch6JuuuNnwlsOQvwW'],7DuKntMjNqgzG1kviyqG5R,Unbroken! Live,2010,12.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],3MjcswHYmTHkQYkTbfG9je,Speed of Life,2009,9.0,21.0
+['7y70dch6JuuuNnwlsOQvwW'],21rek9k8WcIfcY0fmthNND,A Night With,2008,10.0,14.0
+['7y70dch6JuuuNnwlsOQvwW'],7xHXRFBrdxtz51sTUflaTB,Unbroken! Live,2005,9.0,15.0
+['7y70dch6JuuuNnwlsOQvwW'],6K1RXl4TAVQyCYUcA6KDLU,Welcome to Woody Creek,2004,9.0,21.0
+['7y70dch6JuuuNnwlsOQvwW'],61hDfx6YjvRKxceoP8F7oM,Symphonion Dream,2003,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],1e7UTqWSWjuU8mtA3BeQPl,Uncle Charlie And His Dog Teddy (Remastered),2002,12.0,26.0
+['7y70dch6JuuuNnwlsOQvwW'],7e1BJQovPkAFsewqgPBHQC,Will The Circle Be Unbroken (Vol. III),2002,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],2ZJcwgKQMSLyQAfBJsWfbD,Certified Hits (Remastered),2001,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],4o0OZFkee1ak4OmBfvDhbG,Bang Bang Bang,1998,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],3i3RVUFupe1OtTuTp5sQwC,Acoustic,1994,5.0,3.0
+['7y70dch6JuuuNnwlsOQvwW'],2eWelzTs6AE3PmxbXKYjxG,Live Two Five,1991,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],6Rh0dzfnsHQGi76uytM0Ox,The Rest Of The Dream,1990,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],0RX6I7fDn46N8P6lhm2I3h,Will The Circle Be Unbroken Volume Two,1989,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],2kBwV5Y7NVV0TDPj0Bss2a,"Live at the Crazy Horse Saloon, Santa Ana, California 1988 (Live: Santa Ana, California 1988)",1988,,
+['7y70dch6JuuuNnwlsOQvwW'],2KqMTt7g6AMAznKAqkRdf4,Workin' Band,1988,,
+['7y70dch6JuuuNnwlsOQvwW'],5ToL8KapdzZAMtOT7Y4USs,Hold On,1987,4.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],1P3Tnm3C57Fyz4amCwQBDA,"Partners, Brothers and Friends",1985,,
+['7y70dch6JuuuNnwlsOQvwW'],4oRs7K2HbyxhoZ2sQqKshI,Plain Dirt Fashion,1984,,
+['7y70dch6JuuuNnwlsOQvwW'],4ayaIbRXovJA2SM3Zj6Tj0,Super Hits,1984,,
+['7y70dch6JuuuNnwlsOQvwW'],5vAJMr1xa5kqgKEoKCsdxd,Unbroken Live!,1984,,
+['7y70dch6JuuuNnwlsOQvwW'],1Uj1OO9x10cplKgaJG2zXA,Let's Go,1982,,
+['7y70dch6JuuuNnwlsOQvwW'],6u5tgxIxACyv4DavAupJc9,Jealousy 81',1981,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],7hd0MbxF0wWBjiOdxEmrmu,Make A Little Magic,1980,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],2AiZFtDyhJRezHIZNUal33,An American Dream,1979,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],2UsMx2U2owD7qf7G1JugKD,Dirt Band,1978,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],01d9OZQwyzsy0V7SAXPFsk,Stars And Stripes Forever,1974,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],1dfvcFHSox0YKcPMxDrLIs,Will The Circle Be Unbroken,1972,,
+['7y70dch6JuuuNnwlsOQvwW'],6PJqSoTbzNqGKq2HPtVlod,All The Good Times,1971,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],0kIFu14QtpI9QliWTEa5Ri,Alive (Live),1969,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],5605wGiJzsOGfRxFVcJ0SZ,Rare Junk,1968,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],0DN4wQiJcYhIArdTmqvl9k,Ricochet,1967,1.0,1.0
+['7y70dch6JuuuNnwlsOQvwW'],2DZ42BpTENMCTr5PX1XMFM,The Nitty Gritty Dirt Band,1967,1.0,1.0
+"['7FbRMKnEMBCrHfeatwi1o8', '7yMiuoCJXv4Qsj6HwZrMAg']",5Rez64SJbDpaPQ9Dy9qEED,La Pie Bavarde,2022,12.0,14.0
+['7yMiuoCJXv4Qsj6HwZrMAg'],0pfqAgFJMp8V4aLFdLyBof,Chababi Project (Musique inspirée de la série TV),2018,11.0,18.0
+['7yMiuoCJXv4Qsj6HwZrMAg'],6NUmWHLU4uSSK4GumLlK3E,A Bunch of Funk,2015,,
+['7yMiuoCJXv4Qsj6HwZrMAg'],1rrJVghUHTKZRMHt8jWMOu,Return Of Dirty Dezer,2010,1.0,11.0
+['7yMiuoCJXv4Qsj6HwZrMAg'],7GwQGfO3ftK3mcn5t2OlYU,Dirty Dezer,2008,7.0,2.0
+['7ySGZcqhTpH02Is5MZ0cfU'],3He2KXRBqvNyyGlDnB99L9,Full Time Magic,2015,5.0,1.0
+['7ySGZcqhTpH02Is5MZ0cfU'],4m4clC9sC4UfxwSQTj6Di9,Yelled at by a Clown,2012,9.0,18.0
+['7yZC6AEhvCD5NFR8yDUxCG'],1fVyZLsUGyDJcqgRfq8wZ2,Godsend,2021,6.0,4.0
+['7yZC6AEhvCD5NFR8yDUxCG'],5ohqdo4XbIiFKqa8rBJI2w,Godsend (Deluxe),2021,6.0,4.0
+['7yZC6AEhvCD5NFR8yDUxCG'],6buAN2fp3zo5JhNZN45QY2,Riley Clemmons,2018,8.0,3.0
+['7zC8Dq1lkaEADdWmRiNV0j'],16L3AoU7WMBz2rvS9kzIvV,Life Is Pain,2021,10.0,22.0
+"['5YR5GcLQEpfPxi14AUoXEP', '4piihII80Liyq3GWGZ4Vbk', '7zCpSQFdBw585iUpiKHKy9']",6UluMGmjdYkESLnIfDxc8Z,Ambient Rain: Calming Sounds for Scared Pets Vol. 1,2023,3.0,1.0
+"['7zCpSQFdBw585iUpiKHKy9', '3cVdiz4LN31uIJ3GUEys2A', '2I8E7JNw5kkQ4BEvGXuAKE']",3tnvfOhz2xw37wqnA5daLW,Binaural: Restrained Sound Cliche,2023,2.0,21.0
+"['5BQMZfKjZ9VUAy25OjA629', '7zCpSQFdBw585iUpiKHKy9', '6h8E3knoqOJZNvQru53jjL']",5GJWB7ZLz0g4cF6Lyw34XU,Stress-Reducing Sounds of BINAURAL Vol. 1,2023,2.0,16.0
+"['35l4UmwDxuH4Q0HICY1DiQ', '7zCpSQFdBw585iUpiKHKy9', '0kFDsYZBzXak0gNm0hvbcE']",76AvBt3h12j8nJjWz58Eat,Ambient Rain: Rain Background Check,2023,2.0,7.0
+"['7zCpSQFdBw585iUpiKHKy9', '5EXbop7SoRbPG39no1hrWk', '0mJjUpREqz6zBAhL6PpEdL']",1eRjhfq3J1FhJOMY3Jn9tg,Binaural: Consoling Hypnotic Effect,2023,2.0,7.0
+"['5HsZXEN2ubcsGH2Ek7ivEO', '7zCpSQFdBw585iUpiKHKy9', '4cLL1tDQQRdfwmrFllKl2w']",3UWSmmyK6hbEwe4oViFe4o,Binaural: Inclined Serenity for Dogs,2023,2.0,3.0
+"['6jdXzmcf0crcLQOkn58oLQ', '7zCpSQFdBw585iUpiKHKy9', '0i427rmFO91za6EZmhbSCh']",2pjmUjfkbHjqFREbvq7SEe,Rain: Calming Sound for Stressed Dogs Vol. 1,2023,2.0,2.0
+"['0wmr2DRyX5KQcSv2jS6ydi', '7zCpSQFdBw585iUpiKHKy9', '0Arishrmlwe4du7hAttSw2']",2jtvQNIJ4csKupy3ghmWYK,Rain: Lonely Rainy Hours,2023,2.0,2.0
+"['5i2JKg9O2zy5LwcBglqrZb', '1hveNL0VYpvbkaA22SqR7W', '7zCpSQFdBw585iUpiKHKy9']",6jT528VIoGXFBcMm0C06Te,Cure Insomnia with Soothing Night Rain Vol. 1,2023,1.0,31.0
+"['7zCpSQFdBw585iUpiKHKy9', '6PFI5OOK60CzlyJlR1aVGR', '26jQypcjdLzznue1TKzfaU']",2m60SlC213KCSLXVrA9ErP,Hot and Wild Blaze of Fire Vol. 1,2023,1.0,19.0
+"['7zCpSQFdBw585iUpiKHKy9', '3jPQ7LFqubjGZx4Dr7AqqJ', '6pqXF3LLOM9dYBXAE9xUMn']",3cEpDgQvnx8NfRi70oEJhm,Piano & Rains: Relaxing Rain Music To Feel Relaxed,2023,1.0,10.0
+"['7zCpSQFdBw585iUpiKHKy9', '02az7Ywux0nojnEWY4HlUK', '7DAgPe288ujGGpRQ31FuSZ']",7rHyUUDGgXIvCvr2oM44SL,Rain Music: Gorgeous Rain Vol. 1,2023,1.0,9.0
+['7zCpSQFdBw585iUpiKHKy9'],3AlZmwmzJQuz330zApGorj,2022 Woof Christmas,2022,12.0,25.0
+"['7zCpSQFdBw585iUpiKHKy9', '3SsAh8QfMelM1BOXdEbASc', '0dGECGCEw1Krr4MTMmOhsi']",5eyeB77kBDCkLe0V5XUJmF,Sounds For Pets: The Best Selection Of Water Sounds For Animals,2022,11.0,30.0
+"['7zCpSQFdBw585iUpiKHKy9', '1CBbKj7iORJ5c6Kzhx6fAC', '5ma4jvnQUD3f5hdNRoEBHS']",3weHhbOekkobkQMm5fNQM4,ASMR: Gentle Tapping Sound Triggers for Sleep Vol. 1,2022,11.0,24.0
+"['7zCpSQFdBw585iUpiKHKy9', '3hbAGbjrJ4esXMyjnzODz7', '3zG3fwEK20npYHIYooztq9']",3eRvRQaXgfCIjzsIp5ehWj,Waterfall Music Pure Relaxation Vol. 2,2022,11.0,3.0
+"['7zCpSQFdBw585iUpiKHKy9', '72fkL909F5HjZ1otr3mT8D', '0dGECGCEw1Krr4MTMmOhsi']",0rvjgECbkdnVtXKG042uuc,Music For Pets: A Soothing Ocean Atmosphere For Your Cats & Dogs,2022,10.0,29.0
+"['6SJX6moiTKAOvrjJeT5RxY', '7zOUqqG3b4xdYFBlh6I7se', '7zCpSQFdBw585iUpiKHKy9']",2NxXtR8jYLfdd90oqM3d40,Happy Pets: Peaceful Birds & Forest Sounds To Relax Your Dear Pets,2022,9.0,28.0
+"['7zCpSQFdBw585iUpiKHKy9', '1DFgc8zoVRppZkdpeBU6GF', '2KFSAZKp9UT54wbNGmv4si']",5098osIpviLoWir1kFWUd9,4 Paws Relaxing Music Therapy Vol. 1,2022,8.0,17.0
+['7zCpSQFdBw585iUpiKHKy9'],1HtIiO98nyQFwyCB9xj6bM,For Pets Left at Home,2022,2.0,3.0
+['7zCpSQFdBw585iUpiKHKy9'],5Czf0nA2Rf03idfD7u2Bu5,4 Dogs: Dream of Calming Down,2022,1.0,27.0
+['7zCpSQFdBw585iUpiKHKy9'],04gGEScSaZWzOMQG8frkPz,Dog Dreams of of Roll Over,2022,1.0,27.0
+['7zCpSQFdBw585iUpiKHKy9'],7x4bTvHXdG7bwP0hc6h50d,Feelings for Dog Walks,2021,10.0,27.0
+['7zCpSQFdBw585iUpiKHKy9'],4e3Yzq6zcA1RZw6ZAhdetD,Guitar Chill Out - Background for Time With Pups,2021,10.0,25.0
+['7zCpSQFdBw585iUpiKHKy9'],2EX8B7zDQuO61vOaKkPyTv,Dream of Fetching Sticks,2021,7.0,22.0
+"['6YPCpfY9LR0VLAemnNWef9', '7zCpSQFdBw585iUpiKHKy9']",6MjAqswsTZl3xansQrQWJu,2021 Perritos Queridos y Pequenitos,2021,4.0,15.0
+"['6YPCpfY9LR0VLAemnNWef9', '7zCpSQFdBw585iUpiKHKy9']",1CRNNtH07GBmy8tSzzGoRy,2021: Mejor para Perritos,2021,4.0,8.0
+['7zCpSQFdBw585iUpiKHKy9'],0G6Ohq9KwYFTILfZytJJax,Relax that Beloved Dog Woof 05,2020,12.0,28.0
+['7zfhej6FnVXN9LIXs6dcoK'],2vKdLUG7cFgaSUjiwS8LgS,Mondo Pulp (Live in Europe 2016),2019,9.0,17.0
+['7zfhej6FnVXN9LIXs6dcoK'],6iqVPz0sZ6pRh4iKZHxFNc,Bondage at the Bush,2018,5.0,21.0
+['7zfhej6FnVXN9LIXs6dcoK'],3OABG7R9TZUUhwefagwXki,The Musikladen Concert 1981 (Live),2016,,
+['7zfhej6FnVXN9LIXs6dcoK'],4PAEnhMg72dGgKOEkDlBw0,Live At German Television: The Musikladen Concert 1981,2016,,
+['7zfhej6FnVXN9LIXs6dcoK'],2svdgLVITGJahaFQvenOHV,"Legends Live in Concert (Live in Denver, CO, 1976)",2006,6.0,30.0
+['7zfhej6FnVXN9LIXs6dcoK'],0Lm1Z0SrISk8Ff0cJTU4z3,Alive In America,2006,,
+['7zfhej6FnVXN9LIXs6dcoK'],2h0J36X3ryelWC1ECOT1uk,Wild in London,2005,,
+['7zfhej6FnVXN9LIXs6dcoK'],5i6lfhDDFSTRfTtqUU87hd,Love Bomb,1985,2.0,1.0
+['7zfhej6FnVXN9LIXs6dcoK'],2WiDQ5arP6dQ5unzoTJ0UH,Outside Inside,1983,,
+['7zfhej6FnVXN9LIXs6dcoK'],3YVb9ns1i0WdzF1cdnLYWi,The Completion Backward Principle,1981,,
+['7zfhej6FnVXN9LIXs6dcoK'],12kbRL9t2VzUkFcESvku9U,Remote Control,1979,1.0,1.0
+['7zfhej6FnVXN9LIXs6dcoK'],3rnFGSkNvx5FbBUa49gRZv,Remote Control (Expanded Edition),1979,,
+['7zfhej6FnVXN9LIXs6dcoK'],2zVXqIqrSCv58BPJjCvhfC,What Do You Want From Live (Live From Hammersmith Odeon),1978,11.0,25.0
+['7zfhej6FnVXN9LIXs6dcoK'],3iUTduBU0vwPTvq0jhOZKz,Now,1977,1.0,1.0
+['7zfhej6FnVXN9LIXs6dcoK'],4W3xYHm08YL8VPG69jQM20,Young And Rich,1976,1.0,1.0
+['7zfhej6FnVXN9LIXs6dcoK'],3ZirKFZ0s8jbw2eX8dD4dR,The Tubes,1975,1.0,1.0
+['7zo6jk8NbtPMqcSpGM7v67'],4w7weoRJLHuoVHN5Qb0ILI,Achievement Unlocked The Final Fantasy,2023,2.0,24.0
+['7zo6jk8NbtPMqcSpGM7v67'],5SKt1rjumpYVrHYThUPann,Doujinshi Paradox,2022,12.0,30.0
+['7zo6jk8NbtPMqcSpGM7v67'],02eUgn9NtHyoMcgim2cVdV,Rest Or Revive,2022,11.0,18.0
+['7zo6jk8NbtPMqcSpGM7v67'],75aZitv4C25sCG2TuAGASY,Music To Be Murdered,2022,8.0,19.0
+['7zo6jk8NbtPMqcSpGM7v67'],7FpbMolvrq2tDTMgk2HpnP,Vibe & Chill Beattape,2022,5.0,27.0
+['7zo6jk8NbtPMqcSpGM7v67'],1vdlu0JY5yP931TtxoxXxB,The Creation Of Dice,2022,4.0,1.0
+['7zo6jk8NbtPMqcSpGM7v67'],0YDeXM4lgu8P7PCurZ5tSy,Dice $hades Beats Series 2,2022,2.0,11.0
+['7zo6jk8NbtPMqcSpGM7v67'],0kzim6SnHPwrEyZQWRvB3i,Game Over Was It Worth The Shades?,2020,12.0,25.0
+['7zsszvWNKWDrFOLt2tLC5u'],4JpPMfD1WkIJtmLTsfcOkJ,Only a Country Heart,2015,7.0,23.0
+['7zt6Af78CalxaPDqORfw8L'],1dMkUqXlm5b3JxSzBmVIX5,Dark Hearts,2020,10.0,16.0
+['7zt6Af78CalxaPDqORfw8L'],73OF44oPTmFLeiYCEDwolG,Don't Stop,2009,10.0,19.0
+['7zt6Af78CalxaPDqORfw8L'],4hY6mUjQHk2Q0g1ZnVphJy,Don't Stop (Bonus Track Version),2009,10.0,19.0
+['7zt6Af78CalxaPDqORfw8L'],2nATu4NYXHq3SXTYnSpZxe,Anniemal,2004,9.0,28.0
+['7zt6Af78CalxaPDqORfw8L'],4BPtCz0Ii1LuwOpDP2UoWK,Anniemal,2004,9.0,28.0
+['7zt6Af78CalxaPDqORfw8L'],3LN3dGIFGEqTjTDwTFFCj6,Anniemal,2004,9.0,28.0
+['7zt6Af78CalxaPDqORfw8L'],0VO3Vsf0gzRPEIKLwU53KI,Anniemal (US Version),2004,9.0,28.0
