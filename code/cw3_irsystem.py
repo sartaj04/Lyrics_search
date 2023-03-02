@@ -1,6 +1,7 @@
-#importing libraries
+# importing libraries
 from bs4 import BeautifulSoup
 import warnings
+
 warnings.filterwarnings('ignore')
 import itertools
 import math
@@ -9,6 +10,7 @@ import warnings
 from os.path import exists
 from stemming.porter2 import stem
 import pandas as pd
+import pymongo
 
 warnings.filterwarnings('ignore')
 
@@ -21,8 +23,8 @@ song_names = []
 def csv_parser(path):
     file_map = {}
     data = pd.read_csv(path)
-    song_names = data["title"].values
-    Lyrics = data["lyrics"].values
+    song_names = data["SName"].values
+    Lyrics = data["Lyric"].values
     content_list = []
     # for i in range(len(song_names)):
     #     content = str(Lyrics[i])
@@ -30,7 +32,7 @@ def csv_parser(path):
     #     content_list.append(content)
     #     file_map[song_names[i]] = content_list[i]
     file_map = dict(map(lambda i, j: (i, preprocess(j)), song_names, Lyrics))
-    return file_map,song_names
+    return file_map, song_names
 
 
 def stopwords(path):
@@ -52,7 +54,6 @@ def preprocess(text):
             if stem(word).strip() != "":
                 p_words.append(stem(word).strip())
     return p_words
-
 
 
 # generate inverted index
@@ -86,8 +87,46 @@ def output_index(pi):
             f.write(str(key) + ': ' + str(pi[key][0]) + '\n')
             for doc_no in pi[key][1]:
                 word_pos = pi[key][1][doc_no]
-                f.write('\t' + doc_no + ': ' + ','.join(str(pos+1) for pos in word_pos) + '\n')
+                f.write('\t' + str(doc_no) + ': ' + ','.join(str(pos + 1) for pos in word_pos) + '\n')
             # f.write('\n')
+
+
+def output_into_mongodb(pi):
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["song"]
+    mycol = mydb["index"]
+
+    for key in sorted(pi):
+        index_songs = []
+        index_location = []
+        for doc_no in pi[key][1]:
+            word_pos = pi[key][1][doc_no]
+            real_pos = []
+            for pos in word_pos:
+                real_pos.append(pos + 1)
+            index_songs.append(doc_no)
+            index_location.append(real_pos)
+
+        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
+                  "index_location": index_location}
+        x = mycol.insert_one(mydict)
+
+
+def read_from_mongodb():
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["song"]
+    mycol = mydb["index"]
+
+    ii = {}
+    for x in mycol.find():
+        i = 0
+        inner_dict = {}
+        for song in x["index_songs"]:
+            inner_dict[song] = x["index_location"][i]
+            i = i + 1
+        ii[x["index_name"]] = [x["index_times"], inner_dict]
+
+    return ii
 
 
 # generate boolean query result file
@@ -109,6 +148,7 @@ def output_results_ranked(map_result):
             for i in map_result[key][0]:
                 f.write(str(key) + ',' + str(i) + '\n')
         f.write('\n')
+
 
 # process query file
 def read_queries(path):
@@ -164,8 +204,8 @@ def word_search(query):
         real_result = negative(real_result)
 
     real_result = sorted(list(set(real_result)))
-    #print("word_search")
-    #print(real_result)
+    # print("word_search")
+    # print(real_result)
     return real_result
 
 
@@ -196,8 +236,8 @@ def phrase_search(query):
         real_result = negative(real_result)
 
     real_result = sorted(list(set(real_result)))
-    #print("phase_search")
-    #print(real_result)
+    # print("phase_search")
+    # print(real_result)
     return real_result
 
 
@@ -229,8 +269,8 @@ def proximity_search(query):
         real_result = negative(real_result)
 
     real_result = sorted(list(set(real_result)))
-    #print("proximity_search")
-    #print(real_result)
+    # print("proximity_search")
+    # print(real_result)
     return real_result
 
 
@@ -319,13 +359,12 @@ def main():
     stop = stopwords("englishST.txt")
     index_file = "index.txt"
     file_exists = exists(index_file)
-    file_map,song_names = csv_parser("LyricsSmall.csv")
+    file_map, song_names = csv_parser("kaggle_english_dataset.csv")
     if file_exists:  # checking if index file exists
+        ii = read_from_mongodb()
+        '''   
         with open(index_file, "r") as file:
             content = file.read().splitlines()
-        ii = {}
-        inner_dict = {}
-        lst = []
         for line in content:
             if '\t' not in line:
                 inner_dict = {}
@@ -347,13 +386,15 @@ def main():
                 lst.append(inner_dict)
             if inner_dict not in ii[term]:
                 ii[term].append(inner_dict)  # making inverted dictionary
+        '''
         pos_index = ii
     else:
         ii = inverted_index(file_map)
         output_index(ii)
-        pos_index = ii# if index file doesn't exist then initialising and creating it
+        output_into_mongodb(ii)
+        pos_index = ii  # if index file doesn't exist then initialising and creating it
 
-    output_results_ranked(read_queries("queries_lyrics.txt"))
+    print(tfidf("handle"))
 
 
 if __name__ == "__main__":
