@@ -36,32 +36,31 @@ def get_songs(artist_page=0, album_page=0, end_page=20):
             tmp_track_results = []
             stf_albums = stf.albums(partition)["albums"]
             for stf_album in stf_albums:
+                album_idx = stf_album["id"]
                 tracks = stf_album["tracks"]["items"]
 
                 for track in tracks:
                     tmp_track_results.append(
                         {
-                            "artists_idxs": [i["id"] for i in track["artists"]],
-                            "duration": round(track["duration_ms"], 1000),
+                            "artists_spotify_idxs": [i["id"] for i in track["artists"]],
+                            "album_spotify_idx": album_idx,
+                            "duration": int(round(track["duration_ms"] // 1000, 0)),
                             "explicit": track["explicit"],
-                            "track_idx": track["id"],
+                            "track_spotify_idx": track["id"],
                             "track_name": track["name"],
                         }
                     )
-            # print(len(tmp_track_results))
             # get features
             track_limit = 50
             partition_tracks = [
                 tmp_track_results[i * track_limit : (i + 1) * track_limit]
                 for i in range(-(-len(tmp_track_results) // track_limit))
             ]
-            # print("1: ", [len(partition_tracks[i]) for i in range(len(partition_tracks))])
 
             for tracks in partition_tracks:
-                tracks_idxs = [t["track_idx"] for t in tracks]
+                tracks_idxs = [t["track_spotify_idx"] for t in tracks]
                 track_len = len(tracks_idxs)
                 tracks_features = stf.audio_features(tracks_idxs)  # ["audio_features"]
-                # print("2: ", min(track_len, track_limit))
                 for j in range(min(track_len, track_limit)):
                     if tracks_features[j]:  # not None
                         track_dict = tracks[j]
@@ -78,7 +77,6 @@ def get_songs(artist_page=0, album_page=0, end_page=20):
                         track_dict["tempo"] = round(tracks_features[j]["tempo"], 0)
 
                 track_results.extend(tracks)
-                # print("3: ", len(track_results))
 
             print(count, "end!")
         pd.DataFrame(track_results).to_csv(
@@ -88,4 +86,4 @@ def get_songs(artist_page=0, album_page=0, end_page=20):
 
 
 # TODO: specify the pages
-get_songs(4)
+get_songs(0)
