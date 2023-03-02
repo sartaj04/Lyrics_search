@@ -1,0 +1,3826 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html class="snarly song_stories_public_launch--enabled react_forums--disabled report_abuse--disabled" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" xml:lang="en">
+<head>
+  <script type="text/javascript">
+//<![CDATA[
+var _sf_startpt=(new Date()).getTime();
+//]]>
+</script>
+  <title>Most Popular B Artists on Genius</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="apple-itunes-app" content="app-id=709482991">
+
+  <link title="Genius" type="application/opensearchdescription+xml" rel="search" href="https://genius.com/opensearch.xml">
+
+  <meta property="og:site_name" content="Genius"/>
+<meta property="fb:app_id" content="265539304824" />
+<meta property="fb:pages" content="308252472676410" />
+
+<script type="text/javascript">
+  var disqus_developer = 0;
+  var PRODUCTION_ENV = true;
+  var MOBILE_DEVICE = false;
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var CURRENT_USER = null
+//]]>
+</script>
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '265539304824',
+      xfbml      : true,
+      version    : 'v8.0'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
+
+
+<script type="text/javascript">
+  var SOUNDCLOUD_CLIENT_ID = "632c544d1c382f82526f369877aab5c0";
+
+  var FILEPICKER_API_KEY = "Ar03MDs73TQm241ZgLwfjz";
+  var FILEPICKER_POLICY = "eyJleHBpcnkiOjIzNTEwOTE1NTgsImNhbGwiOlsicGljayIsInJlYWQiLCJzdG9yZSIsInN0YXQiLCJjb252ZXJ0Il19";
+  var FILEPICKER_SIGNATURE = "68597b455e6c09bce0bfd73f758e299c95d49a5d5c8e808aaf4877da7801c4da";
+  var DISABLE_VIDEO_RECORDING = false;
+
+  var FIREHOSE_PUSHER_CHANNEL = "activity_stream.firehose";
+
+  var S3_IMAGE_BUCKET = "filepicker-images-rapgenius";
+  var S3_AUDIO_BUCKET = "rapgenius-audio";
+
+  var EMBEDLY_KEY = "fc778e44915911e088ae4040f9f86dcd";
+
+  var CAMERA_TAG_UUID = "62243f30-7952-0130-3e29-1231390fcc11";
+  var CAMERA_TAG_WIDTH = 450;
+  var CAMERA_TAG_HEIGHT = 253;
+
+  var CANONICAL_DOMAIN_PARTS_LENGTH = 2;
+  var VALID_SUBDOMAINS = ["non-music","rap","rock","country","r-b","pop"];
+  var ANNOTATION_QTIP_POSITION = {"target":"rightMiddle","tooltip":"leftMiddle","adjustments":{"screen":true,"x":10}};
+
+  var TOP_LEVEL_BLOCK_CONTAINERS = ["address","article","aside","blockquote","div","dl","fieldset","footer","form","h1","h2","h3","h4","h5","h6","header","menu","nav","ol","p","pre","section","table","ul"];
+  var TOP_LEVEL_STANDALONE_BLOCKS = ["img","hr"];
+
+  var APP_STORE_URL = "https://itunes.apple.com/us/app/genius-by-rap-genius-search/id709482991?ls=1&mt=8";
+
+  var SERVICE_NAME = "Genius";
+  var CANONICAL_DOMAIN = "genius.com";
+  var WRAP_GENIUS_HOST = "genius.it";
+
+  var MAX_REFERENT_LENGTH = 200;
+
+  var I18n = I18n || {};
+  I18n.locale = "en";
+
+  var CURRENT_TAG = null;
+
+  var TRACKING_DATA = {"web_interstitial_variant":"control"};
+
+  var APP_CONFIG = {"env":"production","api_root_url":"/api","microsite_label":"","microsite_url":"","transform_domain":"transform.genius.com","facebook_app_id":"265539304824","facebook_opengraph_api_version":"8.0","pusher_app_key":"6d893fcc6a0c695853ac","embedly_key":"fc778e44915911e088ae4040f9f86dcd","a9_pub_id":"3459","app_store_url":"https://itunes.apple.com/us/app/genius-by-rap-genius-search/id709482991?ls=1&mt=8","play_store_url":"https://play.google.com/store/apps/details?id=com.genius.android","soundcloud_client_id":"632c544d1c382f82526f369877aab5c0","annotator_context_length":32,"comment_reasons":[{"_type":"comment_reason","context_url":"https://genius.com/8846441/Genius-how-genius-works/More-on-annotations","display_character":"R","handle":"Restates the line","id":1,"name":"restates-the-line","raw_name":"restates the line","requires_body":false,"slug":"restates_the_line"},{"_type":"comment_reason","context_url":"https://genius.com/8846441/Genius-how-genius-works/More-on-annotations","display_character":"S","handle":"It’s a stretch","id":2,"name":"its-a-stretch","raw_name":"it’s a stretch","requires_body":false,"slug":"its_a_stretch"},{"_type":"comment_reason","context_url":"https://genius.com/8846441/Genius-how-genius-works/More-on-annotations","display_character":"M","handle":"Missing something","id":3,"name":"missing-something","raw_name":"missing something","requires_body":false,"slug":"missing_something"},{"_type":"comment_reason","context_url":"https://genius.com/8846441/Genius-how-genius-works/More-on-annotations","display_character":"…","handle":"Other","id":4,"name":"other","raw_name":"other","requires_body":true,"slug":"other"}],"comment_reasons_help_url":"https://genius.com/8846441/Genius-how-genius-works/More-on-annotations","filepicker_api_key":"Ar03MDs73TQm241ZgLwfjz","filepicker_policy":"eyJleHBpcnkiOjIzNTEwOTE1NTgsImNhbGwiOlsicGljayIsInJlYWQiLCJzdG9yZSIsInN0YXQiLCJjb252ZXJ0Il19","filepicker_signature":"68597b455e6c09bce0bfd73f758e299c95d49a5d5c8e808aaf4877da7801c4da","filepicker_s3_image_bucket":"filepicker-images-rapgenius","available_roles":["moderator","mega_boss","in_house_staff","verified_artist","meme_artist","engineer","editor","educator","staff","whitehat","tech_liaison","mediator","transcriber"],"canonical_domain":"genius.com","enable_angular_debug":false,"fact_track_launch_article_url":"https://genius.com/a/genius-and-spotify-together","user_authority_roles":["moderator","editor","mediator","transcriber"],"user_verification_roles":["community_artist","verified_artist","meme_artist"],"user_vote_types_for_delete":["votes","upvotes","downvotes"],"brightcove_account_id":"4863540648001","mixpanel_delayed_events_timeout":"86400","unreviewed_annotation_tooltip_info_url":"https://genius.com/8846524/Genius-how-genius-works/More-on-editorial-review","community_policy_and_moderation_guidelines":"https://genius.com/Genius-community-policy-and-moderation-guidelines-annotated","video_placements":{"desktop_song_page":[{"name":"sidebar","min_relevance":"high","fringe_min_relevance":"low","max_videos":0},{"name":"sidebar_thumb","min_relevance":"medium","fringe_min_relevance":"low","max_videos":0},{"name":"recirculated","min_relevance":"low","max_videos":3}],"mobile_song_page":[{"name":"footer","min_relevance":"medium","max_videos":1},{"name":"recirculated","min_relevance":"low","max_videos":3}],"desktop_artist_page":[{"name":"sidebar","min_relevance":"medium","fringe_min_relevance":"low","max_videos":2}],"mobile_artist_page":[{"name":"carousel","min_relevance":"medium","fringe_min_relevance":"low","max_videos":5}],"amp_song_page":[{"name":"footer","min_relevance":"medium","max_videos":1}],"amp_video_page":[{"name":"related","min_relevance":"low","max_videos":8}],"desktop_video_page":[{"name":"series_related","min_relevance":"low","max_videos":8,"series":true},{"name":"related","min_relevance":"low","max_videos":8}],"desktop_article_page":[{"name":"carousel","min_relevance":"low","max_videos":5}],"mobile_article_page":[{"name":"carousel","min_relevance":"low","max_videos":5}],"desktop_album_page":[{"name":"sidebar","min_relevance":"medium","fringe_min_relevance":"low","max_videos":1}],"amp_album_page":[{"name":"carousel","min_relevance":"low","max_videos":5}]},"app_name":"rapgenius-cedar","vttp_parner_id":"719c82b0-266e-11e7-827d-7f7dc47f6bc0","default_cover_art_url":"https://assets.genius.com/images/default_cover_art.png?1676573542","sizies_base_url":"https://t2.genius.com/unsafe","max_line_item_event_count":10,"dmp_match_threshold":0.05,"ab_tests":["apple_desktop_static_cta"],"external_song_match_purposes":["streaming_service_lyrics","streaming_service_player"],"release_version":"Production 2c27e195","react_bugsnag_api_key":"a3ab84a89baa4ee509c9e3f71b9296e0","mixpanel_token":"77967c52dc38186cc1aadebdd19e2a82","mixpanel_enabled":true,"get_involved_page_url":"https://genius.com/Genius-getting-involved-with-genius-projects-annotated","solidarity_text":"","solidarity_url":"http://so.genius.com/aroYTdx","track_gdpr_banner_shown_event":true,"show_cmp_modal":true,"react_song_page_survey_url":"https://forms.gle/rSPEFZEHvZmXakvD7","recaptcha_v3_site_key":"6LewuscaAAAAABNevDiTNPHrKCs8viRjfPnm6xc6","ga_web_vitals_sampling_percentage":"10","mixpanel_web_vitals_sampling_percentage":{"mobile":"5","desktop":"10"},"top_level_block_containers":["address","article","aside","blockquote","div","dl","fieldset","footer","form","h1","h2","h3","h4","h5","h6","header","menu","nav","ol","p","pre","section","table","ul"],"top_level_standalone_blocks":["img","hr"],"zendesk_ccpa_link":"https://support.genius.com/hc/en-us/requests/new","artist_promo_portal_launched":true,"transcriber_guide_url":"https://genius.com/25045402/Genius-what-is-a-transcriber/Mark-lyrics-complete","recommended_content_unit_enabled":true,"tmg_livestreams_index_public":false,"fingerprint_api_key":"dEe6R1Hyzg87t38keh0R","song_derivation_types":{"sample":{"upstream":"samples","downstream":"sampled_in","route_name":"samples"},"interpolation":{"upstream":"interpolates","downstream":"interpolated_by","route_name":"interpolations"},"cover":{"upstream":"cover_of","downstream":"covered_by","route_name":"covers"},"remix":{"upstream":"remix_of","downstream":"remixed_by","route_name":"remixes"},"live":{"upstream":"live_version_of","downstream":"performed_live_as","route_name":"live-versions"},"translation":{"upstream":"translation_of","downstream":"translations","route_name":"translations"}},"primis_demand_test_fraction":0.0,"brightcove_mobile_thumbnail_web_player_id":"SyGQSOxol","brightcove_modal_web_player_id":"S1LI5bh0","brightcove_song_story_web_player_id":"SkfSovRVf","brightcove_standard_web_player_id":"S1ZcmcOC1x","brightcove_standard_no_autoplay_web_player_id":"ByRtIUBvx","brightcove_sitemap_player_id":"BJfoOE1ol"};
+  var SESSION_CONFIG = {"current_user":null,"features":["song_stories_public_launch"],"fringe_enabled":true,"log_client_metrics":false,"show_ads":null};
+  var ANALYTICS_CONFIG = {"enabled":true,"mixpanel_enabled":true,"comscore_client_id":"22489583","quantcast_account":"p-f3CPQ6vHckedE","librato_web_client_host":"librato-collector.genius.com"}
+</script>
+
+<link href="https://assets.genius.com/stylesheets/compiled/screen-7a59f848e5d65d5d31531a88e62ebb63.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="https://assets.genius.com/favicon.ico?1676573542" rel="shortcut icon" />
+<link href="https://assets.genius.com/stylesheets/compiled/bagon_fonts-363d066df348435d4967bc11c37165ee.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+  
+
+  <script src="https://assets.genius.com/javascripts/compiled/sprockets-00da044a9e9efd2b0d1742b2c38fd43e.js" type="text/javascript"></script>
+
+  
+  
+
+  <link href="https://assets.genius.com/images/apple-touch-icon.png?1676573542" rel="apple-touch-icon" />
+
+  
+
+  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+  <meta http-equiv="cleartype" content="on">
+
+
+
+
+  
+  <link href="https://genius.com/posts.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+  <META name="y_key" content="f63347d284f184b0">
+
+  <script>
+  window['Genius.cmp'] = window['Genius.cmp'] || [];
+</script>
+
+
+  <script>
+    var OneTrustTCFStub=function(e){"use strict";var t=function(){var s=this;this.intializeIabStub=function(){var e=window;window.__tcfapi=s.executeTcfApi,s.addIabFrame(),e.receiveOTMessage=s.receiveIabMessage,(e.attachEvent||window.addEventListener)("message",e.receiveOTMessage,!1)},this.addIabFrame=function(){var e=window,t="__tcfapiLocator";e.frames[t]||(e.document.body?s.addLocator(t,"TCF"):setTimeout(s.addIabFrame,5))},this.addLocator=function(e,t){var a=window,i=a.document.createElement("iframe");i.style.cssText="display:none",i.name=e,i.setAttribute("title",t+" Locator"),a.document.body.appendChild(i)},this.receiveIabMessage=function(i){var n="string"==typeof i.data,e={};try{e=n?JSON.parse(i.data):i.data}catch(e){}if(e.__tcfapiCall){var c=e.__tcfapiCall.callId,o=e.__tcfapiCall.command,t=e.__tcfapiCall.parameter,a=e.__tcfapiCall.version;s.executeTcfApi(o,t,function(e,t){var a={__tcfapiReturn:{returnValue:e,success:t,callId:c,command:o}};i.source.postMessage(n?JSON.stringify(a):a,i.origin)},a)}},this.executeTcfApi=function(){for(var e=[],t=0;t<arguments.length;t++)e[t]=arguments[t];if(!e.length)return window.__tcfapi.a||[];var a=e[0],i=e[1],n=e[2],c=e[3];"function"==typeof n&&a&&("ping"===a?s.getPingRequest(n):s.addToQueue(a,i,n,c))},this.addToQueue=function(e,t,a,i){var n=window,c="__tcfapi";n[c].a=n[c].a||[],"ping"===e?s.getPingRequest(a):n[c].a.push([e,t,a,i])},this.getPingRequest=function(e){e&&e({gdprApplies:void 0,cmpLoaded:!1,cmpStatus:"stub",displayStatus:"stub",apiVersion:"2.0",cmpVersion:void 0,cmpId:void 0,gvlVersion:void 0,tcfPolicyVersion:void 0},!0)},this.intializeIabStub()},a=new t;return e.TCF=t,e.tcfStub=a,e}({});
+  </script>
+  <script>
+    (function() {
+      var _optanon;
+
+      Object.defineProperties(window, {
+        Optanon: {
+          set: function(optanon) {
+            window['Genius.cmp'].push(function(gcmp) {
+              gcmp.resolve_with_optanon(optanon);
+            });
+            _optanon = optanon;
+          },
+
+          get: function() {
+            return _optanon;
+          }
+        }
+      });
+    })();
+  </script>
+
+  <script data-domain-script="d0e4f915-b2e6-4865-8f89-5d6eea27556f" defer="true" src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript"></script>
+  <script defer="true" src="https://assets.genius.com/javascripts/compiled/cmp-fc10ba32e6c85bcdbfe0.js" type="text/javascript"></script>
+
+
+  <!--sse-->
+
+  <script>window['Genius.ads'] = window['Genius.ads'] || [];</script>
+
+
+
+<!--/sse-->
+
+  
+  <script type="text/javascript">
+  var _qevents = _qevents || [];
+  (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+    elem.async = true;
+    elem.type = 'text/javascript';
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+  })();
+</script>
+
+
+
+  <script type="text/javascript">
+  window.ga = window.ga || function() {
+    (window.ga.q = window.ga.q || []).push(arguments);
+  };
+
+  
+    (function(g, e, n, i, u, s) {
+      g['GoogleAnalyticsObject'] = 'ga';
+      g.ga.l = Date.now();
+      u = e.createElement(n);
+      s = e.getElementsByTagName(n)[0];
+      u.async = true;
+      u.src = i;
+      s.parentNode.insertBefore(u, s);
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js');
+
+    ga('create', "UA-10346621-1", 'auto', {'useAmpClientId': true});
+    ga('set', 'dimension1', "false");
+    ga('set', 'dimension2', "artists#character_index");
+    ga('set', 'dimension3', null);
+    ga('set', 'dimension4', "false");
+    ga('set', 'dimension5', 'false');
+    ga('set', 'dimension6', "none");
+    ga('set', 'dimension8',  "");
+    ga('set', 'dimension9', window['com.Genius.wunderkind_cohort']);
+    ga('set', 'dimension11', "false");
+    ga('send', 'pageview');
+  
+</script>
+
+</head>
+<body class="act-character_index cont-artists">
+  
+  
+
+  
+  <div class="header" ng-controller="HeaderCtrl as header_ctrl" click-outside="close_mobile_subnav_menu()">
+  <div class="header-primary active">
+    <div class="header-expand_nav_menu" ng-click="toggle_mobile_subnav_menu()"><div class="header-expand_nav_menu-contents"></div></div>
+
+    
+      <div class="logo_container">
+        <a href="https://genius.com/" class="logo_link">GENIUS</a>
+      </div>
+    
+
+    <mutually-exclusive-switches property="open_header_menus">
+  <div class="header-actions">
+    
+      <a href="/signup" class="header-action facebox" rel="nofollow">Sign Up</a>
+      <a href="/login" class="header-action header-action--sign_in facebox" rel="nofollow">Sign In</a>
+    
+  </div>
+</mutually-exclusive-switches>
+
+  </div>
+
+  
+<search-form search-style="header"></search-form>
+
+
+  <ul class="header-nav_menu" ng-class="{'header-nav_menu--visible': mobile_subnav_menu_open}">
+  <div ng-cloak>
+    <header-menu-item class="header-nav_menu--hide_when_expand_menu_is_not_available" name="Home" url="https://genius.com/"></header-menu-item>
+    
+    
+    <header-menu-item name="Featured" url="https://genius.com/#featured-stories"></header-menu-item>
+    <header-menu-item name="Charts" url="https://genius.com/#top-songs"></header-menu-item>
+    <header-menu-item name="Videos" url="https://genius.com/#videos"></header-menu-item>
+    <header-menu-item name="Community" url="https://genius.com/#community"></header-menu-item>
+    
+    <span class="nav_menu-item nav_menu-item--separator">|</span>
+    
+      <header-menu-item name="Promote Your Music" url="https://promote.genius.com/"></header-menu-item>
+    
+    
+      <span class="nav_menu-item nav_menu-item--separator">|</span>
+      <li class="nav_menu-item">
+  <a href="https://www.facebook.com/Genius/" class="nav_menu-link nav_menu-link--facebook" target="_blank">
+    <svg src="facebook.svg" class="inline_icon"></svg>
+    <span class="nav_menu-link-social_text">Facebook</span>
+  </a>
+</li>
+<li class="nav_menu-item">
+  <a href="https://twitter.com/Genius" class="nav_menu-link" target="_blank">
+    <svg src="twitter.svg" class="inline_icon"></svg>
+    <span class="nav_menu-link-social_text">Twitter</span>
+  </a>
+</li>
+<li class="nav_menu-item">
+  <a href="https://www.instagram.com/genius/" class="nav_menu-link" target="_blank">
+    <svg src="instagram.svg" class="inline_icon"></svg>
+    <span class="nav_menu-link-social_text">Instagram</span>
+  </a>
+</li>
+<li class="nav_menu-item">
+  <a href="https://www.youtube.com/genius" class="nav_menu-link nav_menu-link--no_right_padding" target="_blank">
+    <svg src="youtube.svg" class="inline_icon nav_menu-link-youtube_icon"></svg>
+    <span class="nav_menu-link-social_text">Youtube</span>
+  </a>
+</li>
+
+    
+  </div>
+</ul>
+
+</div>
+
+  
+  
+
+  <div id='container' class=" mecha--deprecated" ng-non-bindable>
+    <div id="main">
+      
+
+<ul class="artists_index-breadcrumbs breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+  <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+    <a href="https://genius.com/artists" itemprop="item">
+      <span itemprop="name">Artists</span>
+      <meta itemprop="position" content="1" />
+    </a>
+  </li>
+
+  <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+    <a href="https://genius.com/artists-index/b" itemprop="item">
+      <span itemprop="name">B</span>
+      <meta itemprop="position" content="2" />
+    </a>
+  </li>
+
+  
+</ul>
+
+
+<h1 class="artists_index-header">Most Popular B Artists on Genius</h1>
+
+<ul class="artists_index_list">
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Babytron" class="artists_index_list-artist_name">BabyTron</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Babytron-mr-hanky-lyrics">Mr. Hanky</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Babytron-jesus-shuttlesworth-lyrics">Jesus Shuttlesworth</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Beabadoobee" class="artists_index_list-artist_name">​beabadoobee</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Beabadoobee-glue-song-lyrics">Glue Song</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Beabadoobee-the-perfect-pair-lyrics">​the perfect pair</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/The-beatles" class="artists_index_list-artist_name">The Beatles</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/The-beatles-yesterday-lyrics">Yesterday</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/The-beatles-eleanor-rigby-lyrics">Eleanor Rigby</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Behani" class="artists_index_list-artist_name">Behani</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Behani-real-man-lyrics">Real Man</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Beyonce" class="artists_index_list-artist_name">Beyoncé</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Beyonce-cuff-it-wetter-remix-lyrics">CUFF IT (WETTER REMIX)</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Beyonce-cuff-it-lyrics">CUFF IT</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Big-baby-tape" class="artists_index_list-artist_name">Big Baby Tape</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Big-baby-tape-like-a-g6-lyrics">Like A G6</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Big-baby-tape-my-white-lyrics">Мой Белый (My White)</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Billie-eilish" class="artists_index_list-artist_name">Billie Eilish</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Billie-eilish-i-love-you-lyrics">​i love you</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Billie-eilish-idontwannabeyouanymore-lyrics">​idontwannabeyouanymore</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Bizarrap-and-shakira" class="artists_index_list-artist_name">Bizarrap & Shakira</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bizarrap-and-shakira-shakira-bzrp-music-sessions-vol-53-lyrics">Shakira: Bzrp Music Sessions, Vol. 53</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bizarrap-and-shakira-out-of-your-league-mixed-lyrics">Out of Your League (Mixed)</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Blackpink" class="artists_index_list-artist_name">BLACKPINK</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Blackpink-typa-girl-lyrics">Typa Girl</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Blackpink-sure-thing-lyrics">Sure Thing</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Blink-182" class="artists_index_list-artist_name">​​blink-182</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Blink-182-i-miss-you-lyrics">I Miss You</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Blink-182-all-the-small-things-lyrics">All the Small Things</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Bob-dylan" class="artists_index_list-artist_name">Bob Dylan</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bob-dylan-subterranean-homesick-blues-lyrics">Subterranean Homesick Blues</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bob-dylan-dont-think-twice-its-all-right-lyrics">Don't Think Twice, It's All Right</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Bob-marley-and-the-wailers" class="artists_index_list-artist_name">Bob Marley & The Wailers</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bob-marley-and-the-wailers-redemption-song-lyrics">Redemption Song</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bob-marley-and-the-wailers-no-woman-no-cry-lyrics">No Woman, No Cry</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Bo-burnham" class="artists_index_list-artist_name">Bo Burnham</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bo-burnham-welcome-to-the-internet-lyrics">Welcome to the Internet</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bo-burnham-that-funny-feeling-lyrics">That Funny Feeling</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/A-boogie-wit-da-hoodie" class="artists_index_list-artist_name">A Boogie wit da Hoodie</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/A-boogie-wit-da-hoodie-still-think-about-you-lyrics">Still Think About You</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/A-boogie-wit-da-hoodie-no-808s-lyrics">No 808's</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Boygenius" class="artists_index_list-artist_name">​boygenius</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Boygenius-emily-im-sorry-lyrics">Emily I'm Sorry</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Boygenius-true-blue-lyrics">True Blue</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Brockhampton" class="artists_index_list-artist_name">BROCKHAMPTON</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Brockhampton-sugar-lyrics">SUGAR</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Brockhampton-keep-it-southern-lyrics">KEEP IT SOUTHERN</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Bruce-springsteen" class="artists_index_list-artist_name">Bruce Springsteen</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bruce-springsteen-born-in-the-usa-lyrics">Born in the U.S.A.</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bruce-springsteen-thunder-road-lyrics">Thunder Road</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Bruno-mars" class="artists_index_list-artist_name">Bruno Mars</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bruno-mars-when-i-was-your-man-lyrics">When I Was Your Man</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bruno-mars-it-will-rain-lyrics">It Will Rain</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Bts" class="artists_index_list-artist_name">BTS</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bts-dynamite-lyrics">Dynamite</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Bts-butter-lyrics">Butter</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+    <li class="artists_index_list-popular_artist">
+      <a href="https://genius.com/artists/Burger-king" class="artists_index_list-artist_name">Burger King</a>
+
+      <ul class="artists_index_list-popular_song_list">
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Burger-king-whopper-whopper-lyrics">Whopper Whopper</a>
+          </li>
+        
+          <li class="popular_song">
+            <a href="https://genius.com/Burger-king-burger-cheese-burger-cheese-lyrics">Burger Cheese Burger Cheese</a>
+          </li>
+        
+      </ul>
+    </li>
+  
+</ul>
+
+
+  <ul class="artists_index_list">
+    
+      <li>
+        <a href="https://genius.com/artists/B2k">B2K</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-b-52s">The B-52's</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baauer">Baauer</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babangida">⁠babangida</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babasonicos">Babasónicos</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babbie-mason">Babbie Mason</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babi">Babi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-bash">Baby Bash</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-bugs">Baby Bugs</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babydrill">BabyDrill</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babyface">Babyface</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babyface-ray">Babyface Ray</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-gang">Baby Gang</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-keem">Baby Keem</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-keem-and-kendrick-lamar">Baby Keem & Kendrick Lamar</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-mane">Baby Mane</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babymetal">BABYMETAL</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-money">Baby Money</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-queen">Baby Queen</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-smoove">Baby Smoove</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baby-tate">Baby Tate</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babytron-and-babyface-ray">BabyTron & Babyface Ray</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babytron-and-certified-trapper">BabyTron & Certified Trapper</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babytron-and-cordae">BabyTron & Cordae</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Babytron-and-rico-nasty">BabyTron & Rico Nasty</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bachmanturner-overdrive">Bachman–Turner Overdrive</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Back-number">​back number</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-backseat-lovers">The Backseat Lovers</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Backstreet-boys">Backstreet Boys</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Backxwash">Backxwash</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-backyardigans">The Backyardigans</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baco-exu-do-blues">Baco Exu do Blues</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Badbadnotgood">BADBADNOTGOOD</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-balance">Bad Balance</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-boy-chiller-crew">Bad Boy Chiller Crew</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-brains">Bad Brains</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-bunny">Bad Bunny</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-bunny-and-bomba-estereo">Bad Bunny & Bomba Estéreo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-bunny-and-buscabulla">Bad Bunny & Buscabulla</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-bunny-and-chencho-corleone">Bad Bunny & Chencho Corleone</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-bunny-and-jhay-cortez">Bad Bunny & Jhay Cortez</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-bunny-and-tainy">Bad Bunny & Tainy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-bunny-jowell-and-randy-and-nengo-flow">Bad Bunny, Jowell & Randy & Ñengo Flow</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-company">Bad Company</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Badcurt">​badCurt</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Badfinger">Badfinger</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Badflower">Badflower</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-gyal">Bad Gyal</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-hop">BAD HOP</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-lip-reading">Bad Lip Reading</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-meets-evil">Bad Meets Evil</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Badmomzjay">​badmómzjay</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-omens">Bad Omens</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-religion">Bad Religion</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Badshah">Badshah</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-suns">Bad Suns</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bad-wolves">Bad Wolves</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baha-men">Baha Men</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bailey-zimmerman">Bailey Zimmerman</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bakaprase">BakaPrase</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bakar">Bakar</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baker">Baker</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bakr">Bakr</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bakr-and-ulukmanapo">Bakr & Ulukmanapo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Balance-and-composure">Balance and Composure</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Balkaton-gang">Balkaton Gang</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Balkon">BALKON</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ballout">Ballout</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Balming-tiger">Balming Tiger</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Balthazar">Balthazar</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Balti">Balti بلطي</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bamboo">Bamboo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bamm">​bamm</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bamses-venner">Bamses Venner</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bananarama">Bananarama</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-band">The Band</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Banda-ms-de-sergio-lizarraga">Banda MS de Sergio Lizárraga</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-band-camino">The Band CAMINO</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Banderos">Банд’Эрос (Band’Eros)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bandmanrill">Bandmanrill</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Band-of-horses">Band of Horses</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bando-gz">Bando Gz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-band-perry">The Band Perry</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Band-smetana">Сметана Band (Smetana)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baneva">Baneva</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Banfica">Banfica</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bang-chan">BANG CHAN</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bang-chan-and-lee-know">BANG CHAN & LEE KNOW</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-bangles">The Bangles</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bankrol-hayden">Bankrol Hayden</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bankroll-fresh">Bankroll Fresh</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Banks">BANKS</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bankzitters">Bankzitters</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Banned-drummers">Запрещённые барабанщики (Banned drummers)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Banners">BANNERS</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Banshee-rachel-knight">Banshee (Rachel Knight)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barbie">Barbie</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barbra-streisand">Barbra Streisand</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-barden-bellas-the-treblemakers-and-the-bu-harmonics">The Barden Bellas, The Treblemakers & The Bu Harmonics</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bardero">Bardero$</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bars-diri">Barış Diri</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barenaked-ladies">Barenaked Ladies</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barlow-and-bear">Barlow & Bear</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bars-manco">Barış Manço</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barney">Barney</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barney-sku">Barney Sku</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barns-courtney">Barns Courtney</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barrington-levy">Barrington Levy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barry-manilow">Barry Manilow</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Barry-white">Barry White</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bart-baker">Bart Baker</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bartika-eam-rai">Bartika Eam Rai</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bas">Bas</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Basement">Basement</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bashfortheworld">Bashfortheworld</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Basil-valdez">Basil Valdez</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Basshunter">Basshunter</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bassi-maestro">Bassi Maestro</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Basta">Баста (Basta)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Basta-and-guf">Баста и Гуф (Basta & Guf)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bastille">Bastille</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bathory">Bathory</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Batuflex">Batuflex</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Batushka">Батюшка (Batushka)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bauhaus">Bauhaus</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boa-uk">Bôa (UK)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bausa">Bausa</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baustelle">Baustelle</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bayaan">Bayaan</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bayanni">Bayanni</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bayside">Bayside</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bazar">БАЗАР (BAZAR)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bagzlar">Bağzıları</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Baz-luhrmann">Baz Luhrmann</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bazooka">BAZOOKA</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bazzi">Bazzi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bbg-steppaa">BBG Steppaa</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bbg-steppaa-and-dd-osama">BBG Steppaa & DD Osama</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bb-jacques">B.B. Jacques</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bb-king">B.B. King</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bbno">​bbno$</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bby-goyard">BBY GOYARD</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bbymutha">​bbymutha</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-beach-boys">The Beach Boys</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beach-bunny">Beach Bunny</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beach-fossils">Beach Fossils</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beach-goons">Beach Goons</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beach-house">Beach House</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beach-weather">Beach Weather</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bea-miller">Bea Miller</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beanie-sigel">Beanie Sigel</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bear-ghost">Bear Ghost</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bear-mccreary">Bear McCreary</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bears-den">Bear's Den</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bears-in-trees">Bears in Trees</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beartooth">Beartooth</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beast-boy-teen-titans">Beast Boy (Teen Titans)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beastie-boys">Beastie Boys</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beast-in-black">Beast in Black</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beatking">BeatKing</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-beatnuts">The Beatnuts</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beatrice-garland">Beatrice Garland</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-beautiful-south">The Beautiful South</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bebe-and-cece-winans">BeBe & CeCe Winans</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bebe-rexha">Bebe Rexha</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beck">Beck</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beckstage-x-bitis-hunter">Beck'Stage X Biti's Hunter</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Becky-g">Becky G.</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beda">BEDA</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bedoes">Bedoes</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bedoes-and-kubi-producent">Bedoes & Kubi Producent</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bedoes-and-lanek">Bedoes & Lanek</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bedroom">Bedroom</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bedwetter">​bedwetter</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bee-gees">Bee Gees</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beendo-z">Beendo Z</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beenie-man">Beenie Man</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beenzino">Beenzino (빈지노)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beetlebug">Beetlebug</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bege">BEGE</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Behemoth">Behemoth</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Behm">BEHM</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beirut">Beirut</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bekar">Bekar</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bekrija">Bekrija</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Belinda-carlisle">Belinda Carlisle</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bella">Bella</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bella-dj">Bella DJ</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bellakath">Bellakath</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bella-poarch">Bella Poarch</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bella-shmurda">Bella Shmurda</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bella-thorne">Bella Thorne</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bell-biv-devoe">Bell Biv DeVoe</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Belle">Belle</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Belle-and-sebastian">Belle and Sebastian</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bello-figo">Bello Figo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Belly">Belly</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Belmondawg-and-profeat">Belmondawg & Profeat</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Belmondo">Belmondo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Belmondo-and-gsp">Belmondo & GSP</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Belen-aguilera">Belén Aguilera</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-belonging-co">The Belonging Co</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bemon-and-ksenon">Бемон (Bemon) & Ksenon</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Be-more-chill-ensemble">Be More Chill Ensemble</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benab">Benab</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benal">Benal</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-ben">Ben&Ben</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-caplan">Ben Caplan</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benedixhion">​benedixhion</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benee">BENEE</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-e-king">Ben E. King</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-fero">Ben Fero</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-folds">Ben Folds</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-folds-five">Ben Folds Five</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-harper">Ben Harper</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-howard">Ben Howard</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benita-jones">Benita Jones</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benjamin-fin">Benjamin (FIN)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benjamingotbenz">​benjamingotbenz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benjamin-hav">Benjamin Hav</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benjamin-ingrosso">Benjamin Ingrosso</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benjamin-tod">Benjamin Tod</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benjamin-william-hastings">Benjamin William Hastings</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benny-benassi">Benny Benassi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benny-blanco-and-juice-wrld">​benny blanco & Juice WRLD</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benny-blanco-halsey-and-khalid">​benny blanco, Halsey & Khalid</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benny-dayal">Benny Dayal</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benny-sings">Benny Sings</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benny-the-butcher">Benny the Butcher</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benny-the-butcher-and-j-cole">Benny the Butcher & J. Cole</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-platt">Ben Platt</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-platt-and-original-broadway-cast-of-dear-evan-hansen">Ben Platt & Original Broadway Cast of Dear Evan Hansen</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ben-rector">Ben Rector</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benson-boone">Benson Boone</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bente">Bente</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beny-jr">Beny Jr</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beny-jr-morad-and-k-y-b">Beny Jr, Morad & K y B</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Benzz">Benzz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beogradski-sindikat">Beogradski Sindikat</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Berlin">Berlin</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bernadette-peters">Bernadette Peters</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bernard-cribbins">Bernard Cribbins</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Berner">Berner</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bessie-smith">Bessie Smith</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Best-of-hits">Best of hits</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bet">BET</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beta-berk-bayndr">Beta Berk Bayındır</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bethel-music">Bethel Music</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beth-hart">Beth Hart</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-beths">The Beths</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Betonhofi">Beton.Hofi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bette-midler">Bette Midler</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Better-oblivion-community-center">Better Oblivion Community Center</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Betty-wright">Betty Wright</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Between-friends">BETWEEN FRIENDS</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Between-the-buried-and-me">Between the Buried and Me</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beyazz">Beyazz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Beyonce-and-madonna">Beyoncé & Madonna</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bfb-da-packman">BFB Da Packman</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bg">B.G.</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bgoti">B.G.O.T.I.</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bhad-bhabie">Bhad Bhabie</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bhalwaan-and-signature-by-sb">Bhalwaan & Signature By SB</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bhz">BHZ</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bohse-onkelz">Böhse Onkelz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bia">BIA</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bia-and-nicki-minaj">BIA & Nicki Minaj</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biaas">Białas</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biaas-and-lanek">Białas & Lanek</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bianka">Бьянка (Bianka)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biba">Biba</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bibi">BIBI (비비)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bicep">Bicep</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bic-fizzle">BiC Fizzle</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biffy-clyro">Biffy Clyro</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big30">BIG30</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-ant-dog">Big Ant Dog</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biga-ranx">Biga Ranx</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigbabygucci">BIGBABYGUCCI</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-baby-tape-and-kizaru">Big Baby Tape & kizaru</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-baby-tape-and-molodoi-platon">Big Baby Tape & Молодой Платон (Molodoi Platon)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigbang">BIGBANG (빅뱅)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigbax-and-yungpepsi">BIGBAX & YungPepsi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-black">Big Black</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-boi">Big Boi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-boogie">Big Boogie</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-boss-vette">Big Boss Vette</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-daddy-kane">Big Daddy Kane</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-daddy-weave">Big Daddy Weave</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigflo-and-oli">Bigflo & Oli</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biggie-cheese">Biggie Cheese</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-homiie-g">Big Homiie G</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigkaybeezy">BigKayBeezy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigklit">BigKlit</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-krit">Big K.R.I.T.</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-l">Big L</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-mama-thornton">Big Mama Thornton</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-moochie-grape">Big Moochie Grape</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-n">Big N</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-naughty">BIG Naughty (서동현)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-pun">Big Pun</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-red-machine">Big Red Machine</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigru-i-paja-kratak">BIGru i Paja Kratak</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-russian-boss">Big Russian Boss</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-scarr">Big Scarr</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-sean">Big Sean</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-sean-and-metro-boomin">Big Sean & Metro Boomin</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-shaq">Big Shaq</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-skeelz">Big Skeelz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-star">Big Star</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-thief">Big Thief</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-time-rush">Big Time Rush</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-tymers">Big Tymers</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigwalkdog">BigWalkDog</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-wild">Big Wild</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-willy-status">Big Willy Status</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bigxthaplug">BigXthaPlug</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Big-yavo">Big Yavo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biig-piig">Biig Piig</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bijelo-dugme">Bijelo Dugme</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bikini-kill">Bikini Kill</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bilal-saeed">Bilal Saeed</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billboards">билборды (billboards)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bill-callahan">Bill Callahan</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bill-gaither">Bill Gaither</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billie-eilish-and-khalid">Billie Eilish & Khalid</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billie-holiday">Billie Holiday</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billie-marten">Billie Marten</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bill-withers">Bill Withers</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bill-wurtz">Bill Wurtz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-bragg">Billy Bragg</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-cobb">Billy Cobb</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-currington">Billy Currington</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-idol">Billy Idol</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-joel">Billy Joel</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-milligan">Billy Milligan</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-nomates">Billy Nomates</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-ocean">Billy Ocean</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-preston">Billy Preston</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-ray-cyrus">Billy Ray Cyrus</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-squier">Billy Squier</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-straus">Billy Straus</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-strings">Billy Strings</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-talent">Billy Talent</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-woods">​billy woods</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Billy-woods-and-kenny-segal">​billy woods & ​kenny segal</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bilmuri">Bilmuri</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bing-crosby">Bing Crosby</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Birdman">Birdman</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Birdman-and-lil-wayne">Birdman & Lil Wayne</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Birdy">Birdy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Birdy-rhodes">Birdy + RHODES</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-birthday-massacre">The Birthday Massacre</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Birth-day">Birth+day</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biser-king">Biser King</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bishop-briggs">Bishop Briggs</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bishop-paul-s-morton">Bishop Paul S. Morton</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bisz">Bisz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biv">Biv</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bixby">Bixby</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bizarrap-and-duki">Bizarrap & Duki</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bizarrap-and-eladio-carrion">Bizarrap & Eladio Carrión</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bizarrap-and-quevedo">Bizarrap & Quevedo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bizarrap-and-villano-antillano">Bizarrap & Villano Antillano</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bizarre">Bizarre</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Biz-markie">Biz Markie</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bizzle">Bizzle</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bizzy-banks">Bizzy Banks</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bizzy-bone">Bizzy Bone</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bj-putnam">BJ Putnam</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bjork">Björk</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bjorn-afzelius">Björn Afzelius</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bjrn-eidsvag">Bjørn Eidsvåg</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bj-the-chicago-kid">BJ the Chicago Kid</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bj-thomas">B.J. Thomas</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bk">BK'</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bktherula">Bktherula</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blacha">BLACHA</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blackalicious">Blackalicious</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-black-angels">The Black Angels</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blackbear">​blackbear</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-box-recorder">Black Box Recorder</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-country-new-road">Black Country, New Road</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-black-crowes">The Black Crowes</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-black-dahlia-murder">The Black Dahlia Murder</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-dresses">Black Dresses</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-eyed-peas">Black Eyed Peas</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-eyed-peas-anitta-and-el-alfa">Black Eyed Peas, Anitta & El Alfa</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-flag">Black Flag</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-gryph0n-and-baasik">Black Gryph0n & Baasik</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-black-keys">The Black Keys</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-label-society">Black Label Society</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blacklite-district">Blacklite District</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-m">Black M</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-marble">Black Marble</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-midi">​black midi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-moon">Black Moon</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blackmores-night">Blackmore's Night</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blackpink-and-selena-gomez">BLACKPINK & Selena Gomez</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-pumas">Black Pumas</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-sabbath">Black Sabbath</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-sheep">Black Sheep</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-sherif">Black Sherif</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-black-skirts">The Black Skirts</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-smurf">Black Smurf</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-star">Black Star</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blackstreet">Blackstreet</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-thought">Black Thought</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Black-veil-brides">Black Veil Brides</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blackwinterwells">​blackwinterwells</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blac-youngsta">Blac Youngsta</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bladee">Bladee</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bladee-and-ecco2k">Bladee & Ecco2k</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bladee-and-thaiboy-digital">Bladee & Thaiboy Digital</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bladee-ecco2k-and-thaiboy-digital">Bladee, Ecco2k & Thaiboy Digital</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blago-white">​blago white</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blake-shelton">Blake Shelton</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blanco">BLANCO</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blaqbonez">Blaqbonez</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-blasting-company">The Blasting Company</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blaxy-girls">Blaxy Girls</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blayzer">Блэйзер (Blayzer)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blaze-foley">Blaze Foley</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blckk">BLCKK</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bleachers">Bleachers</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blessing-offor">Blessing Offor</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blu-eyes">BLÜ EYES</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blf">BLØF</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blind-faith">Blind Faith</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blind-guardian">Blind Guardian</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blind-melon">Blind Melon</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bliss-n-eso">Bliss n Eso</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blixemi">Blixemi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blocboy-jb">BlocBoy JB</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blockkid">Blockkid</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blockwork">Blockwork</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bloc-party">Bloc Party</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blok3">BLOK3</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blonde-redhead">Blonde Redhead</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blondie">Blondie</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bloodhound-gang">Bloodhound Gang</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blood-on-the-dance-floor">Blood on the Dance Floor</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blood-orange">Blood Orange</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blood-sweat-and-tears">Blood, Sweat & Tears</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bloody-hawk">Bloody Hawk</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/B-lovee">B-Lovee</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blp-kosher">BLP KOSHER</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blu-and-exile">Blu & Exile</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blu-cantrell">Blu Cantrell</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blue">Blue</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bluebucksclan">BlueBucksClan</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blueface">Blueface</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blueface-and-og-bobby-billions">Blueface & OG Bobby Billions</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blue-ivy-saint-jhn-beyonce-and-wizkid">Blue Ivy, SAINt JHN, Beyoncé & Wizkid</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blue-kid">Blue Kid</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blue-october">Blue October</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blue-rodeo">Blue Rodeo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-blues-brothers">The Blues Brothers</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blues-traveler">Blues Traveler</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blue-swede">Blue Swede</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blue-virus">Blue Virus</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blue-oyster-cult">Blue Öyster Cult</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blur">Blur</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bluxxi">Bluxxi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blxckie">Blxckie</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blxst">Blxst</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Blxst-and-tyga">Blxst & Tyga</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/B-mike">B-Mike</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bm-tpl">BM (TPL)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bnkr44">​bnkr44</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bnxn-fka-buju">BNXN fka Buju</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boa">BoA (보아)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boards-of-canada">Boards of Canada</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bob">B.o.B</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobbie-gentry">Bobbie Gentry</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-2-pistolz">Bobby 2 Pistolz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-blue-bland">Bobby "Blue" Bland</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-brown">Bobby Brown</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-caldwell">Bobby Caldwell</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-darin">Bobby Darin</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-hebb">Bobby Hebb</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-mcferrin">Bobby McFerrin</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-shmurda">Bobby Shmurda</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-v">Bobby V</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-vandamme">Bobby Vandamme</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-vinton">Bobby Vinton</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobby-womack">Bobby Womack</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bob-dylan-and-the-band">Bob Dylan & The Band</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bober">Bober</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bobs-burgers">Bob's Burgers</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bob-seger">Bob Seger</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bob-sinclar">Bob Sinclar</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bob-the-builder">Bob the Builder</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bob-vylan">Bob Vylan</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bob-wills">Bob Wills</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bo-diddley">Bo Diddley</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Body-count">Body Count</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boef">Boef</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bo-en">​bo en</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bohemia">Bohemia</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bojack-horseman">BoJack Horseman</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bol4">BOL4</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boldy-james-and-richgains">Boldy James & RichGains</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boldy-james-and-the-alchemist">Boldy James & The Alchemist</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bombay-bicycle-club">Bombay Bicycle Club</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bombay-jayashree">Bombay Jayashree</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bombay-vikings">Bombay Vikings</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bomb-the-music-industry">Bomb the Music Industry!</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bomfunk-mcs">Bomfunk MC's</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonbero">Bonbero</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bondan-prakoso">Bondan Prakoso</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bones">BONES</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bones-and-ghost-ghoul">BONES and ​ghost/\/ghoul</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bones-and-lyson">BONES & Lyson</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bone-thugs-n-harmony">Bone Thugs-N-Harmony</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boney-m">Boney M.</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonez-mc">Bonez MC</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonez-mc-and-gzuz">Bonez MC & Gzuz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonez-mc-and-raf-camora">Bonez MC & RAF Camora</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bong-da-city-grc">Bong Da City (GRC)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bon-iver">Bon Iver</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bon-iver-and-st-vincent">Bon Iver & St. Vincent</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bon-jovi">Bon Jovi</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonnie-prince-billy">Bonnie "Prince" Billy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonnie-raitt">Bonnie Raitt</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonnie-tyler">Bonnie Tyler</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonobo">Bonobo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonson">Bonson</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bonus-rpk">Bonus RPK</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Booba">Booba</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boofpaxkmooky">BoofPaxkMooky</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boogie-down-productions">Boogie Down Productions</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Booka600">Booka600</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Booker">Booker</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Booker-mukka-and-pyrokinesis">BOOKER, МУККА (MUKKA) & pyrokinesis</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Booking-machine">Booking Machine</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boombox1">Бумбокс (Boombox1)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-boomtown-rats">The Boomtown Rats</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-boondocks">The Boondocks</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boosie-badazz">Boosie Badazz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bootsys-rubber-band">Bootsy's Rubber Band</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Booze-and-glory">Booze & Glory</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Borat">Borat</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bore-balboa">Bore Balboa</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Borges">Borges</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boss-top">Boss Top</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boston">Boston</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boudewijn-de-groot">Boudewijn De Groot</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boulevard-depo">Boulevard Depo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boulevard-depo-and-i61">Boulevard Depo & i61</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boulevard-depo-and-jeembo">Boulevard Depo & JEEMBO</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boulevard-depo-and-sp4k">Boulevard Depo & SP4K</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boundaries">Boundaries</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bowling-for-soup">Bowling for Soup</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bow-wow">Bow Wow</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Box-car-racer">Box Car Racer</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boy-fantasy">BOY FANTASY</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boy-froot-and-lil-peep">Boy Froot & Lil Peep</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boy-harsher">Boy Harsher</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boy-pablo">​boy pablo</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-boyz">THE BOYZ</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boyz-ii-men">Boyz II Men</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boys-like-girls">Boys Like Girls</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boy-spyce">Boy Spyce</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-boys-vr">The Boys (VR)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boys-who-cry-spongebob">Boys Who Cry (SpongeBob)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boys-world">Boys World</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boywithuke">BoyWithUke</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boyzone">Boyzone</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Boz-scaggs">Boz Scaggs</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bozza">Bozza</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brad-kane">Brad Kane</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brad-paisley">Brad Paisley</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Ibrahim-tatlses">İbrahim Tatlıses</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brainbombs">Brainbombs</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brakence">​brakence</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Branco">Branco</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brandi-carlile">Brandi Carlile</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brand-new">Brand New</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brand-nubian">Brand Nubian</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brand-of-sacrifice">Brand of Sacrifice</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brandon-lake">Brandon Lake</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brandon-mychal-smith-and-tyler-james-williams">Brandon Mychal Smith & Tyler James Williams</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brandy">Brandy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brandy-and-monica">Brandy & Monica</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brantley-gilbert">Brantley Gilbert</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Branya-and-macan">BRANYA & MACAN</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bratya-grim">Братья Грим (Brat'ya Grim)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-brave-little-abacus">The Brave Little Abacus</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bravo-the-bagchaser">Bravo the Bagchaser</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/B-ray-vnm">B Ray (VNM)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brazil-national-football-team">Brazil National Football Team</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bread">Bread</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Breaking-bad">Breaking Bad</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Breaking-benjamin">Breaking Benjamin</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bredish">БРЕДИШЬ (BREDISH)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-breeders">The Breeders</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Breezy-boyz">Breezy Boyz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brenda-lee">Brenda Lee</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brennan-savage">Brennan Savage</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brentalfloss">​brentalfloss</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brent-faiyaz">Brent Faiyaz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brent-jones">Brent Jones</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bresh">Bresh</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Breskvica">Breskvica</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brett-eldredge">Brett Eldredge</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brett-young">Brett Young</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brian-and-jenn-johnson">Brian & Jenn Johnson</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brian-david-gilbert">Brian David Gilbert</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brian-doerksen">Brian Doerksen</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brian-eno">Brian Eno</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-brian-jonestown-massacre">The Brian Jonestown Massacre</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brian-mcknight">Brian McKnight</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bri-babineaux">Bri Babineaux</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brick-bazuka">Brick Bazuka</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-bridge-city-sinners">The Bridge City Sinners</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bridgit-mendler">Bridgit Mendler</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Briella">Briella</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bright-eyes">Bright Eyes</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bring-it-on-the-musical-original-broadway-cast">Bring it On: The Musical - Original Broadway Cast</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bring-me-the-horizon">Bring Me The Horizon</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bris">Bris</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Briston-maroney">Briston Maroney</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Britney-spears">Britney Spears</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brittnee-belt-and-cash-callaway">Brittnee Belt & Cash Callaway</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brns">BØRNS</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Broadcast">Broadcast</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Broadway-karkat">Broadway Karkat</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-brobecks">The Brobecks</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brocasito">Brocasito</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brodha-v">Brodha V</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Broederliefde">Broederliefde</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Broken-bells">Broken Bells</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Broken-social-scene">Broken Social Scene</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bronski-beat">Bronski Beat</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-brook-and-the-bluff">The Brook & The Bluff</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brooke-candy">Brooke Candy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brooke-ligertwood">Brooke Ligertwood</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brooke-maxwell-and-jacob-richmond">Brooke Maxwell & Jacob Richmond</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-brooklyn-tabernacle-choir">The Brooklyn Tabernacle Choir</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brooks-and-dunn">Brooks & Dunn</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brotha-lynch-hung">Brotha Lynch Hung</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brother-ali">Brother Ali</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brothers">BROTHERS</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-brothers-four">The Brothers Four</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brothers-of-metal">Brothers of Metal</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brown-bird">Brown Bird</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brown-eyes-white-boy">Brown-Eyes White Boy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brownman-revival">Brownman Revival</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brs-kash-dababy-and-city-girls">BRS Kash, DaBaby & City Girls</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bru-c">Bru-C</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bruce-cockburn">Bruce Cockburn</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bruno-coulais">Bruno Coulais</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bruno-major">Bruno Major</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brut">Brut</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brutalismus-3000">Brutalismus 3000</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brutto">Брутто (Brutto)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brxxk">Brxxk</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryan-adams">Bryan Adams</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryan-ferry">Bryan Ferry</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryann-t">Bryann T</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryant-myers">Bryant Myers</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryant-oden">Bryant Oden</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryce-pinkham">Bryce Pinkham</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryce-vine">Bryce Vine</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brye">Brye</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryson-gray">Bryson Gray</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bryson-tiller">Bryson Tiller</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Brytiago">Brytiago</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buba-corelli">Buba Corelli</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bubba-sparxxx">Bubba Sparxxx</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buckcherry">Buckcherry</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buck-owens">Buck Owens</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buckshot-buckeshot">Buckshot (@buckeshot)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buck-tick">BUCK-TICK</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buddy-castle">Buddy Castle</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buddy-holly">Buddy Holly</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buena-vista-social-club">Buena Vista Social Club</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buerak">Буерак (Buerak)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buffalo-springfield">Buffalo Springfield</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buffy-sainte-marie">Buffy Sainte-Marie</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buggles">Buggles</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bug-mafia">B.U.G. Mafia</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bugzy-malone">Bugzy Malone</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buhodermia">Buhodermia 夜</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Built-to-spill">Built to Spill</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buju-banton">Buju Banton</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bukahara">Bukahara</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bukas-palad-music-ministry">Bukas Palad Music Ministry</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bu-kolthoum">Bu Kolthoum</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bulatik">Булатик (Bulatik)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bullet-for-my-valentine">Bullet for My Valentine</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bumble-beezy">Bumble Beezy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bun-b">Bun B</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bunt">BUNT.</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Burial">Burial</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Burl-ives">Burl Ives</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Burna-bandz">Burna Bandz</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Burna-boy">Burna Boy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Burning-spear">Burning Spear</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Burn-the-ballroom">Burn The Ballroom</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Burt-bacharach">Burt Bacharach</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buruklyn-boyz">BURUKLYN BOYZ</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Burzum">Burzum</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Busdriver">Busdriver</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bush">Bush</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bu-hi">BU$HI</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bushido">Bushido</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bushido-and-shindy">Bushido & Shindy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bushido-zho">BUSHIDO ZHO</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bushido-zho-and-treepside">BUSHIDO ZHO & treepside</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Busta-rhymes">Busta Rhymes</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Busta-rhymes-and-mariah-carey">Busta Rhymes & Mariah Carey</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Busted">Busted</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buster">BUSTER</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Busy-signal">Busy Signal</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buta">Buta</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Butrint-imeri">Butrint Imeri</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Butthole-surfers">Butthole Surfers</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-buttress">The Buttress</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Butyrka">Бутырка (Butyrka)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Buzzcocks">Buzzcocks</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bvbvbvbudvbv">​bvbvbvbudvbv</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bvcovia">Bvcovia</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bway-yungy">Bway Yungy</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Bwitched">B*Witched</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/By-by-india">By Индия (By India)</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/B-young">B Young</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/The-byrds">The Byrds</a>
+      </li>
+    
+      <li>
+        <a href="https://genius.com/artists/Byron-messia">Byron Messia</a>
+      </li>
+    
+  </ul>
+
+
+<div class="all_artists_link">
+  <a href="https://genius.com/artists-index/b/all">All B Artists on Genius</a>
+</div>
+
+      
+    </div>
+  </div>
+  <div id="footer">
+  <div class="site_map">
+  <div class="site_map_primary">
+    <a href="/embed_guide">Embed a Text</a>
+    <a href="/verified-artists">Verified Artists</a>
+    <a href="/hot-songs">Hot Songs</a>
+    <a href="/contributor_guidelines">Contributor Guidelines</a>
+  </div>
+  <div class="site_map_secondary">
+  <a href="/about">About Genius</a>
+  <a href="/static/press" class="privacy_policy" target="_blank">Press</a>
+
+  
+    <a href="https://shop.genius.com/">Shop</a>
+  
+
+  <a href="mailto:inquiry@genius.com">Advertise</a>
+  <a href="/static/privacy_policy" class="privacy_policy" rel="nofollow" target="_blank">Privacy Policy</a>
+  
+    <a href="#" class="optanon-toggle-display">Privacy Preferences</a>
+  
+  
+  <a href="/jobs" class="jobs">Jobs</a>
+  <a href="/developers" class="developers">Developers</a>
+  <a href="/static/terms" class="terms_of_use" rel="nofollow" target="_blank">Terms of Use</a>
+  <a href="/static/copyright" rel="nofollow" target="_blank">Copyright Policy</a>
+  <a href="/feedback/new" class="contact_us facebox" rel="nofollow">Contact us</a>
+  
+  
+  <span class="copyright">&copy; 2023 ML Genius Holdings, LLC</span>
+</div>
+
+</div>
+
+<div id="request_time" style="display:none">0.61</div>
+
+  <div style="display:none">
+  <img class="loading dark" data-src="/images/throbber.gif" />
+  <img style="display:none" data-src="/images/throbber-light.gif" />
+  <img style="display:none" data-src="/images/ajax-loader-mobile.gif" />
+</div>
+
+  <div id="edit_annotation_form">
+  <div class='edit_annotation_form' data-filepicker-form>
+  <h3 class="edit_annotation_form-integration_notice hide">
+    Integrate the suggestion into the annotation,
+    keeping the <a href="https://genius.com/Genius-how-genius-works-annotated">contributor guidelines</a>
+    in mind.
+  </h3>
+
+  <a class="toggle_lyric_editor toggle_target" data-relative=true data-target="~ .lyric_editor" data-focus=".lyric_text:visible">Correct this Line</a>
+  <button class="record_video video_controls ">Record a Video Annotation </button>
+  <a class="toggle_video_id toggle_target" data-relative=true data-target="~ .video_id_container">Edit Video Id</a>
+
+  <textarea class="lyric_text lyric_editor" rows=2 cols=20 tabindex="1" placeholder="Correct the lyrics"></textarea>
+
+  <div class="video_recorder_container"></div>
+<div class="video_id_container">
+  <input class="video_id" tabindex="6" placeholder="Video ID"></input>
+</div>
+
+
+  <textarea class="annotation_text activate_on_change autogrow" data-filepicker-target required="required" tabindex="2" placeholder="Don’t just put the lyric in your own words—drop some knowledge!"></textarea>
+  <a class="image_adder edit_annotation_option">Add an Image</a>
+  <a class="formatting_help_button edit_annotation_option toggle_target" data-target="~ .explanation_instructions" data-relative=true>Formatting Help</a>
+  <br>
+  <textarea class="edit_annotation_note" tabindex="3" maxlength="250" placeholder ="Briefly describe your edit"></textarea>
+  <button class="submit_annotation" tabindex="4">Save <small>(shift+enter)</small></button>
+  <button class="cancel_annotation" tabindex="7">cancel</button>
+
+  <div class="explanation_instructions">
+  <ul>
+    <li>
+      <p>Add an image, video, or tweet by pasting in the URL:</p>
+      <pre>http://genius.com/logo.png</pre>
+    </li>
+    <li>
+      <p>Add a link like this:</p>
+      <pre>[Check out my fave website](http://genius.com)</pre>
+    </li>
+    <li>
+      <p>Simple formatting:</p>
+      <pre>
+*Italicize Album Titles*
+> This is how you quote from other sources</pre>
+    </li>
+  </ul>
+
+  <p><a href="https://genius.com/Genius-how-genius-works-annotated" target="_blank">How to write for Genius</a> </p>
+</div>
+
+</div>
+
+</div>
+
+<script type="text/template" id="new_comment_template">
+  <div class="comment_unit comment_unit--new new  anonymous_comment" id="{{ identifier }}">
+    <div class="comment">
+      <div class="comment-header">
+        <div class="name">
+          
+            {{ name }}
+          
+        </div>
+        {{#reason}}
+          <div class="reason reason--inline" data-reason="{{ reason }}">
+            <span class="reason-title">
+              Marked this as
+              <a ng-href="{{reason_context_url}}" class="reason-context_link" target="_blank">{{ inline_reason }}</a><a ng-href="{{reason_context_url}}" class="reason-context_indicator" target="_blank">?</a>
+            </span>
+          </div>
+        {{/reason}}
+        <div class="created_at" data-timeago="{{ timestamp }}" data-timeago-shortened="true"></div>
+      </div>
+      <div class="body embedly embedly_pro" >
+        {{{ body }}}
+      </div>
+    </div>
+    <div class="comment_footer">
+      <div class="moderate_comment">
+        
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="post_comment_message">
+  <div class="post_comment_message">
+    <form accept-charset="UTF-8" action="/users" class="new_user" id="" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="xe5YAU52/7EYQ+OvHgfiMqldr/2LYon2cElhwWId3jM=" /></div>
+      <h3>Sign up for Genius</h3>
+      <p class="sign_up_message">Tired of entering your email address? Create a Genius account and you'll never have to worry about it (or anything else) ever again:</p>
+
+      <label for="user_login">Genius Nickname</label>
+<input class="required" id="user_login" name="user[login]" size="30" tabindex="1" title="Enter a nickname" type="text" />
+
+<label for="user_email">Email</label>
+<input class="required email" id="user_email" name="user[email]" size="30" tabindex="2" title="Enter your email address" type="text" />
+
+
+  <label for="user_password">Password</label>
+  <input class="required" id="user_password" name="user[password]" size="30" tabindex="3" title="Enter a password" type="password" />
+
+
+<input id="user_device_fingerprint" name="user[device_fingerprint]" type="hidden" />
+
+
+  <p class="message">
+    By clicking &ldquo;Create Account&rdquo;, you are indicating that you have
+    read and agree to the <a href='/static/terms' target="_blank">Terms of Service</a>.
+  </p>
+
+
+      <input id="user_submit" name="commit" type="submit" value="Create Account" />
+      <p>(Already have an account? <a href="/login" class="facebox">Sign in</a>)</p>
+    </form>
+  </div>
+</script>
+
+<div style="display:none">
+  <div id='custom_cameratag_screens'>
+    <div id='accept-screen' class='cameratag_screen cameratag_accept'>
+      <a class="cameratag_accept_btn cameratag_publish"><span class="button_label">✓ Save Video</span></a>
+      <a class="cameratag_rerecord_btn cameratag_record"><span class="button_label">&#9679; Re-record Video</span></a>
+      <a class="cameratag_play_btn cameratag_play"><span class="button_label">&#9654; Watch Video Again</span></a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  
+  <script type="text/javascript">_qevents.push({ qacct: "p-f3CPQ6vHckedE"});</script>
+<noscript>
+  <div style="display: none;">
+    <img src="http://pixel.quantserve.com/pixel/p-f3CPQ6vHckedE.gif" height="1" width="1" alt="Quantcast"/>
+  </div>
+</noscript>
+
+  
+
+<script type="text/javascript">
+
+  var _sf_async_config={};
+
+  _sf_async_config.uid = 3877;
+  _sf_async_config.domain = 'genius.com';
+  _sf_async_config.title = 'Most Popular B Artists on Genius';
+  _sf_async_config.sections = '';
+  _sf_async_config.authors = '-';
+
+  var _cbq = window._cbq || [];
+
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src', 'https://static.chartbeat.com/js/chartbeat.js');
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+       loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script>
+
+  <!-- Begin comScore Tag -->
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "22489583" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=22489583&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '201983886890479');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=201983886890479&ev=PageView&noscript=1"
+/></noscript>
+
+  
+
+
+
+
+  <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init('77967c52dc38186cc1aadebdd19e2a82');</script>
+
+
+
+  
+
+</body>
+</html>
