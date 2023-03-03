@@ -2,6 +2,8 @@ import ast
 import json
 import pandas as pd
 import os
+from pymongo import MongoClient
+from bson.objectid import ObjectId
 
 
 def get_dataframe(directory):
@@ -23,8 +25,78 @@ def merge_two_lists_dictionaries(old, new):
     return [json.loads(x) for x in merged_dump]
 
 
+class MongoDB:
+    def __init__(self, client_dir="mongodb://localhost:27017/") -> None:
+        my_client = MongoClient(client_dir)
+        self.db = my_client["lyricsSearchEngine"]
+
+    def search_mongo_spotify_idx(
+        self, stf_idx, collection="tracks", get_duplicates=False
+    ):
+        mycol = self.db[collection]
+        field_name = collection[:-1] + "_spotify_idx"
+        res = list(mycol.find({field_name: stf_idx}))
+        if len(res) == 0:
+            return None
+        doc = res[0]
+        if len(res) > 1:
+            print(f"ERROR: {stf_idx} in collection {collection} is duplicated.")
+            if get_duplicates:
+                return res
+        return doc
+
+    def clean_duplicates_mongo(self, collection="tracks"):
+        mycol = self.db[collection]
+        res = list(mycol.find({}))
+        helper_dict = {}
+        for doc in res:
+            field_name = collection[:-1] + "_spotify_idx"
+            stf_idx = doc[field_name]
+            if stf_idx not in helper_dict:
+                helper_dict[stf_idx] = []
+            helper_dict[stf_idx].append(doc)
+
+        # Keep the duplicates
+        for key in list(helper_dict):
+            if len(helper_dict[key]) == 1:
+                del helper_dict[key]
+
+        # If duplicates have the same artists name:
+        # keep the first one (the popularity can be updated later)
+        for key in list(helper_dict):
+            value = helper_dict[key]
+            field_name = collection[:-1] + "_name"
+            all_equal = all(doc[field_name] == value[0][field_name] for doc in value)
+            if all_equal:
+                for doc in value[1:]:
+                    try:
+                        mycol.delete_one({"_id": ObjectId(doc["_id"])})
+                    except Exception as e:
+                        print(f"ERROR:{e}")
+                del helper_dict[key]
+
+        return helper_dict
+
+    def insert_mongo(self, file_dir="track_data.json", collection="tracks"):
+        mycol = self.db[collection]
+        with open(file_dir, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            mycol.insert_many(data)
+
+    def update_mongo(self, collection="tracks"):
+        pass
+
+
+# Convert ObjectId into string
+def object_id_to_str(obj):
+    if "_id" in obj:
+        obj["_id"] = str(obj["_id"])
+    return obj
+
+
+# Merge artists list based on Wasabi Dataset
 def merge_artist(start_page=0, end_page=31):
-    for idx in range(start_page, end_page + 1):
+    for idx in range(start_page, end_page):
         # load csv
         artist_df = get_dataframe(f"../artist_dataset/artist_id_spotipy{idx:02d}.csv")
         # rename column
@@ -47,57 +119,65 @@ def merge_artist(start_page=0, end_page=31):
             json.dump(output, f, ensure_ascii=False, indent=4)
 
 
-def merge_album(new_album_folder_dir="../album_dataset"):
-    with open("artist_data.json", "r", encoding="utf-8") as f:
-        artists = json.load(f)
+def merge_album(new_album_folder_dir="../new_album"):
+    db = MongoDB()
+    artists = list(db.db["artists"].find({}))
     artists_dict = {artist["artist_spotify_idx"]: artist for artist in artists}
+
     untracked_artist_idxs = []
     handled_albums, unhandled_albums = [], []
-
     albums_files = find_files(new_album_folder_dir)
     album_dfs = [get_dataframe(album_dir) for album_dir in albums_files]
+    albums = []
+
+    if len(album_dfs) > 0:
+        concat_album_df = pd.concat(album_dfs)
+        concat_album_df = concat_album_df.drop_duplicates()
+        concat_album_df.rename(
+            columns={"album_idx": "album_spotify_idx"}, inplace=True, errors="raise"
+        )
+        albums = concat_album_df.to_dict("records")
+        for a in albums:
+            a["artists_idxs"] = ast.literal_eval(a["artists_idxs"])
+
     # also load the unhandled albums:
-    tb_updated_albums_df = pd.read_json("unhandled_albums.json")
-    if not tb_updated_albums_df.empty:
-        album_dfs.append(tb_updated_albums_df)
-    concat_album_df = pd.concat(album_dfs)
-    concat_album_df = concat_album_df.drop_duplicates()
-    concat_album_df.rename(
-        columns={"album_idx": "album_spotify_idx"}, inplace=True, errors="raise"
-    )
+    with open("unhandled_albums.json", "r", encoding="utf-8") as f:
+        tb_updated_albums = json.load(f)
+    albums = merge_two_lists_dictionaries(albums, tb_updated_albums)
 
-    # convert into python dictionary
-    albums = concat_album_df.to_dict("records")
     for a in albums:
-        a["artists_idxs"] = ast.literal_eval(a["artists_idxs"])
-
         # if there is artists idx unrecorded, handle it later
-        marked_tbc = all([artist_id in artists_dict for artist_id in a["artists_idxs"]])
+        artists_search = [
+            object_id_to_str(artists_dict[artist_id])
+            if artist_id in artists_dict
+            else None
+            for artist_id in a["artists_idxs"]
+        ]
+        marked_tbc = all(artists_search)
+
         if marked_tbc:
-            a["artists"] = [artists_dict[artist_id] for artist_id in a["artists_idxs"]]
+            a["artists"] = artists_search
             del a["artists_idxs"]
             handled_albums.append(a)
         else:
-            untracked_artist_idxs.extend(a["artists_idxs"])
+            for idx, artist in enumerate(artists_search):
+                if artist == None:
+                    untracked_artist_idxs.append(a["artists_idxs"][idx])
             unhandled_albums.append(a)
 
-    untracked_artist_idxs = list(set(untracked_artist_idxs) - set(artists_dict.keys()))
+    untracked_artist_idxs = list(set(untracked_artist_idxs))
 
     # load current history
-    with open("album_data.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
-    output = merge_two_lists_dictionaries(data, handled_albums)
-    with open("album_data.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=4)
-
+    with open("handled_albums.json", "w", encoding="utf-8") as f:
+        json.dump(handled_albums, f, ensure_ascii=False)
     with open("unhandled_albums.json", "w", encoding="utf-8") as f:
-        json.dump(unhandled_albums, f, ensure_ascii=False, indent=4)
+        json.dump(unhandled_albums, f, ensure_ascii=False)
 
     with open("untracked_artist_idxs.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     untracked_artist_idxs = list(set(data + untracked_artist_idxs))
     with open("untracked_artist_idxs.json", "w", encoding="utf-8") as f:
-        json.dump(untracked_artist_idxs, f, ensure_ascii=False, indent=4)
+        json.dump(untracked_artist_idxs, f, ensure_ascii=False)
 
 
 def merge_track(new_track_folder_dir="../song_dataset"):
@@ -171,4 +251,8 @@ def merge_track(new_track_folder_dir="../song_dataset"):
         json.dump(untracked_artist_idxs, f, ensure_ascii=False, indent=4)
 
 
-merge_track("../new_track")
+if __name__ == "__main__":
+    # merge_album("../album_dataset")
+    db = MongoDB()
+    # db.insert_mongo("handled_albums.json", "albums")
+    db.clean_duplicates_mongo("albums")
