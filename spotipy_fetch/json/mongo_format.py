@@ -116,7 +116,7 @@ def merge_artist(start_page=0, end_page=31):
         output = merge_two_lists_dictionaries(data, artists)
 
         with open("artist_data.json", "w", encoding="utf-8") as f:
-            json.dump(output, f, ensure_ascii=False, indent=4)
+            json.dump(output, f, ensure_ascii=False)
 
 
 def merge_album(new_album_folder_dir="../new_album"):
@@ -181,78 +181,85 @@ def merge_album(new_album_folder_dir="../new_album"):
 
 
 def merge_track(new_track_folder_dir="../song_dataset"):
-    with open("artist_data.json", "r", encoding="utf-8") as f:
-        artists = json.load(f)
+    db = MongoDB()
+    artists = list(db.db["artists"].find({}))
     artists_dict = {artist["artist_spotify_idx"]: artist for artist in artists}
-    with open("album_data.json", "r", encoding="utf-8") as f:
-        albums = json.load(f)
+    albums = list(db.db["albums"].find({}))
     albums_dict = {album["album_spotify_idx"]: album for album in albums}
 
     untracked_artist_idxs, untracked_album_idxs = [], []
     handled_tracks, unhandled_tracks = [], []
-
     tracks_file = find_files(new_track_folder_dir)
     track_dfs = [get_dataframe(album_dir) for album_dir in tracks_file]
-    # also load the unhandled albums:
-    tb_updated_tracks_df = pd.read_json("unhandled_tracks.json")
-    if not tb_updated_tracks_df.empty:
-        track_dfs.append(tb_updated_tracks_df)
+    tracks = []
 
-    concat_track_df = pd.concat(track_dfs)
-    concat_track_df = concat_track_df.drop_duplicates()
-    tracks = concat_track_df.to_dict("records")
+    if len(track_dfs) > 0:
+        concat_track_df = pd.concat(track_dfs)
+        concat_track_df = concat_track_df.drop_duplicates()
+        tracks = concat_track_df.to_dict("records")
+        for t in tracks:
+            t["artists_spotify_idxs"] = ast.literal_eval(t["artists_spotify_idxs"])
+
+    # also load the unhandled albums:
+    with open("unhandled_tracks.json", "r", encoding="utf-8") as f:
+        tb_updated_tracks = json.load(f)
+    tracks = merge_two_lists_dictionaries(tracks, tb_updated_tracks)
 
     for t in tracks:
-        t["artists_spotify_idxs"] = ast.literal_eval(t["artists_spotify_idxs"])
-
-        # if there is artists idx unrecorded, handle it later
-        marked_tbc = all(
-            [artist_id in artists_dict for artist_id in t["artists_spotify_idxs"]]
+        # if there is artists idx or album idx unrecorded, handle it later
+        artists_search = [
+            object_id_to_str(artists_dict[artist_id])
+            if artist_id in artists_dict
+            else None
+            for artist_id in t["artists_spotify_idxs"]
+        ]
+        album_search = (
+            object_id_to_str(albums_dict[t["album_spotify_idx"]])
+            if t["album_spotify_idx"] in albums_dict
+            else None
         )
-        marked_tbc = marked_tbc and (t["album_spotify_idx"] in albums_dict)
+        marked_tbc = all(artists_search) and album_search
 
         if marked_tbc:
-            t["artists"] = [
-                artists_dict[artist_id] for artist_id in t["artists_spotify_idxs"]
-            ]
-            t["album"] = albums_dict[t["album_spotify_idx"]]
+            t["artists"] = artists_search
+            t["album"] = album_search
             del t["artists_spotify_idxs"]
             del t["album_spotify_idx"]
             t["lyrics"] = None
             handled_tracks.append(t)
+            pass
         else:
-            untracked_artist_idxs.extend(t["artists_spotify_idxs"])
-            untracked_album_idxs.append(t["album_spotify_idx"])
+            for idx, artist in enumerate(artists_search):
+                if artist == None:
+                    untracked_artist_idxs.append(t["artists_spotify_idxs"][idx])
+            if album_search == None:
+                untracked_album_idxs.append(t["album_spotify_idx"])
             unhandled_tracks.append(t)
 
-    untracked_artist_idxs = list(set(untracked_artist_idxs) - set(artists_dict.keys()))
-    untracked_album_idxs = list(set(untracked_album_idxs) - set(albums_dict.keys()))
+    untracked_artist_idxs = list(set(untracked_artist_idxs))
+    untracked_album_idxs = list(set(untracked_album_idxs))
 
     # load current history
-    with open("track_data.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
-    output = merge_two_lists_dictionaries(data, handled_tracks)
     with open("track_data.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=4)
-
-    with open("unhandled_albums.json", "w", encoding="utf-8") as f:
-        json.dump(unhandled_tracks, f, ensure_ascii=False, indent=4)
+        json.dump(handled_tracks, f, ensure_ascii=False)
+    with open("unhandled_tracks.json", "w", encoding="utf-8") as f:
+        json.dump(unhandled_tracks, f, ensure_ascii=False)
 
     with open("untracked_artist_idxs.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     untracked_artist_idxs = list(set(data + untracked_artist_idxs))
     with open("untracked_artist_idxs.json", "w", encoding="utf-8") as f:
-        json.dump(untracked_artist_idxs, f, ensure_ascii=False, indent=4)
+        json.dump(untracked_artist_idxs, f, ensure_ascii=False)
 
     with open("untracked_album_idxs.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     untracked_album_idxs = list(set(data + untracked_album_idxs))
     with open("untracked_album_idxs.json", "w", encoding="utf-8") as f:
-        json.dump(untracked_artist_idxs, f, ensure_ascii=False, indent=4)
+        json.dump(untracked_album_idxs, f, ensure_ascii=False)
 
 
 if __name__ == "__main__":
-    # merge_album("../album_dataset")
-    db = MongoDB()
+    merge_album("../new_album")
+    # db = MongoDB()
     # db.insert_mongo("handled_albums.json", "albums")
-    db.clean_duplicates_mongo("albums")
+    # db.clean_duplicates_mongo("albums")
