@@ -11,6 +11,7 @@ from os.path import exists
 from stemming.porter2 import stem
 import pandas as pd
 import pymongo
+from metaphone import doublemetaphone
 
 warnings.filterwarnings('ignore')
 
@@ -34,6 +35,22 @@ def csv_parser(path):
     file_map = dict(map(lambda i, j: (i, preprocess(j)), song_names, Lyrics))
     return file_map, song_names
 
+def phonetic(value):
+    '''
+    :param value:
+    :return: size 2 tuple representing two level of precision, first one is the primary key
+    '''
+    return doublemetaphone(value)
+
+def preprocess(text):
+    p_words = []
+    tokenization = re.sub('\W', ' ', text.lower()).split()
+
+    for word in tokenization:
+        if word not in stop:
+            if phonetic(word) != ('', ''):
+                p_words.append(phonetic(word))
+    return p_words
 
 def stopwords(path):
     global stop
@@ -45,15 +62,15 @@ def stopwords(path):
 
 
 # tokenization, remove stopwords, lower case, stemming
-def preprocess(text):
-    p_words = []
-    tokenization = re.sub('\W', ' ', text.lower()).split()
-
-    for word in tokenization:
-        if word not in stop:
-            if stem(word).strip() != "":
-                p_words.append(stem(word).strip())
-    return p_words
+# def preprocess(text):
+#     p_words = []
+#     tokenization = re.sub('\W', ' ', text.lower()).split()
+#
+#     for word in tokenization:
+#         if word not in stop:
+#             if stem(word).strip() != "":
+#                 p_words.append(stem(word).strip())
+#     return p_words
 
 
 # generate inverted index
@@ -391,7 +408,7 @@ def main():
     else:
         ii = inverted_index(file_map)
         output_index(ii)
-        output_into_mongodb(ii)
+        #output_into_mongodb(ii)
         pos_index = ii  # if index file doesn't exist then initialising and creating it
 
     print(tfidf("handle"))
