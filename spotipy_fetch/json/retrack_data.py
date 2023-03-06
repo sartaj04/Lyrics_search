@@ -32,7 +32,6 @@ def get_artist_idx():
         print(count, "start... ", end="")
         fetch_result = stf.artists(partition)["artists"]
         for artist in fetch_result:
-            # print(artist)
             fields_name_changes = [
                 ("genres", "artist_genres"),
                 ("id", "artist_spotify_idx"),
@@ -52,8 +51,11 @@ def get_artist_idx():
         json.dump([], f, ensure_ascii=False)  # clear everything
 
 
+# ["7rAA9SXeqCtCcf7jkcMcKQ", "0XjGDP4VwR0z0Xqe7Vd7KR", "5IjeJ3eN1VwJvqYN7zn3YW"]
+
 if __name__ == "__main__":
     # get_artist_idx()
-    db = MongoDB()
-    db.insert_mongo("tb_add_artists.json", "artists")
-    db.clean_duplicates_mongo("artists")
+    # db = MongoCollection()
+    # db.insert_mongo("tb_add_artists.json", "artists")
+    # db.clean_duplicates_mongo("artists")
+    pass
