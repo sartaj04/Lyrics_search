@@ -3,7 +3,6 @@ import json
 import pandas as pd
 import os
 from pymongo import MongoClient
-from bson.objectid import ObjectId
 
 
 def get_dataframe(directory):
@@ -25,65 +24,61 @@ def merge_two_lists_dictionaries(old, new):
     return [json.loads(x) for x in merged_dump]
 
 
-class MongoDB:
-    def __init__(self, client_dir="mongodb://localhost:27017/") -> None:
+class MongoCollection:
+    def __init__(
+        self, client_dir="mongodb://localhost:27017/", collection="tracks"
+    ) -> None:
         my_client = MongoClient(client_dir)
-        self.db = my_client["lyricsSearchEngine"]
+        db = my_client["lyricsSearchEngine"]
+        self.col_name = collection
+        self.col = db[collection]
 
-    def search_mongo_spotify_idx(
-        self, stf_idx, collection="tracks", get_duplicates=False
-    ):
-        mycol = self.db[collection]
-        field_name = collection[:-1] + "_spotify_idx"
-        res = list(mycol.find({field_name: stf_idx}))
-        if len(res) == 0:
-            return None
-        doc = res[0]
-        if len(res) > 1:
-            print(f"ERROR: {stf_idx} in collection {collection} is duplicated.")
-            if get_duplicates:
-                return res
-        return doc
+    def search_mongo_spotify_idxs(self, stf_idxs, get_duplicates=False):
+        field_name = self.col_name[:-1] + "_spotify_idx"
 
-    def clean_duplicates_mongo(self, collection="tracks"):
-        mycol = self.db[collection]
-        res = list(mycol.find({}))
-        helper_dict = {}
-        for doc in res:
-            field_name = collection[:-1] + "_spotify_idx"
-            stf_idx = doc[field_name]
-            if stf_idx not in helper_dict:
-                helper_dict[stf_idx] = []
-            helper_dict[stf_idx].append(doc)
+        def search_idx(stf_idx):
+            res = list(self.col.find({field_name: stf_idx}))
+            if len(res) == 0:
+                return None
+            doc = res[0]
+            if len(res) > 1:
+                print(f"ERROR: {stf_idx} in collection {self.col_name} is duplicated.")
+                if get_duplicates:
+                    return res
+            return doc
 
-        # Keep the duplicates
-        for key in list(helper_dict):
-            if len(helper_dict[key]) == 1:
-                del helper_dict[key]
+        return [search_idx(idx) for idx in stf_idxs]
 
-        # If duplicates have the same artists name:
-        # keep the first one (the popularity can be updated later)
-        for key in list(helper_dict):
-            value = helper_dict[key]
-            field_name = collection[:-1] + "_name"
-            all_equal = all(doc[field_name] == value[0][field_name] for doc in value)
-            if all_equal:
-                for doc in value[1:]:
-                    try:
-                        mycol.delete_one({"_id": ObjectId(doc["_id"])})
-                    except Exception as e:
-                        print(f"ERROR:{e}")
-                del helper_dict[key]
+    def clean_duplicates_mongo(self, regex_exp):
+        idx_field_name = self.col_name[:-1] + "_spotify_idx"
+        db = MongoCollection(collection=self.col_name)
+        res = list(
+            db.col.find(
+                {idx_field_name: {"$regex": regex_exp}}, {"_id": 1, idx_field_name: 1}
+            )
+        )
+        df = pd.DataFrame(res)
+        dedup = df.drop_duplicates(subset=idx_field_name, keep="first")
+        remove = df[~df.apply(tuple, 1).isin(dedup.apply(tuple, 1))]
+        if len(remove):
+            remove_idxs = list(remove["_id"])
+            threshold = 25000
+            pages = -(-len(remove_idxs) // threshold)
+            print(pages)
+            for i in range(pages):
+                print(i, end="starts ...")
+                db.col.delete_many(
+                    {"_id": {"$in": remove_idxs[i * threshold : (i + 1) * threshold]}}
+                )
+                print("end!")
 
-        return helper_dict
-
-    def insert_mongo(self, file_dir="track_data.json", collection="tracks"):
-        mycol = self.db[collection]
+    def insert_mongo(self, file_dir="track_data.json"):
         with open(file_dir, "r", encoding="utf-8") as f:
             data = json.load(f)
-            mycol.insert_many(data)
+            print(f"Insert {len(data)} data...")
+            self.col.insert_many(data)
 
-    def update_mongo(self, collection="tracks"):
+    def update_mongo(self):
         pass
 
 
@@ -120,8 +115,8 @@ def merge_artist(start_page=0, end_page=31):
 
 
 def merge_album(new_album_folder_dir="../new_album"):
-    db = MongoDB()
-    artists = list(db.db["artists"].find({}))
+    db = MongoCollection(collection="artists")
+    artists = list(db.col.find({}))
     artists_dict = {artist["artist_spotify_idx"]: artist for artist in artists}
 
     untracked_artist_idxs = []
@@ -180,11 +175,12 @@ def merge_album(new_album_folder_dir="../new_album"):
         json.dump(untracked_artist_idxs, f, ensure_ascii=False)
 
 
-def merge_track(new_track_folder_dir="../song_dataset"):
-    db = MongoDB()
-    artists = list(db.db["artists"].find({}))
+def merge_track(new_track_folder_dir="../new_track"):
+    db = MongoCollection(collection="artists")
+    artists = list(db.col.find({}))
     artists_dict = {artist["artist_spotify_idx"]: artist for artist in artists}
-    albums = list(db.db["albums"].find({}))
+    db = MongoCollection(collection="albums")
+    albums = list(db.col.find({}))
     albums_dict = {album["album_spotify_idx"]: album for album in albums}
 
     untracked_artist_idxs, untracked_album_idxs = [], []
@@ -259,7 +255,4 @@ def merge_track(new_track_folder_dir="../song_dataset"):
 
 
 if __name__ == "__main__":
-    merge_album("../new_album")
-    # db = MongoDB()
-    # db.insert_mongo("handled_albums.json", "albums")
-    # db.clean_duplicates_mongo("albums")
+    merge_track("../new_track")
