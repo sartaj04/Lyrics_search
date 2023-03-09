@@ -1,42 +1,44 @@
 import csv
 import re
+import time
+import lyricsgenius
 import lyricsgenius as lg
 import pandas
 import requests
 from bs4 import BeautifulSoup
-
+from urllib3.exceptions import ReadTimeoutError
 
 access_token = 'dqGL_JaIaTxkHZsZq2gSy8_SvR8h5WhpEJ56hHLX2RolATalA5XLV4evQVnFm1hz'
 genius = lg.Genius('dqGL_JaIaTxkHZsZq2gSy8_SvR8h5WhpEJ56hHLX2RolATalA5XLV4evQVnFm1hz', skip_non_songs=True, excluded_terms=["(Remix)", "(Live)"],
                              remove_section_headers=True)
 artists = []
-
 df = pandas.read_csv('artist_V.csv')
 
 #df.iloc[start_index:end_index] to specify no of rows to read from dataframe 'df'
-for index, row in df.iloc[0:2].iterrows():
+
+for index, row in df.iloc[100:110].iterrows():
     print(index, row['name'])
     artists.append(row['name'])
 
 
-def get_lyrics(row):
-    path = row['path']
-    print(row['full_title'])
-    url_prefix = 'https://genius.com'
-    full_url = f'{url_prefix}{path}'
-    #print(full_url)
-    response_url = requests.get(full_url)
-    soup = BeautifulSoup(response_url.text, 'html.parser')
-    unformulated_lyrics = soup.find('div', {'class': 'Lyrics__Container-sc-1ynbvzw-6 YYrds'})
+def get_lyrics(song_id):
+    url_prefix = 'https://genius.com/songs/'
+    full_url = f'{url_prefix}{song_id}'
+    print(full_url)
     try:
+        response_url = requests.get(full_url)
+        response_url.raise_for_status()
+        soup = BeautifulSoup(response_url.text, 'html.parser')
+        unformulated_lyrics = soup.find('div', {'class': 'Lyrics__Container-sc-1ynbvzw-6 YYrds'})
         if unformulated_lyrics is not None:
             lyrics_brackets = str(unformulated_lyrics.get_text(separator=' '))
             lyrics = re.sub(r'\[.*?\]', '', lyrics_brackets)
+            return lyrics
         else:
-            lyrics = "Sorry, the lyrics of this song are not available."
+            return "Sorry, the lyrics of this song are not available."
     except (AttributeError, IndexError):
-        lyrics = "Unexpected Error Occured!"
-    return lyrics
+        return "Unexpected Error Occured!"
+
 
 
 def get_artist_songs(artistID):
@@ -60,6 +62,18 @@ def get_artist_songs(artistID):
 count = 0
 lyrics_list = []
 
+'''
+The below code directly appends the lyrics to each row and then it is written into the csv file. 
+The approx. number of calls that can be used per day is around 10000. 
+If the code breaks due to SSL Error, you can do the below:
+    1. Copy paste the whole code into a new python file and run it again.
+    2. Create a new genius token and re-run the program
+However, this way the output file will consist of data until failure was observed, so you will 
+know where to start from again. 
+IMP: In case you decide to rerun the program, 
+please copy the current output of the csv file you will use in below code without fail
+'''
+
 with open('Nithya_AVWXY.csv', mode='w', newline='', encoding='utf-8') as input_file:
     csv_writer = csv.writer(input_file)
     for artist in artists:
@@ -77,14 +91,12 @@ with open('Nithya_AVWXY.csv', mode='w', newline='', encoding='utf-8') as input_f
             for j in range(0, len(songs_json)):
                 if (songs_json[j]['language'] != 'null') & (songs_json[j]['language'] == 'en'):
                     if count == 0:
-                        header = songs_json[j].keys()
+                        header = list(songs_json[j].keys())
+                        header.append('lyrics')
                         csv_writer.writerow(header)
                         count += 1
-                    vals = songs_json[j].values()
-                    title = songs_json[j]['title']
+                    print(songs_json[j]['id'])
+                    vals = list(songs_json[j].values())
+                    res = get_lyrics(songs_json[j]['id'])
+                    vals.append(res)
                     csv_writer.writerow(vals)
-
-
-df_results = pandas.read_csv('Nithya_AVWXY.csv', encoding='utf-8')
-df_results['lyrics'] = df_results.apply(lambda row: get_lyrics(row), axis=1)
-df_results.to_csv('temp.csv', index=False)
