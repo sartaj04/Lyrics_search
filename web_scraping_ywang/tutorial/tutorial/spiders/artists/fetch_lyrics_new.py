@@ -21,7 +21,7 @@ for index, row in df.iloc[100:110].iterrows():
     artists.append(row['name'])
 
 
-def get_lyrics(song_id):
+def get_lyrics(song_id, retry):
     url_prefix = 'https://genius.com/songs/'
     full_url = f'{url_prefix}{song_id}'
     print(full_url)
@@ -38,6 +38,13 @@ def get_lyrics(song_id):
             return "Sorry, the lyrics of this song are not available."
     except (AttributeError, IndexError):
         return "Unexpected Error Occured!"
+    except requests.exceptions.HTTPError as err:
+        if retry > 0:
+            print(f"HTTP error occurred: {err}. Retrying...")
+            time.sleep(20)
+            return get_lyrics(song_id,  retry = retry-1)
+        else:
+            return f"HTTP error occurred: {err}. Maximum retry attempts exceeded."
 
 
 
@@ -97,6 +104,6 @@ with open('Nithya_AVWXY.csv', mode='w', newline='', encoding='utf-8') as input_f
                         count += 1
                     print(songs_json[j]['id'])
                     vals = list(songs_json[j].values())
-                    res = get_lyrics(songs_json[j]['id'])
+                    res = get_lyrics(songs_json[j]['id'], 3)
                     vals.append(res)
                     csv_writer.writerow(vals)
