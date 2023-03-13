@@ -1,20 +1,14 @@
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
+from utils import create_spotipy
 
-# Current your account to fetch data. These info should be private.
-def create_spotipy():
-    client_id = ""
-    client_secret = ""
 
-    client_credentials_manager = SpotifyClientCredentials(
-        client_id=client_id, client_secret=client_secret
-    )
-    stf = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    return stf
+# TODO
+client_id = "0c525f920ffa4e6fbb3f538a4ece013f"
+client_secret = "284dc2899d2844cbbc952e586c6959c5"
 
 
 def get_songs(artist_page=0, album_page=0, end_page=20):
+    stf = create_spotipy(client_id, client_secret)
     for page in range(album_page, end_page + 1):
         print("Now handling album page:", page)
         df = pd.read_csv(
@@ -29,7 +23,6 @@ def get_songs(artist_page=0, album_page=0, end_page=20):
             for i in range(-(-len(album_idxs) // album_limit))
         ]
 
-        stf = create_spotipy()
         track_results = []
         for count, partition in enumerate(partition_albums_idxs):
             print(count, "start... ", end="")

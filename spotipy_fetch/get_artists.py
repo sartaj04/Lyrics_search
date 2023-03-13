@@ -1,24 +1,17 @@
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
 import csv
+from utils import create_spotipy
 
 page_limit = 2500
 
-# Current your account to fetch data. These info should be private.
-def create_spotipy():
-    client_id = ""
-    client_secret = ""
 
-    client_credentials_manager = SpotifyClientCredentials(
-        client_id=client_id, client_secret=client_secret
-    )
-    stf = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    return stf
+# TODO
+client_id = "0c525f920ffa4e6fbb3f538a4ece013f"
+client_secret = "284dc2899d2844cbbc952e586c6959c5"
 
 
 def get_artist(page=0):
-    stf = create_spotipy()
+    stf = create_spotipy(client_id, client_secret)
     steam = open(f"../dataset/dfArtistDetailed.csv", "r", newline="", encoding="utf-8")
     reader = csv.reader(steam, delimiter=",")
     next(reader, None)
@@ -30,8 +23,8 @@ def get_artist(page=0):
 
     track_results = []
     for art in search_artists[start:end]:
-        query = f"remaster artist:{art[2]}".replace(" ", "%20")
-        track_results.append(stf.search(q=query, type="artist", offset=0, limit=3))
+        query = f"artist:{art[2]}".replace(" ", "%20")
+        track_results.append(stf.search(q=query, type="artist", offset=0, limit=1))
 
     organized_data = [
         res["artists"]["items"]

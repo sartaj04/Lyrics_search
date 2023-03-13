@@ -1,22 +1,13 @@
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
+import re
+from utils import create_spotipy
+
 
 artist_limit = 250
 
-# Current your account to fetch data. These info should be private.
-def create_spotipy():
-    client_id = "0c525f920ffa4e6fbb3f538a4ece013f"
-    client_secret = "284dc2899d2844cbbc952e586c6959c5"
-
-    client_credentials_manager = SpotifyClientCredentials(
-        client_id=client_id, client_secret=client_secret
-    )
-    stf = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    return stf
-
-
-import re
+# TODO
+client_id = "0c525f920ffa4e6fbb3f538a4ece013f"
+client_secret = "284dc2899d2844cbbc952e586c6959c5"
 
 
 def get_ymd(date):
@@ -45,7 +36,7 @@ def get_albums(artist_page=0, album_page=0):
     ][album_page:]
     print("Total album page:", (len(artist_idxs) + artist_limit - 1) // artist_limit)
 
-    stf = create_spotipy()
+    stf = create_spotipy(client_id, client_secret)
     for count, partition in enumerate(partition_artist_idxs):
         print(count, "start... ", end="")
         album_results = []

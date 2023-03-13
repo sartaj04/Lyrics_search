@@ -1,2 +1,7 @@
 # cache for spotipy
 *.cache
+
+/spotipy_fetch/album_dataset/*
+/spotipy_fetch/artist_dataset/*
+/spotipy_fetch/track_dataset/*
+/spotipy_fetch/*.zip
