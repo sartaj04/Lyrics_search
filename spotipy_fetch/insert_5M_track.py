@@ -44,8 +44,8 @@ def clean_df():
 
 
 def get_basic_track_info(page=0, display_404=False):
-    page_limit = 1000 + 200 * page
-    rows_skip = 100 * page * (page + 9)
+    page_limit = 1000
+    rows_skip = 1000 * page
     stf = create_spotipy(client_id, client_secret)
     artists_df = pd.read_csv(
         "5M_artists_ENGLISH.csv",
@@ -188,6 +188,7 @@ def get_basic_track_info(page=0, display_404=False):
 
 def get_basic_track_infos(start_page=0, end_page=57):
     for i in range(start_page, end_page + 1):
+        print(f"====Page {i} ====")
         get_basic_track_info(i)
 
 
