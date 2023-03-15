@@ -15,13 +15,30 @@ def tracks_to_artists_albums(
     track_dir="tracks_intersection.json",
     album_export_dir="albums_small.json",
     artist_export_dir="artists_small.json",
+    track_export_dir="",
 ):
     with open(track_dir, "r", encoding="utf-8") as f:
         tracks = json.load(f)
 
+    # Search if exists in DB
+    print("Search MongoDB...")
+    tracks_col = MongoCollection(database="trackInfo")
+    insert_lyrics_tracks = []
+    for track in tracks:
+        mongo_tracks = list(
+            tracks_col.col.find(
+                {"track_spotify_idx": track["track_spotify_idx"]}, {"lyrics": 1}
+            )
+        )
+
+        # insert data if tracks not found
+        if len(mongo_tracks) == 0:
+            insert_lyrics_tracks.append(track)
+
+    print("Creating artists and artists info...")
     albums_dict = {}
     artist_dict = {}
-    for track in tracks:
+    for track in insert_lyrics_tracks:
         album = track["album"]
         artists = album["artists"] + track["artists"]
 
@@ -34,6 +51,9 @@ def tracks_to_artists_albums(
             if artist["_id"] not in artist_dict:
                 artist_dict[artist["_id"]] = artist
 
+    print("Exporting ...")
+    with open(track_export_dir, "w", encoding="utf-8") as f:
+        json.dump(insert_lyrics_tracks, f, ensure_ascii=False)
     with open(album_export_dir, "w", encoding="utf-8") as f:
         json.dump(list(albums_dict.values()), f, ensure_ascii=False)
     with open(artist_export_dir, "w", encoding="utf-8") as f:
@@ -42,11 +62,18 @@ def tracks_to_artists_albums(
 
 if __name__ == "__main__":
     start_page, end_page = 0, 0  # TODO
-    track_dir = f"track_extra_dataset/track_data_{start_page:02d}_{end_page:02d}.json"
+    track_dir = (
+        f"track_extra_dataset/filtered_data_{start_page:02d}_{end_page:02d}.json"
+    )
     album_export_dir = (
         f"track_extra_dataset/album_data_{start_page:02d}_{end_page:02d}.json"
     )
     artist_export_dir = (
         f"track_extra_dataset/artist_data_{start_page:02d}_{end_page:02d}.json"
     )
-    tracks_to_artists_albums(track_dir, album_export_dir, artist_export_dir)
+    track_export_dir = (
+        f"track_extra_dataset/track_data_{start_page:02d}_{end_page:02d}.json"
+    )
+    tracks_to_artists_albums(
+        track_dir, album_export_dir, artist_export_dir, track_export_dir
+    )

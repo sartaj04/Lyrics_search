@@ -203,14 +203,13 @@ def merge_with_lyrics(start_page=0, end_page=0):
         usecols=["title", "artist", "lyrics"],
         header=0,
     )
-    df_tracks = pd.read_json(f"track_extra_dataset/track_data_{start_page:02d}.json")
-
-    # dfs_tracks = pd.concat(
-    #     [
-    #         pd.read_json(f"track_extra_dataset/track_data_{page:02d}.json")
-    #         for page in range(start_page, end_page + 1)
-    #     ]
-    # ).drop_duplicates()
+    # df_tracks = pd.read_json(f"track_extra_dataset/track_data_{start_page:02d}.json")
+    df_tracks = pd.concat(
+        [
+            pd.read_json(f"track_extra_dataset/track_data_{page:02d}.json")
+            for page in range(start_page, end_page + 1)
+        ]
+    ).drop_duplicates()
 
     # find lyrics
     print("Join database...")
@@ -231,31 +230,17 @@ def merge_with_lyrics(start_page=0, end_page=0):
     ).rename(columns={"lyrics_y": "lyrics"})
     add_lyrics_tracks = filtered_df.to_dict("records")
 
-    # Search if exists in DB
-    print("Search MongoDB...")
-    tracks_col = MongoCollection(database="trackInfo")
-    insert_lyrics_tracks = []
-    for track in add_lyrics_tracks:
-        mongo_tracks = list(
-            tracks_col.col.find(
-                {"track_spotify_idx": track["track_spotify_idx"]}, {"lyrics": 1}
-            )
-        )
-
-        # insert data if tracks not found
-        if len(mongo_tracks) == 0:
-            insert_lyrics_tracks.append(track)
-
     print("Exporting ...")
     with open(
-        f"extra_track_dataset/insert_data_{start_page:02d}_{end_page:02d}.json",
+        f"track_extra_dataset/filtered_data_{start_page:02d}_{end_page:02d}.json",
         "w",
         encoding="utf-8",
     ) as f:
-        json.dump(insert_lyrics_tracks, f, ensure_ascii=False)
+        json.dump(add_lyrics_tracks, f, ensure_ascii=False)
 
 
 if __name__ == "__main__":
+    # TODO
     # for single one
     # get_basic_track_info(0)
     # for multiple pages
