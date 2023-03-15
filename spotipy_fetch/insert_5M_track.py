@@ -192,26 +192,74 @@ def get_basic_track_infos(start_page=0, end_page=57):
         get_basic_track_info(i)
 
 
-def merge_with_lyrics(page=0):
+def unify_str(str):
+    return str.lower().replace("'", "’")
 
+
+def merge_with_lyrics(start_page=0, end_page=0):
+    print("Loading data...")
     df_5M = pd.read_csv(
         "../dataset/ds2_ENGLISH.csv",
         usecols=["title", "artist", "lyrics"],
         header=0,
     )
+    df_tracks = pd.read_json(f"track_extra_dataset/track_data_{start_page:02d}.json")
 
-    df_tracks = pd.read_json(f"extra_track_dataset/track_data_{page:02d}.json")
-    df_tracks = df_tracks.drop_duplicates()
+    # dfs_tracks = pd.concat(
+    #     [
+    #         pd.read_json(f"track_extra_dataset/track_data_{page:02d}.json")
+    #         for page in range(start_page, end_page + 1)
+    #     ]
+    # ).drop_duplicates()
 
-    # TODO
+    # find lyrics
+    print("Join database...")
     merged_df = df_tracks.merge(
-        df_5M, how="left", left_on="artist", right_on="artist_name"
+        df_5M, how="left", left_on="track_name", right_on="title"
     )
-    search_df = merged_df[merged_df["artist_name"].notnull()]
+    search_df = merged_df[merged_df["title"].notnull()]
+
+    filtered_df = search_df[
+        search_df.apply(
+            lambda row: (f"’{unify_str(row['artist'])}’,")
+            in unify_str(str(row["artists"])),
+            axis=1,
+        )
+    ]
+    filtered_df = filtered_df.drop(
+        labels=["lyrics_x", "artist", "title"], axis=1
+    ).rename(columns={"lyrics_y": "lyrics"})
+    add_lyrics_tracks = filtered_df.to_dict("records")
+
+    # Search if exists in DB
+    print("Search MongoDB...")
+    tracks_col = MongoCollection(database="trackInfo")
+    insert_lyrics_tracks = []
+    for track in add_lyrics_tracks:
+        mongo_tracks = list(
+            tracks_col.col.find(
+                {"track_spotify_idx": track["track_spotify_idx"]}, {"lyrics": 1}
+            )
+        )
+
+        # insert data if tracks not found
+        if len(mongo_tracks) == 0:
+            insert_lyrics_tracks.append(track)
+
+    print("Exporting ...")
+    with open(
+        f"extra_track_dataset/insert_data_{start_page:02d}_{end_page:02d}.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(insert_lyrics_tracks, f, ensure_ascii=False)
 
 
 if __name__ == "__main__":
     # for single one
-    get_basic_track_info(0)
+    # get_basic_track_info(0)
     # for multiple pages
     # get_basic_track_infos(0, 0)
+
+    # get intersection
+    merge_with_lyrics(0)

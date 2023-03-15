@@ -11,8 +11,12 @@ def get_datasets_intersection():
         json.dump(x, f, ensure_ascii=False)
 
 
-def tracks_to_artists_albums():
-    with open("tracks_intersection.json", "r", encoding="utf-8") as f:
+def tracks_to_artists_albums(
+    track_dir="tracks_intersection.json",
+    album_export_dir="albums_small.json",
+    artist_export_dir="artists_small.json",
+):
+    with open(track_dir, "r", encoding="utf-8") as f:
         tracks = json.load(f)
 
     albums_dict = {}
@@ -30,12 +34,13 @@ def tracks_to_artists_albums():
             if artist["_id"] not in artist_dict:
                 artist_dict[artist["_id"]] = artist
 
-    with open("albums_small.json", "w", encoding="utf-8") as f:
+    with open(album_export_dir, "w", encoding="utf-8") as f:
         json.dump(list(albums_dict.values()), f, ensure_ascii=False)
-    with open("artists_small.json", "w", encoding="utf-8") as f:
+    with open(artist_export_dir, "w", encoding="utf-8") as f:
         json.dump(list(artist_dict.values()), f, ensure_ascii=False)
 
 
 if __name__ == "__main__":
-    # get_datasets_intersection()
+    start_page, end_page = 0, 0
+    track_dir = f"track_extra_dataset/track_data_{start_page:02d}.json"
     tracks_to_artists_albums()
