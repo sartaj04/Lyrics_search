@@ -1,6 +1,5 @@
 import pandas as pd
-import re
-from utils import create_spotipy
+from utils import create_spotipy, get_ymd
 
 
 artist_limit = 250
@@ -8,22 +7,6 @@ artist_limit = 250
 # TODO
 client_id = "0c525f920ffa4e6fbb3f538a4ece013f"
 client_secret = "284dc2899d2844cbbc952e586c6959c5"
-
-
-def get_ymd(date):
-    ymd_list = [None] * 3
-    if len(date) == 0:
-        return ymd_list
-    ymd = date.split("-")
-    len_ymd = len(ymd)
-    for i in range(3):
-        if len_ymd <= i:
-            ymd_list[i] = None
-        else:
-            digit_str = re.sub("\D", "", ymd[i])
-            ymd_list[i] = int(digit_str) if len(digit_str) > 0 else None
-            ymd_list[i] = None if ymd_list[i] == 0 else ymd_list[i]
-    return ymd_list
 
 
 def get_albums(artist_page=0, album_page=0):

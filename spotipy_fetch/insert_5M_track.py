@@ -1,16 +1,11 @@
-import csv
-from utils import get_dataframe, find_files
+from utils import create_spotipy, get_ymd
 from Mongo_Collection import MongoCollection
-from retrack_data import create_spotipy
 import json
 import pandas as pd
 
-
-###TODO: Complete this python file
-
-spotipy = create_spotipy(
-    "0c525f920ffa4e6fbb3f538a4ece013f", "284dc2899d2844cbbc952e586c6959c5"
-)
+# TODO: insert your client tokens here
+client_id = "8aa464cad6524f3bb664c009125bc1e3"
+client_secret = "41a8b8604d3f41079e9303a937f108ee"
 
 
 def get_5M_artists():
@@ -41,71 +36,181 @@ def get_5M_artists():
     )
 
 
-def artists_datasets_common():
-    pass
+def clean_df():
+    genius_df = pd.read_csv("../dataset/ds2.csv", header=0)
+    genius_df_nonan = genius_df[genius_df["lyrics"].notna()]
+    gdf = genius_df_nonan[genius_df_nonan["lyrics"].map(lambda x: x.isascii())]
+    gdf.to_csv("../dataset/ds2_ENGLISH.csv", index=False)
 
 
-# def clean_df(df):
-#     df = df[~(df["lyrics"] == "[Instrumental]")]
-#     df = df[~(df["lyrics"] == "TBD")]
-#     df = df[~(df["artist"].str.contains("&"))]
-#     return df
+def get_basic_track_info(page=0, display_404=False):
+    page_limit = 1000 + 200 * page
+    rows_skip = 100 * page * (page + 9)
+    stf = create_spotipy(client_id, client_secret)
+    artists_df = pd.read_csv(
+        "5M_artists_ENGLISH.csv",
+        sep=",",
+        header=None,
+        skiprows=rows_skip,
+        nrows=page_limit,
+    )
+    artists = list(artists_df[0])
+
+    # Export dictionary
+    artist_dict = {}
+    album_dict = {}
+    track_dict = {}
+
+    # insert each track info into 3 dictionaries
+    def add_track_info(target_artist, stf_track):
+        # check if artist name is we want
+        if stf_track == None:
+            return False
+        stf_album_artists = [a["name"].lower() for a in stf_track["artists"]]
+        # punctuation unmatched handling
+        target_artist = target_artist.replace("'", "’")  # Genius -> Spotify
+
+        if target_artist.lower() not in stf_album_artists:
+            # if return_found_err:
+            #     print(f"Not match for {target_artist} in {stf_album_artists}")
+            return False
+
+        stf_album = stf_track["album"]
+        stf_artists = stf_album["artists"] + stf_track["artists"]
+
+        # artist add
+        for stf_artist in stf_artists:
+            artist_stf_idx = stf_artist["id"]
+            if artist_stf_idx not in artist_dict:
+                # artist formatting
+                db_artist = {
+                    "artist_name": stf_artist["name"],
+                    "artist_id": artist_stf_idx,
+                    "artist_popularity": None,  # popularity not included
+                    "artist_genres": None,  # genres not included
+                }
+                artist_dict[artist_stf_idx] = db_artist
+
+        # album add
+        album_stf_idx = stf_album["id"]
+        if album_stf_idx not in album_dict:
+            # album formatting
+            year, month, day = get_ymd(stf_album["release_date"])
+            db_album = {
+                "artists": [artist_dict[a["id"]] for a in stf_album["artists"]],
+                "album_idx": album_stf_idx,
+                "album_name": stf_album["name"],
+                "album_release_year": year,
+                "album_release_month": month,
+                "album_release_day": day,
+            }
+            album_dict[album_stf_idx] = db_album
+
+        # track add
+        track_stf_idx = stf_track["id"]
+        if track_stf_idx not in track_dict:
+            # track formatting
+            db_track = {
+                "artists": [artist_dict[a["id"]] for a in stf_track["artists"]],
+                "album": album_dict[album_stf_idx],
+                "duration": int(round(stf_track["duration_ms"] // 1000, 0)),
+                "explicit": stf_track["explicit"],
+                "track_spotify_idx": stf_track["id"],
+                "track_name": stf_track["name"],
+                "lyrics": None,
+            }
+            track_dict[track_stf_idx] = db_track
+
+        return True
+
+    for idx, artist in enumerate(artists):
+        found_result = stf.search(
+            q=f"artist:{artist}", type="track", offset=0, limit=50
+        )["tracks"]
+        # get all tracks available in Spotify
+        tracks_result = found_result["items"]
+        if tracks_result:
+            artist_found = [
+                add_track_info(artist, stf_track) for stf_track in tracks_result
+            ]
+            correct_artist = any(artist_found)
+            if display_404 and all(artist_found) == False:
+                print(
+                    f"({idx}, {artist}) is not found in first 50 records."
+                )  # for debug
+        else:
+            correct_artist = False
+
+        # If not match then stop wasting api call
+        while correct_artist and found_result["next"]:
+            found_result = stf.next(found_result)["tracks"]
+            tracks_result = found_result["items"]
+            if tracks_result:
+                correct_artist = any(
+                    [add_track_info(artist, stf_track) for stf_track in tracks_result]
+                )
+            else:
+                correct_artist = False
+
+    structured_tracks = list(track_dict.values())
+    output_tracks = []
+    # Also include audio features
+    track_limit = 50
+    partition_tracks = [
+        structured_tracks[i * track_limit : (i + 1) * track_limit]
+        for i in range(-(-len(structured_tracks) // track_limit))
+    ]
+
+    for tracks in partition_tracks:
+        tracks_idxs = [t["track_spotify_idx"] for t in tracks]
+        track_len = len(tracks_idxs)
+        tracks_features = stf.audio_features(tracks_idxs)  # ["audio_features"]
+        for j in range(min(track_len, track_limit)):
+            if tracks_features[j]:  # not None
+                track_dict = tracks[j]
+                track_dict["danceability"] = tracks_features[j]["danceability"]
+                track_dict["energy"] = tracks_features[j]["energy"]
+                track_dict["loudness"] = tracks_features[j]["loudness"]
+                track_dict["speechiness"] = tracks_features[j]["speechiness"]
+                track_dict["acousticness"] = tracks_features[j]["acousticness"]
+                track_dict["instrumentalness"] = tracks_features[j]["instrumentalness"]
+                track_dict["liveness"] = tracks_features[j]["liveness"]
+                track_dict["valence"] = tracks_features[j]["valence"]
+                track_dict["tempo"] = round(tracks_features[j]["tempo"], 0)
+
+        output_tracks.extend(tracks)
+
+    with open(
+        f"extra_track_dataset/track_data_{page:02d}.json", "w", encoding="utf-8"
+    ) as f:
+        json.dump(output_tracks, f, ensure_ascii=False)
 
 
-def split_df():
-    page_num = 985569
-    # Handle page 0 without skiprows
-    for i in range(6):
-        genius_artist_df = pd.read_csv(
-            "../../dataset/ds2.csv",
-            usecols=["title", "artist", "lyrics", "id"],
-            header=0,
-            skiprows=(range(1, page_num * i)) if i > 0 else None,
-            nrows=page_num,
-        )
-        genius_artist_df.to_csv(f"extra_track_{i}.csv", index=False)
+def get_basic_track_infos(start_page=0, end_page=57):
+    for i in range(start_page, end_page + 1):
+        get_basic_track_info(i)
 
 
-def insert_genius_data(page=0, subpage=0):
-    # with open(f"extra_track_{page}.csv") as f:
-    #     reader = csv.DictReader(f)
+def merge_with_lyrics(page=0):
 
-    #     load_limit = 25000  # max api call per day
-    #     album_idxs = list(reader)
+    df_5M = pd.read_csv(
+        "../dataset/ds2_ENGLISH.csv",
+        usecols=["title", "artist", "lyrics"],
+        header=0,
+    )
 
-    #     partition_albums_idxs = [
-    #         album_idxs[i * album_limit : (i + 1) * album_limit]
-    #         for i in range(-(-len(album_idxs) // album_limit))
-    #     ]
+    df_tracks = pd.read_json(f"extra_track_dataset/track_data_{page:02d}.json")
+    df_tracks = df_tracks.drop_duplicates()
 
-    # artists_dict = {}
-    # albums_dict = {}
-    # tracks_dict = {}
-    # for track in tracks:
-    #     query = f"track:{track['title']} artist:{track['artist']}"
-    #     print(query)
-    #     search_res = spotipy.search(q=query, type="track", offset=0, limit=1)
-    #     search_items = search_res["tracks"]["items"]
-    #     if len(search_items) > 0:
-    #         spotify_track_info = search_items[0]
-    #         spotify_artists = spotify_track_info["artists"]
-    #         spotify_track_name = spotify_track_info["name"]
-
-    #         # ensure same track title and same artist
-    #         is_same_track = is_substring(spotify_track_name, track["title"])
-    #         contains_same_artist = any(
-    #             [
-    #                 is_substring(artist["name"], track["artist"])
-    #                 for artist in spotify_artists
-    #             ]
-    #         )
-    #         print(is_same_track, contains_same_artist)
-    #         if is_same_track and contains_same_artist:
-    #             pass
-    #     break
-    pass
+    # TODO
+    merged_df = df_tracks.merge(
+        df_5M, how="left", left_on="artist", right_on="artist_name"
+    )
+    search_df = merged_df[merged_df["artist_name"].notnull()]
 
 
 if __name__ == "__main__":
-    # split_df()
-    insert_genius_data(0)
+    # for single one
+    get_basic_track_info(0)
+    # for multiple pages
+    # get_basic_track_infos(0, 0)

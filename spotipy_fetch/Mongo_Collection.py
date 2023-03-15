@@ -6,7 +6,7 @@ from pymongo import MongoClient
 class MongoCollection:
     def __init__(
         self,
-        client_dir="mongodb://localhost:27017/",
+        client_dir="mongodb://35.225.194.2:27017/autoReconnect=true&socketTimeoutMS=360000&connectTimeoutMS=360000",
         database="lyricsSearchEngine",
         collection="tracks",
     ) -> None:
