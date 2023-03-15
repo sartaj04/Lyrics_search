@@ -41,6 +41,12 @@ def tracks_to_artists_albums(
 
 
 if __name__ == "__main__":
-    start_page, end_page = 0, 0
-    track_dir = f"track_extra_dataset/track_data_{start_page:02d}.json"
-    tracks_to_artists_albums()
+    start_page, end_page = 0, 0  # TODO
+    track_dir = f"track_extra_dataset/track_data_{start_page:02d}_{end_page:02d}.json"
+    album_export_dir = (
+        f"track_extra_dataset/album_data_{start_page:02d}_{end_page:02d}.json"
+    )
+    artist_export_dir = (
+        f"track_extra_dataset/artist_data_{start_page:02d}_{end_page:02d}.json"
+    )
+    tracks_to_artists_albums(track_dir, album_export_dir, artist_export_dir)

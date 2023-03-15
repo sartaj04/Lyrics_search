@@ -5,3 +5,6 @@
 /spotipy_fetch/artist_dataset/*
 /spotipy_fetch/track_dataset/*
 /spotipy_fetch/*.zip
+
+/dataset/ds2.csv
+/dataset/ds2_ENGLISH.csv
