@@ -4,8 +4,8 @@ import json
 import pandas as pd
 
 # TODO: insert your client tokens here
-client_id = "8aa464cad6524f3bb664c009125bc1e3"
-client_secret = "41a8b8604d3f41079e9303a937f108ee"
+client_id = "5288959a7fcf4531bddf261d0b010485"
+client_secret = "bdccb523f6d044ecb06fe698f9fc0391"
 
 
 def get_5M_artists():
@@ -181,7 +181,7 @@ def get_basic_track_info(page=0, display_404=False):
         output_tracks.extend(tracks)
 
     with open(
-        f"extra_track_dataset/track_data_{page:02d}.json", "w", encoding="utf-8"
+        f"track_extra_dataset/track_data_{page:02d}.json", "w", encoding="utf-8"
     ) as f:
         json.dump(output_tracks, f, ensure_ascii=False)
 
