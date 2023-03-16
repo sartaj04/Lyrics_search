@@ -189,7 +189,10 @@ def get_basic_track_info(page=0, display_404=False):
 def get_basic_track_infos(start_page=0, end_page=57):
     for i in range(start_page, end_page + 1):
         print(f"====Page {i} ====")
-        get_basic_track_info(i)
+        try:
+            get_basic_track_info(i)
+        except Exception as e:
+            print(e)
 
 
 def unify_str(str):
@@ -209,7 +212,7 @@ def merge_with_lyrics(start_page=0, end_page=0):
             pd.read_json(f"track_extra_dataset/track_data_{page:02d}.json")
             for page in range(start_page, end_page + 1)
         ]
-    ).drop_duplicates()
+    )
 
     # find lyrics
     print("Join database...")
@@ -244,7 +247,7 @@ if __name__ == "__main__":
     # for single one
     # get_basic_track_info(0)
     # for multiple pages
-    # get_basic_track_infos(0, 0)
+    # get_basic_track_infos(1, 2)
 
     # get intersection
-    merge_with_lyrics(0)
+    merge_with_lyrics(0, 1)
