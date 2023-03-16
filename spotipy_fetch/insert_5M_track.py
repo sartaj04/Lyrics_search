@@ -4,8 +4,8 @@ import json
 import pandas as pd
 
 # TODO: insert your client tokens here
-client_id = "5288959a7fcf4531bddf261d0b010485"
-client_secret = "bdccb523f6d044ecb06fe698f9fc0391"
+client_id = "3e7d63377ec44b93ba07677710576fc3"
+client_secret = "ed6950b03bf142448e3a9ba845bd5dd4"
 
 
 def get_5M_artists():
@@ -189,7 +189,10 @@ def get_basic_track_info(page=0, display_404=False):
 def get_basic_track_infos(start_page=0, end_page=57):
     for i in range(start_page, end_page + 1):
         print(f"====Page {i} ====")
-        get_basic_track_info(i)
+        try:
+            get_basic_track_info(i)
+        except Exception as e:
+            print(e)
 
 
 def unify_str(str):
@@ -209,7 +212,7 @@ def merge_with_lyrics(start_page=0, end_page=0):
             pd.read_json(f"track_extra_dataset/track_data_{page:02d}.json")
             for page in range(start_page, end_page + 1)
         ]
-    ).drop_duplicates()
+    )
 
     # find lyrics
     print("Join database...")
@@ -244,7 +247,7 @@ if __name__ == "__main__":
     # for single one
     # get_basic_track_info(0)
     # for multiple pages
-    # get_basic_track_infos(0, 0)
+    # get_basic_track_infos(1, 2)
 
     # get intersection
-    merge_with_lyrics(0)
+    merge_with_lyrics(0, 1)

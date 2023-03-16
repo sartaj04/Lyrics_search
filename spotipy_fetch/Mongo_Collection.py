@@ -54,11 +54,19 @@ class MongoCollection:
                 )
                 print("end!")
 
-    def insert_mongo(self, file_dir="track_data.json"):
-        with open(file_dir, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            print(f"Insert {len(data)} data...")
-            self.col.insert_many(data)
-
-    def update_mongo(self):
-        pass
+    def insert_mongo(self, file_dir="track_data.json", page_range=None):
+        sublist_len = 5000
+        data_df = pd.read_json(file_dir)
+        if page_range == None:
+            max_page = -(-len(data_df) // sublist_len)
+            print(f"Total pages : {max_page}")
+            page_range = range(max_page)
+        for idx in page_range:
+            try:
+                self.col.insert_many(
+                    data_df[idx * sublist_len : (idx + 1) * sublist_len].to_dict(
+                        "records"
+                    )
+                )
+            except Exception as e:
+                print(idx, e)
