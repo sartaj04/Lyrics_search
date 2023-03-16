@@ -21,6 +21,7 @@ def tracks_to_artists_albums(
         tracks = json.load(f)
 
     # Search if exists in DB
+    print(f"Tracks number before: {len(tracks)}")
     print("Search MongoDB...")
     tracks_col = MongoCollection(database="trackInfo")
     insert_lyrics_tracks = []
@@ -51,6 +52,7 @@ def tracks_to_artists_albums(
             if artist["_id"] not in artist_dict:
                 artist_dict[artist["_id"]] = artist
 
+    print(f"Tracks number after: {len(insert_lyrics_tracks)}")
     print("Exporting ...")
     with open(track_export_dir, "w", encoding="utf-8") as f:
         json.dump(insert_lyrics_tracks, f, ensure_ascii=False)
@@ -61,7 +63,7 @@ def tracks_to_artists_albums(
 
 
 if __name__ == "__main__":
-    start_page, end_page = 0, 0  # TODO
+    start_page, end_page = 0, 1  # TODO
     track_dir = (
         f"track_extra_dataset/filtered_data_{start_page:02d}_{end_page:02d}.json"
     )
