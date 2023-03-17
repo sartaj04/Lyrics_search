@@ -26,11 +26,17 @@ def tracks_to_artists_albums(
     tracks_col = MongoCollection(database="trackInfo")
     insert_lyrics_tracks = []
     for track in tracks:
-        mongo_tracks = list(
-            tracks_col.col.find(
-                {"track_spotify_idx": track["track_spotify_idx"]}, {"lyrics": 1}
-            )
-        )
+        while True:
+            print(track["track_spotify_idx"])
+            try:
+                mongo_tracks = list(
+                    tracks_col.col.find(
+                        {"track_spotify_idx": track["track_spotify_idx"]}, {"lyrics": 1}
+                    )
+                )
+                break
+            except Exception as e:
+                print(e)
 
         # insert data if tracks not found
         if len(mongo_tracks) == 0:
@@ -40,17 +46,29 @@ def tracks_to_artists_albums(
     albums_dict = {}
     artist_dict = {}
     for track in insert_lyrics_tracks:
+        # formatting bug fix
+        track["album"]["album_spotify_idx"] = track["album"]["album_idx"]
+        del track["album"]["album_idx"]
+        for artist in track["album"]["artists"]:
+            artist["artist_spotify_idx"] = artist["artist_id"]
+            del artist["artist_id"]
+        for artist in track["artists"]:
+            artist["artist_spotify_idx"] = artist["artist_id"]
+            del artist["artist_id"]
+
         album = track["album"]
         artists = album["artists"] + track["artists"]
 
         # album add
-        if album["_id"] not in albums_dict:
-            albums_dict[album["_id"]] = album
+        if album["album_spotify_idx"] not in albums_dict:
+            albums_dict[album["album_spotify_idx"]] = album
 
         # artists add
         for artist in artists:
-            if artist["_id"] not in artist_dict:
-                artist_dict[artist["_id"]] = artist
+            if artist["artist_spotify_idx"] not in artist_dict:
+                artist_dict[artist["artist_spotify_idx"]] = artist
+        print(album)
+        print(artists[0])
 
     print(f"Tracks number after: {len(insert_lyrics_tracks)}")
     print("Exporting ...")
