@@ -6,8 +6,8 @@ from pymongo import MongoClient
 class MongoCollection:
     def __init__(
         self,
-        client_dir="mongodb://35.225.194.2:27017/autoReconnect=true&socketTimeoutMS=360000&connectTimeoutMS=360000",
-        database="lyricsSearchEngine",
+        client_dir="mongodb://34.121.79.26:27017/autoReconnect=true&socketTimeoutMS=360000&connectTimeoutMS=360000",
+        database="trackInfo",
         collection="tracks",
     ) -> None:
         my_client = MongoClient(client_dir)
@@ -66,7 +66,8 @@ class MongoCollection:
                 self.col.insert_many(
                     data_df[idx * sublist_len : (idx + 1) * sublist_len].to_dict(
                         "records"
-                    )
+                    ),
+                    ordered=False,
                 )
             except Exception as e:
                 print(idx, e)

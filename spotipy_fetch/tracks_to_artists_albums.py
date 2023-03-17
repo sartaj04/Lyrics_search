@@ -1,6 +1,7 @@
 import json
 from Mongo_Collection import MongoCollection
 from utils import object_id_to_str
+import pandas as pd
 
 
 def get_datasets_intersection():
@@ -18,29 +19,21 @@ def tracks_to_artists_albums(
     track_export_dir="",
 ):
     with open(track_dir, "r", encoding="utf-8") as f:
-        tracks = json.load(f)
+        tracks_df = pd.read_json(f)
 
     # Search if exists in DB
-    print(f"Tracks number before: {len(tracks)}")
-    print("Search MongoDB...")
-    tracks_col = MongoCollection(database="trackInfo")
-    insert_lyrics_tracks = []
-    for track in tracks:
-        while True:
-            print(track["track_spotify_idx"])
-            try:
-                mongo_tracks = list(
-                    tracks_col.col.find(
-                        {"track_spotify_idx": track["track_spotify_idx"]}, {"lyrics": 1}
-                    )
-                )
-                break
-            except Exception as e:
-                print(e)
-
-        # insert data if tracks not found
-        if len(mongo_tracks) == 0:
-            insert_lyrics_tracks.append(track)
+    print(f"Tracks number before: {len(tracks_df)}")
+    print("Search inserted data...")
+    with open("tracks_intersection_stfidx.csv", "r", encoding="utf-8") as f:
+        mongo_tracks_df = pd.read_csv(f)
+    join_tracks_df = tracks_df.merge(
+        mongo_tracks_df, on="track_spotify_idx", how="left", indicator=True
+    )
+    insert_lyrics_tracks = (
+        join_tracks_df[join_tracks_df["_merge"] == "left_only"]
+        .drop("_merge", 1)
+        .to_dict("records")
+    )
 
     print("Creating artists and artists info...")
     albums_dict = {}
@@ -67,8 +60,6 @@ def tracks_to_artists_albums(
         for artist in artists:
             if artist["artist_spotify_idx"] not in artist_dict:
                 artist_dict[artist["artist_spotify_idx"]] = artist
-        print(album)
-        print(artists[0])
 
     print(f"Tracks number after: {len(insert_lyrics_tracks)}")
     print("Exporting ...")
