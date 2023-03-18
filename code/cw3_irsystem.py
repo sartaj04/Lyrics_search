@@ -365,6 +365,7 @@ def tfidf(query):
 
     return result_list
 
+def combine_search(query1, query2):
 
 def main():
     global stop
