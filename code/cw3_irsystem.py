@@ -23,16 +23,21 @@ song_names = []
 def csv_parser(path):
     file_map = {}
     data = pd.read_csv(path)
-    song_names = data["SName"].values
-    Lyrics = data["Lyric"].values
+    song_names = data["title"].values
+    Lyrics = data["lyrics"].values
     content_list = []
     # for i in range(len(song_names)):
     #     content = str(Lyrics[i])
     #     content = preprocess(content)
     #     content_list.append(content)
     #     file_map[song_names[i]] = content_list[i]
-    file_map = dict(map(lambda i, j: (i, preprocess(j)), song_names, Lyrics))
+    file_map = dict(map(lambda i, j: (i, preprocess_lyric(j)), song_names, Lyrics))
     return file_map, song_names
+
+
+def ngrams(word, n):
+    words = [word[i: i+n] for i in range(len(word) - n + 1) if word[i: i+n] != []]
+    return words
 
 
 def stopwords(path):
@@ -45,16 +50,25 @@ def stopwords(path):
 
 
 # tokenization, remove stopwords, lower case, stemming
-def preprocess(text):
+def preprocess_lyric(text):
     p_words = []
     tokenization = re.sub('\W', ' ', text.lower()).split()
 
     for word in tokenization:
-        if word not in stop:
-            if stem(word).strip() != "":
-                p_words.append(stem(word).strip())
+        #if word not in stop:
+        if stem(word).strip() != "":
+            p_words.extend(ngrams(stem(word).strip(), 2))
     return p_words
 
+def preprocess_normal(text):
+    p_words = []
+    tokenization = re.sub('\W', ' ', text.lower()).split()
+
+    for word in tokenization:
+        #if word not in stop:
+        if stem(word).strip() != "":
+            p_words.append(stem(word).strip())
+    return p_words
 
 # generate inverted index
 def inverted_index(file_map):
@@ -193,7 +207,7 @@ def word_search(query):
 
     result = []
     term = query.strip('')
-    term = preprocess(term)
+    term = preprocess_lyric(term)
     index = pos_index[term[0]]
 
     for doc_no in index[1]:
@@ -219,8 +233,8 @@ def phrase_search(query):
     result = []
     terms = query.strip('"')
     term1, term2 = terms.split(' ', 1)
-    term1 = preprocess(term1)
-    term2 = preprocess(term2)
+    term1 = preprocess_lyric(term1)
+    term2 = preprocess_lyric(term2)
     index1 = pos_index[term1[0]]
     index2 = pos_index[term2[0]]
 
@@ -252,8 +266,8 @@ def proximity_search(query):
     distance = int(query[query.index('#') + 1: query.index('(')])
     term1 = query[query.index('('): query.index(',')].strip()
     term2 = query[query.index(','): query.index(')')].strip()
-    term1 = preprocess(term1)
-    term2 = preprocess(term2)
+    term1 = preprocess_lyric(term1)
+    term2 = preprocess_lyric(term2)
     index1 = pos_index[term1[0]]
     index2 = pos_index[term2[0]]
 
@@ -296,8 +310,8 @@ def boolean_search(query):
 
     if 'OR' in query:
         terms = query.split(' OR ')
-        term1 = preprocess(terms[0])
-        term2 = preprocess(terms[1])
+        term1 = preprocess_lyric(terms[0])
+        term2 = preprocess_lyric(terms[1])
         if '"' in term1:
             result1 = phrase_search(str(term1[0]))
         elif '#' in term1:
@@ -326,7 +340,7 @@ def negative(result):
 
 # ranked
 def tfidf(query):
-    terms = preprocess(query)
+    terms = preprocess_lyric(query)
     score = {}
     # print(song_names)
     # print(pos_index)
