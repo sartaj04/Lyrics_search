@@ -17,7 +17,7 @@ def get_lyrics(sent):
             cont = div.get_text()
             l += str(cont)
             #print(str(l))
-    if l:
+    if l and len(l) > 10:
         return l
     else:
         return 'This song has no lyrics'
