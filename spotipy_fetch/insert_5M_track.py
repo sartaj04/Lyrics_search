@@ -4,8 +4,8 @@ import json
 import pandas as pd
 
 # TODO: insert your client tokens here
-client_id = "3e7d63377ec44b93ba07677710576fc3"
-client_secret = "ed6950b03bf142448e3a9ba845bd5dd4"
+client_id = "5288959a7fcf4531bddf261d0b010485"
+client_secret = "bdccb523f6d044ecb06fe698f9fc0391"
 
 
 def get_5M_artists():
@@ -250,4 +250,4 @@ if __name__ == "__main__":
     # get_basic_track_infos(1, 2)
 
     # get intersection
-    merge_with_lyrics(0, 1)
+    merge_with_lyrics(4, 4)
