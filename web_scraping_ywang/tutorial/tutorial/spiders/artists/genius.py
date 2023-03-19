@@ -17,7 +17,7 @@ def get_lyrics(sent):
             cont = div.get_text()
             l += str(cont)
             #print(str(l))
-    if l and len(l) > 10:
+    if l:
         return l
     else:
         return 'This song has no lyrics'
@@ -64,8 +64,7 @@ with open('temp2.csv', mode='w', newline='', encoding='utf-8') as input_file:
     csv_writer2 = csv.writer(input_file)
     header = ['title', 'tag', 'artist', 'year', 'image', 'views', 'lyrics', 'id']
     csv_writer2.writerow(header)
-    #change the range below, preferably with a diff of 500
-    for id in range(7882891, 7882950):
+    for id in range(7963232, 7963850):
         print(id)
         url = f"https://genius.com/songs/{id}"
         response = requests.get(url)
@@ -75,10 +74,15 @@ with open('temp2.csv', mode='w', newline='', encoding='utf-8') as input_file:
         final_lyrics = get_lyrics(send)
         image = get_image(soup1)
         details = get_details(soup1)
-        #print(details)
-        if final_lyrics != 'This song has no lyrics' and int(details['pageviews'][0]) > 50 and detect(final_lyrics) == 'en':
-            result = [details['song_title'][0], details['primary_tag'][0], details['artist_name'][0], details['release_year'][0], image, details['pageviews'][0], str(final_lyrics), details['song_id'][0]]
-            csv_writer2.writerow(str(elem) for elem in result)
+        if final_lyrics != 'This song has no lyrics' and int(details['pageviews'][0]) > 50:
+            try:
+                if detect(final_lyrics) == 'en':
+                    result = [details['song_title'][0], details['primary_tag'][0], details['artist_name'][0],
+                              details['release_year'][0], image, details['pageviews'][0], str(final_lyrics),
+                              details['song_id'][0]]
+                    csv_writer2.writerow(str(elem) for elem in result)
+            except:
+                print('Language not detected')
         else:
             print("No lyrics for instrumentals.")
 
@@ -87,5 +91,4 @@ cols = ['title', 'tag', 'artist', 'year', 'image', 'views', 'lyrics', 'id']
 append_data = pd.read_csv('temp.csv', header=None, names=cols, skiprows=1)
 current_data = pd.read_csv('temp2.csv', delimiter=',', skip_blank_lines=True)
 updated_data = append_data.append(current_data, ignore_index=True)
-#This csv file to be used as it will contain all data after multiple runs
-updated_data.to_csv('temp.csv', index=False) 
+updated_data.to_csv('temp.csv', index=False)
