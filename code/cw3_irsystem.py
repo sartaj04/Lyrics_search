@@ -422,7 +422,7 @@ def tfidf_score_b(query):
 
     return score
 
-def combine_search(query_a, query_b, search_type, search_a = tfidf_score_a(), search_b = tfidf_score_b(), num_top_search = 20,
+def combine_search(query_a, query_b, search_type, search_a = tfidf_score_a, search_b = tfidf_score_b, num_top_search = 20,
                    coefficient_a = .7, coefficient_b =.3):
     result_list = []
 
