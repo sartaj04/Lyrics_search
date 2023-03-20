@@ -424,23 +424,30 @@ def tfidf_score_b(query):
 
 def combine_search(query_a, query_b, search_type, search_a = tfidf_score_a(), search_b = tfidf_score_b(), num_top_search = 20,
                    coefficient_a = .7, coefficient_b =.3):
-    score_a = search_a(query_a)
-    score_b = search_b(query_b)
-    score_total = {}
-    for i, (k, v) in enumerate(score_a):
-        if i in range(0, num_top_search):
-            # k is the song id
-            # using k to search in DB for score b id and its song name
-            id_b_list = read_related_info_from_mongodb(k, search_type)
-            max_score_b = 0
-            for id_b in id_b_list:
-                if score_b[id_b] > max_score_b:
-                    max_score_b = score_b[id_b]
-            score_total[k] = coefficient_a * v + coefficient_b * max_score_b
-
-    score_total = sorted(score_total.items(), key=lambda x: -x[1])
-
     result_list = []
+
+    if query_a == "":
+        # it will return album , artist name or song (by song title)
+        score_total = sorted(search_b(query_b).items(), key=lambda x: -x[1])
+    else:
+        score_a = search_a(query_a)
+        if query_b == "":
+            score_total = sorted(score_a.items(), key=lambda x: -x[1])
+        else:
+            score_b = search_b(query_b)
+            score_total = {}
+            for i, (k, v) in enumerate(score_a):
+                if i in range(0, num_top_search):
+                    # k is the song id
+                    # using k to search in DB for score b id and its song name
+                    id_b_list = read_related_info_from_mongodb(k, search_type)
+                    max_score_b = 0
+                    for id_b in id_b_list:
+                        if score_b[id_b] > max_score_b:
+                            max_score_b = score_b[id_b]
+                    score_total[k] = coefficient_a * v + coefficient_b * max_score_b
+
+        score_total = sorted(score_total.items(), key=lambda x: -x[1])
 
     for i, (k, v) in enumerate(score_total):
         if i in range(0, 5):
