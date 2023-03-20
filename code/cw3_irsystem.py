@@ -57,7 +57,7 @@ def preprocess_lyric(text):
     for word in tokenization:
         #if word not in stop:
         if stem(word).strip() != "":
-            p_words.extend(ngrams(stem(word).strip(), 2))
+            p_words.extend(stem(word).strip())
     return p_words
 
 def preprocess_normal(text):
@@ -65,9 +65,9 @@ def preprocess_normal(text):
     tokenization = re.sub('\W', ' ', text.lower()).split()
 
     for word in tokenization:
-        #if word not in stop:
-        if stem(word).strip() != "":
-            p_words.append(stem(word).strip())
+        if word not in stop:
+            if stem(word).strip() != "":
+                p_words.append(stem(word).strip())
     return p_words
 
 # generate inverted index
@@ -162,6 +162,23 @@ def output_results_ranked(map_result):
             for i in map_result[key][0]:
                 f.write(str(key) + ',' + str(i) + '\n')
         f.write('\n')
+
+def read_related_info_from_mongodb(spotify_id, search_type):
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["trackInfo"]
+    mycol = mydb["track"]
+    data = mycol.find_one({"track_spotify_idx": spotify_id})
+    search_id = []
+    if search_type == 'artist':
+        for result in data['artists']:
+            search_id.append(result['artist_spotify_idx'])
+    elif search_type == 'album':
+        for result in data['album']:
+            search_id.append(result['album_spotify_idx'])
+    elif search_type == 'song':
+        search_id.append(spotify_id)
+
+    return search_id
 
 
 # process query file
@@ -365,7 +382,79 @@ def tfidf(query):
 
     return result_list
 
-def combine_search(query1, query2):
+def tfidf_score_a(query):
+    terms = preprocess_lyric(query)
+    score = {}
+    # print(song_names)
+    # print(pos_index)
+    # print(terms)
+    for song in song_names:
+        weight = 0
+        for term in terms:
+            if song in pos_index[term][1]:
+                dl = pos_index[term]
+                tf_td = len(dl[1][song])
+                dft = len(pos_index[term][1])
+                wtd = ((1 + math.log10(tf_td)) * math.log10(len(song_names) / dft))
+                weight = weight + wtd
+        score[str(song)] = weight
+
+    score = sorted(score.items(), key=lambda x: -x[1])
+
+    return score
+
+def tfidf_score_b(query):
+    terms = preprocess_lyric(query)
+    score = {}
+    # print(song_names)
+    # print(pos_index)
+    # print(terms)
+    for song in song_names:
+        weight = 0
+        for term in terms:
+            if song in pos_index[term][1]:
+                dl = pos_index[term]
+                tf_td = len(dl[1][song])
+                dft = len(pos_index[term][1])
+                wtd = ((1 + math.log10(tf_td)) * math.log10(len(song_names) / dft))
+                weight = weight + wtd
+        score[str(song)] = weight
+
+    return score
+
+def combine_search(query_a, query_b, search_type, search_a = tfidf_score_a(), search_b = tfidf_score_b(), num_top_search = 20,
+                   coefficient_a = .7, coefficient_b =.3):
+    result_list = []
+
+    if query_a == "":
+        # it will return album , artist name or song (by song title)
+        score_total = sorted(search_b(query_b).items(), key=lambda x: -x[1])
+    else:
+        score_a = search_a(query_a)
+        if query_b == "":
+            score_total = sorted(score_a.items(), key=lambda x: -x[1])
+        else:
+            score_b = search_b(query_b)
+            score_total = {}
+            for i, (k, v) in enumerate(score_a):
+                if i in range(0, num_top_search):
+                    # k is the song id
+                    # using k to search in DB for score b id and its song name
+                    id_b_list = read_related_info_from_mongodb(k, search_type)
+                    max_score_b = 0
+                    for id_b in id_b_list:
+                        if score_b[id_b] > max_score_b:
+                            max_score_b = score_b[id_b]
+                    score_total[k] = coefficient_a * v + coefficient_b * max_score_b
+
+        score_total = sorted(score_total.items(), key=lambda x: -x[1])
+
+    for i, (k, v) in enumerate(score_total):
+        if i in range(0, 5):
+            result_list.append(str(k) + ',' + ('%.4f' % v))
+
+    return result_list
+
 
 def main():
     global stop
