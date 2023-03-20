@@ -294,7 +294,7 @@ def tfidf(query):
 
     for i, (k, v) in enumerate(score):
         if i in range(0, 10):
-            result_list.append(str(k) + ',' + ('%.4f' % v))
+            result_list.append(str(k) + '|' + ('%.4f' % v))
 
     return result_list
 
@@ -458,13 +458,76 @@ def generate_permutations(tokens):
 
 
 def lyric_search(query):
+    tfidf_results = tfidf(query)
+    phrase_search_results = phase_search(query)
 
-    print(tfidf(query))
-    print(phase_search(query))
+    tfidf_scores = [result.split('|') for result in tfidf_results]
+    tfidf_dict = {song: float(score) for song, score in tfidf_scores}
 
-    return score
+    phrase_scores = {}
+    for num_tokens, song_list in phrase_search_results.items():
+        for song in song_list:
+            if num_tokens == len(preprocess(query)):
+                phrase_scores[song] = 100
+            else:
+                phrase_scores[song] = len(preprocess(query)) - num_tokens
+
+    normalized_tfidf_scores = normalize(tfidf_dict)
+    normalized_phrase_scores = normalize(phrase_scores)
+    weight_tfidf = 0.7
+    weight_phrase = 0.3
+
+    final_scores = {}
+    for song in set(normalized_tfidf_scores.keys()) | set(normalized_phrase_scores.keys()):
+        tfidf_score = normalized_tfidf_scores.get(song, 0)
+        phrase_score = normalized_phrase_scores.get(song, 0)
+        final_scores[song] = (weight_tfidf * tfidf_score) + (weight_phrase * phrase_score)
+
+    ranked_songs = sorted(final_scores.items(), key=lambda x: x[1], reverse=True)
+
+    top_songs = [song for song, score in ranked_songs[:20]]
+
+    print(top_songs)
 
 
+def lyric_search(query):
+
+    tfidf_results = tfidf(query)
+    phrase_search_results = phase_search(query)
+    tfidf_scores = [result.split('|') for result in tfidf_results]
+    tfidf_dict = {song: float(score) for song, score in tfidf_scores}
+
+    phrase_scores = {}
+    for num_tokens, song_list in phrase_search_results.items():
+        for song in song_list:
+            current_score = phrase_scores.get(song, 0)
+            if num_tokens > current_score:
+                phrase_scores[song] = len(preprocess(query)) - num_tokens
+
+    normalized_tfidf_scores = normalize(tfidf_dict)
+    normalized_phrase_scores = normalize(phrase_scores)
+    weight_tfidf = 0.7
+    weight_phrase = 0.3
+
+    final_scores = {}
+    for song in set(normalized_tfidf_scores.keys()) | set(normalized_phrase_scores.keys()):
+        tfidf_score = normalized_tfidf_scores.get(song, 0)
+        phrase_score = normalized_phrase_scores.get(song, 0)
+        final_scores[song] = (weight_tfidf * tfidf_score) + (weight_phrase * phrase_score)
+
+    ranked_songs = sorted(final_scores.items(), key=lambda x: x[1], reverse=True)
+
+    top_songs = [song for song, score in ranked_songs[:20]]
+
+    print(top_songs)
+
+    return top_songs
+
+
+def normalize(scores):
+    min_score = min(scores.values())
+    max_score = max(scores.values())
+    return {song: (score - min_score) / (max_score - min_score) for song, score in scores.items()}
 
 
 def tfidf_score_a(query):
