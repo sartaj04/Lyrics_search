@@ -428,12 +428,15 @@ def combine_search(query_a, query_b, search_type, search_a = tfidf_score_a(), se
 
     if query_a == "":
         # it will return album , artist name or song (by song title)
+        # case: only search b
         score_total = sorted(search_b(query_b).items(), key=lambda x: -x[1])
     else:
         score_a = search_a(query_a)
         if query_b == "":
+            # case: only search a
             score_total = sorted(score_a.items(), key=lambda x: -x[1])
         else:
+            # combine search on search a and search b
             score_b = search_b(query_b)
             score_total = {}
             for i, (k, v) in enumerate(score_a):
@@ -445,10 +448,11 @@ def combine_search(query_a, query_b, search_type, search_a = tfidf_score_a(), se
                     for id_b in id_b_list:
                         if score_b[id_b] > max_score_b:
                             max_score_b = score_b[id_b]
+                    # only get the max score from search b
+                    # v is the score a from that song; k is the song id
                     score_total[k] = coefficient_a * v + coefficient_b * max_score_b
-
-        score_total = sorted(score_total.items(), key=lambda x: -x[1])
-
+            score_total = sorted(score_total.items(), key=lambda x: -x[1])
+    # k can be the song, album, artist id and v is their corresponding score
     for i, (k, v) in enumerate(score_total):
         if i in range(0, 5):
             result_list.append(str(k) + ',' + ('%.4f' % v))
