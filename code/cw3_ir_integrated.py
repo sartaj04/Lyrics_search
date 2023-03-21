@@ -2,6 +2,8 @@
 import math
 import re
 import warnings
+from itertools import combinations
+
 from stemming.porter2 import stem
 import pandas as pd
 import pymongo
@@ -25,7 +27,7 @@ def csv_parser(path):
     data = pd.read_csv(path)
     song_names = data["title"].values
     Lyrics = data["lyrics"].values
-    file_map = dict(map(lambda i, j: (i, preprocess(j)), song_names, Lyrics))
+    file_map = dict(map(lambda i, j: (i, preprocess_lyric(j)), song_names, Lyrics))
     mongo_file_map = dict(map(lambda i, j: (i, j), song_names, Lyrics))
 
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
@@ -34,7 +36,7 @@ def csv_parser(path):
 
     for i in mongo_file_map:
         mydict = {"song_name": i, "song_lyrics": mongo_file_map[i],
-                  "song_filemap_length": len(preprocess(mongo_file_map[i]))}
+                  "song_filemap_length": len(preprocess_lyric(mongo_file_map[i]))}
         x = mycol.insert_one(mydict)
 
     return file_map, song_names
@@ -275,7 +277,7 @@ def compute_tf(song_lyrics: list) -> dict:
 
 # ranked
 def tfidf(query):
-    terms = preprocess(query)
+    terms = preprocess_lyric(query)
     score = {}
     for sid in spotify_id:
         weight = 0
@@ -341,7 +343,7 @@ def cosine_similarity(vec1, vec2):
 
 
 def tfidf_cosine_similarity(query):
-    query = preprocess(query)
+    query = preprocess_lyric(query)
     vocabulary = build_vocabulary(pos_index)
 
     # Calculate the IDF vector for the vocabulary
@@ -382,7 +384,7 @@ def sort_similarities(similarities):
 
 
 def phase_search(query):
-    tokens = preprocess(query)
+    tokens = preprocess_lyric(query)
     num_tokens = len(tokens)
     if num_tokens == 1:
         # If the query consists of a single token, return the postings list for that token
@@ -396,7 +398,7 @@ def phase_search(query):
         da = []
         permuta = generate_permutations(tokens)
         for a in permuta:
-            da.append(preprocess(a))
+            da.append(preprocess_lyric(a))
         z = 0
         lengthresult = 0
         resultlist = {}
@@ -457,38 +459,6 @@ def generate_permutations(tokens):
     return sorted_permutations
 
 
-def lyric_search(query):
-    tfidf_results = tfidf(query)
-    phrase_search_results = phase_search(query)
-
-    tfidf_scores = [result.split('|') for result in tfidf_results]
-    tfidf_dict = {song: float(score) for song, score in tfidf_scores}
-
-    phrase_scores = {}
-    for num_tokens, song_list in phrase_search_results.items():
-        for song in song_list:
-            if num_tokens == len(preprocess(query)):
-                phrase_scores[song] = 100
-            else:
-                phrase_scores[song] = len(preprocess(query)) - num_tokens
-
-    normalized_tfidf_scores = normalize(tfidf_dict)
-    normalized_phrase_scores = normalize(phrase_scores)
-    weight_tfidf = 0.7
-    weight_phrase = 0.3
-
-    final_scores = {}
-    for song in set(normalized_tfidf_scores.keys()) | set(normalized_phrase_scores.keys()):
-        tfidf_score = normalized_tfidf_scores.get(song, 0)
-        phrase_score = normalized_phrase_scores.get(song, 0)
-        final_scores[song] = (weight_tfidf * tfidf_score) + (weight_phrase * phrase_score)
-
-    ranked_songs = sorted(final_scores.items(), key=lambda x: x[1], reverse=True)
-
-    top_songs = [song for song, score in ranked_songs[:20]]
-
-    print(top_songs)
-
 
 def lyric_search(query):
 
@@ -502,7 +472,7 @@ def lyric_search(query):
         for song in song_list:
             current_score = phrase_scores.get(song, 0)
             if num_tokens > current_score:
-                phrase_scores[song] = len(preprocess(query)) - num_tokens
+                phrase_scores[song] = len(preprocess_lyric(query)) - num_tokens
 
     normalized_tfidf_scores = normalize(tfidf_dict)
     normalized_phrase_scores = normalize(phrase_scores)
@@ -530,28 +500,10 @@ def normalize(scores):
     return {song: (score - min_score) / (max_score - min_score) for song, score in scores.items()}
 
 
-def tfidf_score_a(query):
-    terms = preprocess_lyric(query)
-    score = {}
-
-    for sid in spotify_id:
-        weight = 0
-        for term in terms:
-            if sid in pos_index[term][1]:
-                dl = pos_index[term]
-                tf_td = len(dl[1][sid])
-                dft = len(pos_index[term][1])
-                wtd = ((1 + math.log10(tf_td)) * math.log10(len(spotify_id) / dft))
-                weight = weight + wtd
-        score[str(sid)] = weight
-
-    score = sorted(score.items(), key=lambda x: -x[1])
-
-    return score
 
 
 def tfidf_score_b(query):
-    terms = preprocess_lyric(query)
+    terms = preprocess_normal(query)
     score = {}
     # print(song_names)
     # print(pos_index)
@@ -570,18 +522,21 @@ def tfidf_score_b(query):
     return score
 
 
-def combine_search(query_a, query_b, search_type, search_a=tfidf_score_a(), search_b=tfidf_score_b(), num_top_search=20,
-                   coefficient_a=.7, coefficient_b=.3):
+def combine_search(query_a, query_b, search_type, search_a = lyric_search, search_b = tfidf_score_b, num_top_search = 20,
+                   coefficient_a = .7, coefficient_b =.3):
     result_list = []
 
     if query_a == "":
         # it will return album , artist name or song (by song title)
+        # case: only search b
         score_total = sorted(search_b(query_b).items(), key=lambda x: -x[1])
     else:
         score_a = search_a(query_a)
         if query_b == "":
+            # case: only search a
             score_total = sorted(score_a.items(), key=lambda x: -x[1])
         else:
+            # combine search on search a and search b
             score_b = search_b(query_b)
             score_total = {}
             for i, (k, v) in enumerate(score_a):
@@ -593,10 +548,11 @@ def combine_search(query_a, query_b, search_type, search_a=tfidf_score_a(), sear
                     for id_b in id_b_list:
                         if score_b[id_b] > max_score_b:
                             max_score_b = score_b[id_b]
+                    # only get the max score from search b
+                    # v is the score a from that song; k is the song id
                     score_total[k] = coefficient_a * v + coefficient_b * max_score_b
-
-        score_total = sorted(score_total.items(), key=lambda x: -x[1])
-
+            score_total = sorted(score_total.items(), key=lambda x: -x[1])
+    # k can be the song, album, artist id and v is their corresponding score
     for i, (k, v) in enumerate(score_total):
         if i in range(0, 5):
             result_list.append(str(k) + ',' + ('%.4f' % v))
@@ -605,7 +561,7 @@ def combine_search(query_a, query_b, search_type, search_a=tfidf_score_a(), sear
 
 
 def long_query_handling(query):
-    query = preprocess(query)
+    query = preprocess_normal(query)
     freq_list = []
     for i, word in enumerate(query):
         freq_list.append((word, pos_index[word], i))
@@ -617,15 +573,22 @@ def long_query_handling(query):
     return top_10
 
 
-def ir_from_index(query, search_type):
+
+
+def ir_from_index(query_a, query_b, search_type):
     global stop
     global pos_index
     global spotify_ids
     stop = stopwords("englishST.txt")
 
-    spotify_ids = interact_mongo.read_from_db(search_type)
+    if search_type != "":
+        spotify_ids = interact_mongo.read_from_db(search_type)
+
     ii = read_index_from_mongodb(search_type)
     pos_index = ii
+
+    combine_search("you are my sunshine","","")
+
 
     similarities = tfidf_cosine_similarity(query)
     sorted_similarities = sort_similarities(similarities)

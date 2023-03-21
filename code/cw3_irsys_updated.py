@@ -8,7 +8,7 @@ from stemming.porter2 import stem
 import pandas as pd
 import pymongo
 import numpy as np
-
+from itertools import combinations
 warnings.filterwarnings('ignore')
 
 stop = []
@@ -252,7 +252,7 @@ def tfidf(query):
 
     for i, (k, v) in enumerate(score):
         if i in range(0, 10):
-            result_list.append(str(k) + ',' + ('%.4f' % v))
+            result_list.append(str(k) + '|' + ('%.4f' % v))
 
     return result_list
 
@@ -335,9 +335,28 @@ def tfidf_cosine_similarity(query):
     return similarities
 
 
+def generate_permutations(tokens):
+    num_tokens = len(tokens)
+    permutations = []
+
+    for length in range(num_tokens, 0, -1):
+        for combination in combinations(tokens, length):
+            permutations.append(' '.join(combination))
+
+    # Remove duplicates and sort according to length
+    sorted_permutations = sorted(list(set(permutations)), key=lambda x: (len(x), x), reverse=True)
+
+    return sorted_permutations
+
 def sort_similarities(similarities):
     sorted_similarities = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
-    return sorted_similarities
+    result_list = []
+
+    for i, (k, v) in enumerate(sorted_similarities):
+        if i in range(0, 10):
+            result_list.append(str(k) + ',' + ('%.4f' % v))
+
+    return result_list
 
 
 def phase_search(query):
@@ -351,33 +370,127 @@ def phase_search(query):
         else:
             return []
     else:
-        # If the query consists of multiple tokens, perform phrase search
-        positions = []
-        for i, token in enumerate(tokens):
-            if i == 0:
-                # For the first token, initialize the positions with the postings list for the token
-                if token in pos_index:
-                    positions = pos_index[token][1]
-                else:
-                    return []
-            else:
-                # For subsequent tokens, keep only the positions that are adjacent to the previous token
-                if token in pos_index:
-                    new_pos = {}
-                    for candidate in pos_index[token][1]:
-                        if candidate in positions:
-                            for pospos in positions[candidate]:
-                                for pos in pos_index[token][1][candidate]:
-                                    distance = pos - pospos
-                                    if distance == 1:
-                                        new_pos[candidate] = pos_index[token][1][candidate]
-                                        break
-                    if i != len(tokens):
-                        positions = new_pos
-                        if len(positions) == 1:
-                            return positions
+        result = {}
+        da = []
+        permuta = generate_permutations(tokens)
+        for a in permuta:
+            da.append(preprocess(a))
+        z = 0
+        lengthresult = 0
+        resultlist = {}
+        for i in range(num_tokens):
+            resultlist[i] = []
 
-        return positions
+        while lengthresult < 20:
+            # If the query consists of multiple tokens, perform phrase search
+            positions = []
+            for i, token in enumerate(da[z]):
+                if i == 0:
+                    # For the first token, initialize the positions with the postings list for the token
+                    if token in pos_index:
+                        positions = pos_index[token][1]
+                    else:
+                        return []
+                else:
+                    # For subsequent tokens, keep only the positions that are adjacent to the previous token
+                    if token in pos_index:
+                        new_pos = {}
+                        for candidate in pos_index[token][1]:
+                            if candidate in positions:
+                                for pospos in positions[candidate]:
+                                    for pos in pos_index[token][1][candidate]:
+                                        distance = pos - pospos
+                                        if distance == 1:
+                                            new_pos[candidate] = pos_index[token][1][candidate]
+                                            break
+                        if i != len(tokens):
+                            positions = new_pos
+                            if len(positions) == 1:
+                                result[z] = positions
+                            if len(positions) == 0:
+                                result[z] = {}
+            for key in positions:
+                resultlist[num_tokens - len(da[z])].append(key)
+            resultlist[num_tokens - len(da[z])] = list(set(resultlist[num_tokens - len(da[z])]))
+            lengthresult = 0
+            for jj in range(len(resultlist)):
+                lengthresult = len(resultlist[jj]) + lengthresult
+
+            z = z + 1
+
+    return resultlist
+
+
+def lyric_search(query):
+
+    tfidf_results = tfidf(query)
+    phrase_search_results = phase_search(query)
+    tfidf_scores = [result.split('|') for result in tfidf_results]
+    tfidf_dict = {song: float(score) for song, score in tfidf_scores}
+
+    phrase_scores = {}
+    for num_tokens, song_list in phrase_search_results.items():
+        for song in song_list:
+            current_score = phrase_scores.get(song, 0)
+            if num_tokens > current_score:
+                phrase_scores[song] = len(preprocess(query)) - num_tokens
+
+    normalized_tfidf_scores = normalize(tfidf_dict)
+    normalized_phrase_scores = normalize(phrase_scores)
+    weight_tfidf = 0.7
+    weight_phrase = 0.3
+
+    final_scores = {}
+    for song in set(normalized_tfidf_scores.keys()) | set(normalized_phrase_scores.keys()):
+        tfidf_score = normalized_tfidf_scores.get(song, 0)
+        phrase_score = normalized_phrase_scores.get(song, 0)
+        final_scores[song] = (weight_tfidf * tfidf_score) + (weight_phrase * phrase_score)
+
+    ranked_songs = sorted(final_scores.items(), key=lambda x: x[1], reverse=True)
+
+    top_songs = [song for song, score in ranked_songs[:20]]
+
+    print(top_songs)
+
+    return score
+
+
+
+def tfidf_score_b(query):
+    terms = preprocess_normal(query)
+    score = {}
+    for song in song_names:
+        weight = 0
+        for term in terms:
+            if song in pos_index[term][1]:
+                dl = pos_index[term]
+                tf_td = len(dl[1][song])
+                dft = len(pos_index[term][1])
+                wtd = ((1 + math.log10(tf_td)) * math.log10(len(song_names) / dft))
+                weight = weight + wtd
+        score[str(song)] = weight
+
+    return score
+
+
+
+def normalize(scores):
+    min_score = min(scores.values())
+    max_score = max(scores.values())
+    return {song: (score - min_score) / (max_score - min_score) for song, score in scores.items()}
+
+
+def long_query_handling(query):
+    query = preprocess(query)
+    freq_list = []
+    for i, word in enumerate(query):
+        freq_list.append((word, pos_index[word], i))
+    freq_list.sort(key=lambda x: (x[1], x[2]))
+    top_10 = freq_list[:10]
+    top_10.sort(key=lambda x: query.index(x[0]))
+    to_string = lambda lst: ' '.join([t[0] for t in lst])
+    top_10 = to_string(top_10)
+    return top_10
 
 
 def main():
@@ -396,16 +509,41 @@ def main():
     output_index_into_mongodb(ii)
     pos_index = ii  # if index file doesn't exist then initialising and creating it
 '''
-    query = "Take that money"
-    similarities = tfidf_cosine_similarity(query)
-    sorted_similarities = sort_similarities(similarities)
-    for rank, (song, similarity) in enumerate(sorted_similarities, start=1):
-        print(f"{rank}. {song} - Similarity: {similarity}")
 
-    print(tfidf(query))
-    print(bm25(query))
-    print(phase_search(query))
+    query = long_query_handling("You gotta Prada bag with a lotta stuff in it (uh, uh, uh) Give it to friend, let's spin Every lookin' at me, glancin' the kid")
+    #similarities = tfidf_cosine_similarity(query)
+    #sorted_similarities = sort_similarities(similarities)
+    #print(sorted_similarities)
+    tfidf_results = tfidf(query)
+    #print(bm25(query))
+    phrase_search_results = phase_search(query)
 
+    tfidf_scores = [result.split('|') for result in tfidf_results]
+    tfidf_dict = {song: float(score) for song, score in tfidf_scores}
+
+    phrase_scores = {}
+    for num_tokens, song_list in phrase_search_results.items():
+        for song in song_list:
+            current_score = phrase_scores.get(song, 0)
+            if num_tokens > current_score:
+                phrase_scores[song] = len(preprocess(query)) - num_tokens
+
+    normalized_tfidf_scores = normalize(tfidf_dict)
+    normalized_phrase_scores = normalize(phrase_scores)
+    weight_tfidf = 0.7
+    weight_phrase = 0.3
+
+    final_scores = {}
+    for song in set(normalized_tfidf_scores.keys()) | set(normalized_phrase_scores.keys()):
+        tfidf_score = normalized_tfidf_scores.get(song, 0)
+        phrase_score = normalized_phrase_scores.get(song, 0)
+        final_scores[song] = (weight_tfidf * tfidf_score) + (weight_phrase * phrase_score)
+
+    ranked_songs = sorted(final_scores.items(), key=lambda x: x[1], reverse=True)
+
+    top_songs = [song for song, score in ranked_songs[:20]]
+
+    print(top_songs)
 
 
 if __name__ == "__main__":

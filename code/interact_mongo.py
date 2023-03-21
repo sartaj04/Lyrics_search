@@ -59,6 +59,32 @@ def generate_inverted_index(file_map):
     return pos_index
 
 
+
+def update_inverted_index(file_map):
+    new_pos_index = {}
+    for key in file_map:
+        wordlist = file_map[key]
+        for pos, word in enumerate(wordlist):
+            if word in pos_index or word in new_pos_index:
+                new_pos_index[word] = pos_index[word]
+                if key in new_pos_index[word][1]:
+                    new_pos_index[word][1][key].append(pos)
+                else:
+
+                    new_pos_index[word][1][key] = [pos]
+            else:
+                new_pos_index[word] = []
+                new_pos_index[word].append(1)
+                new_pos_index[word].append({})
+                new_pos_index[word][1][key] = [pos]
+
+    for term in new_pos_index:
+        for i in new_pos_index[term]:
+            new_pos_index[term][0] = len(pos_index[term][1])
+
+
+
+
 def get_lyric_filemap():
     with client:
         db = client.trackInfo
@@ -116,16 +142,16 @@ def get_album_filemap():
     return file_map
 
 
-def output_index_into_mongodb(pi, column):
+def output_index_into_mongodb(pi, search_type):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["indices"]
-    if (column == "lyric"):
+    if (search_type == "lyric"):
         mycol = mydb["lyricIndex"]
-    elif(column == "title"):
+    elif(search_type == "title"):
         mycol = mydb["titleIndex"]
-    elif(column == "artist"):
+    elif(search_type == "artist"):
         mycol = mydb["artistIndex"]
-    elif(column == "album"):
+    elif(search_type == "album"):
         mycol = mydb["albumIndex"]
 
     for key in sorted(pi):
@@ -144,16 +170,54 @@ def output_index_into_mongodb(pi, column):
 
 
 
-def read_index_from_mongodb(column):
+
+def output_updated_index_into_mongodb(pi):
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["song"]
+    mycol = mydb["index"]
+    # myclient.drop_database('mycol')
+
+    for key in sorted(pi):
+        index_songs = []
+        index_location = []
+        for doc_no in pi[key][1]:
+            word_pos = pi[key][1][doc_no]
+            # real_pos = []
+            # for pos in word_pos:
+            #     # if pos not in real_pos:
+            #     real_pos.append(pos + 1)
+            index_songs.append(doc_no)
+            index_location.append(list(set(word_pos)))
+
+        query = {"index_name": str(key)}
+
+        # create the update parameter with the fields to update
+        update = {"index_times": str(pi[key][0]), "index_songs": index_songs, "index_location": index_location}
+
+        # check if a document with the same index_name already exists in the collection
+        result = mycol.find_one(query)
+
+        if result is not None:
+            # if a matching document exists, update it with the new values
+            x = mycol.update_one(query, {"$set": update})
+        else:
+            # if no matching document exists, insert a new document
+            mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
+                      "index_location": index_location}
+            x = mycol.insert_one(mydict)
+
+
+
+def read_index_from_mongodb(search_type):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["indices"]
-    if (column == "lyric"):
+    if (search_type == "lyric"):
         mycol = mydb["lyricIndex"]
-    elif (column == "title"):
+    elif (search_type == "title"):
         mycol = mydb["titleIndex"]
-    elif (column == "artist"):
+    elif (search_type == "artist"):
         mycol = mydb["artistIndex"]
-    elif (column == "album"):
+    elif (search_type == "album"):
         mycol = mydb["albumIndex"]
 
     ii = {}
@@ -168,25 +232,23 @@ def read_index_from_mongodb(column):
     return ii
 
 
-def read_related_info_from_mongodb(spotify_id, collections):
+def read_related_info_from_mongodb(spotify_id, search_type):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["trackInfo"]
-    if collections == "lyric":
-        mycol = mydb["track"]
-        data = mycol.find_one({"track_spotify_idx": spotify_id})
-        #track_info = [data['track_name'], data['artists'], data['album']]
-    elif collections == "title":
-        mycol = mydb["track"]
-        data = mycol.find_one({"track_spotify_idx": spotify_id})
-        #track_info = [data['track_name'], data['artists'], data['album']]
-    elif collections == "artist":
-        mycol = mydb["artist"]
-        data = mycol.find_one({"artist_spotify_idx": spotify_id})
-    elif collections == "album":
-        mycol = mydb["album"]
-        data = mycol.find_one({"album_spotify_idx": spotify_id})
+    mycol = mydb["track"]
+    data = mycol.find_one({"track_spotify_idx": spotify_id})
+    search_id = []
+    if search_type == 'artist':
+        for result in data['artists']:
+            search_id.append(result['artist_spotify_idx'])
+    elif search_type == 'album':
+        for result in data['album']:
+            search_id.append(result['album_spotify_idx'])
+    elif search_type == 'song':
+        search_id.append(spotify_id)
 
-    return data
+    return search_id
+
 
 
 if __name__ == "__main__":
