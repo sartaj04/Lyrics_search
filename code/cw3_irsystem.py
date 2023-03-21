@@ -111,17 +111,17 @@ def output_into_mongodb(pi):
     mycol = mydb["index"]
 
     for key in sorted(pi):
-        index_songs = []
+        index_ids = []
         index_location = []
         for doc_no in pi[key][1]:
             word_pos = pi[key][1][doc_no]
             real_pos = []
             for pos in word_pos:
                 real_pos.append(pos + 1)
-            index_songs.append(doc_no)
+            index_ids.append(doc_no)
             index_location.append(real_pos)
 
-        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
+        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_ids": index_ids,
                   "index_location": index_location}
         x = mycol.insert_one(mydict)
 
@@ -135,7 +135,7 @@ def read_from_mongodb():
     for x in mycol.find():
         i = 0
         inner_dict = {}
-        for song in x["index_songs"]:
+        for song in x["index_ids"]:
             inner_dict[song] = x["index_location"][i]
             i = i + 1
         ii[x["index_name"]] = [x["index_times"], inner_dict]
@@ -213,146 +213,6 @@ def read_queries(path):
         count = count + 1
 
     return map_result
-
-
-# single word search
-def word_search(query):
-    neg = False
-    if 'NOT' in query:
-        query = query[4:]
-        neg = True
-
-    result = []
-    term = query.strip('')
-    term = preprocess_lyric(term)
-    index = pos_index[term[0]]
-
-    for doc_no in index[1]:
-        result.append(doc_no)
-
-    real_result = result
-    if neg:
-        real_result = negative(real_result)
-
-    real_result = sorted(list(set(real_result)))
-    # print("word_search")
-    # print(real_result)
-    return real_result
-
-
-# phrase search
-def phrase_search(query):
-    neg = False
-    if 'NOT' in query:
-        query = query[4:]
-        neg = True
-
-    result = []
-    terms = query.strip('"')
-    term1, term2 = terms.split(' ', 1)
-    term1 = preprocess_lyric(term1)
-    term2 = preprocess_lyric(term2)
-    index1 = pos_index[term1[0]]
-    index2 = pos_index[term2[0]]
-
-    for doc_no1 in index1[1]:
-        for doc_no2 in index2[1]:
-            if doc_no1 == doc_no2:
-                for pos1 in index1[1][doc_no1]:
-                    for pos2 in index2[1][doc_no2]:
-                        if (pos2 - pos1) == 1:
-                            result.append(doc_no1)
-    real_result = result
-    if neg:
-        real_result = negative(real_result)
-
-    real_result = sorted(list(set(real_result)))
-    # print("phase_search")
-    # print(real_result)
-    return real_result
-
-
-# proximity search
-def proximity_search(query):
-    neg = False
-    if 'NOT' in query:
-        query = query[4:]
-        neg = True
-
-    result = []
-    distance = int(query[query.index('#') + 1: query.index('(')])
-    term1 = query[query.index('('): query.index(',')].strip()
-    term2 = query[query.index(','): query.index(')')].strip()
-    term1 = preprocess_lyric(term1)
-    term2 = preprocess_lyric(term2)
-    index1 = pos_index[term1[0]]
-    index2 = pos_index[term2[0]]
-
-    for doc_no1 in index1[1]:
-        for doc_no2 in index2[1]:
-            if doc_no1 == doc_no2:
-                for pos1 in index1[1][doc_no1]:
-                    for pos2 in index2[1][doc_no2]:
-                        if abs((pos2 - pos1)) <= distance:
-                            result.append(doc_no1)
-    real_result = result
-    if neg:
-        real_result = negative(real_result)
-
-    real_result = sorted(list(set(real_result)))
-    # print("proximity_search")
-    # print(real_result)
-    return real_result
-
-
-# boolean search
-def boolean_search(query):
-    real_result = []
-    if 'AND' in query:
-        terms = query.split(' AND ')
-        if '"' in terms[0]:
-            result1 = phrase_search(str(terms[0]))
-        elif '#' in terms[0]:
-            result1 = proximity_search(str(terms[0]))
-        else:
-            result1 = word_search(str(terms[0]))
-
-        if '"' in terms[1]:
-            result2 = phrase_search(str(terms[1]))
-        elif '#' in terms[1]:
-            result2 = proximity_search(str(terms[1]))
-        else:
-            result2 = word_search(str(terms[1]))
-        real_result = sorted(list(set(result1).intersection(set(result2))))
-
-    if 'OR' in query:
-        terms = query.split(' OR ')
-        term1 = preprocess_lyric(terms[0])
-        term2 = preprocess_lyric(terms[1])
-        if '"' in term1:
-            result1 = phrase_search(str(term1[0]))
-        elif '#' in term1:
-            result1 = proximity_search(str(term1[0]))
-        else:
-            result1 = word_search(str(term1[0]))
-
-        if '"' in term2:
-            result2 = phrase_search(str(term2[0]))
-        elif '#' in term2:
-            result2 = proximity_search(str(term2[0]))
-        else:
-            result2 = word_search(str(term2[0]))
-        real_result = sorted(list(set(result1).union(set(result2))))
-
-    return real_result
-
-
-# deal with NOT
-def negative(result):
-    real_result = song_names
-    for i in result:
-        real_result.remove(str(i))
-    return real_result
 
 
 # ranked
