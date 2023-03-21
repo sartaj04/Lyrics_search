@@ -1,15 +1,14 @@
 # importing libraries
 import warnings
-
-
-
 warnings.filterwarnings('ignore')
 import re
+import json
 import warnings
 from stemming.porter2 import stem
 import pymongo
 warnings.filterwarnings('ignore')
 from pymongo import MongoClient
+from os.path import exists
 
 stop = []
 pos_index = {}
@@ -17,7 +16,7 @@ track_index = []
 
 clientlocal = MongoClient('mongodb://35.225.194.2:27017/')
 client = MongoClient('mongodb://localhost:27017/')
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
 
 def stopwords(path):
     global stop
@@ -27,18 +26,9 @@ def stopwords(path):
 
     return stop
 
-def preprocess_lyric(text):
-    p_words = []
-    tokenization = re.sub('\W', ' ', text.lower()).split()
 
-    for word in tokenization:
-        # if word not in stop:
-        if stem(word).strip() != "":
-            p_words.extend(stem(word).strip())
-    return p_words
-
-
-def preprocess_normal(text):
+# tokenization, remove stopwords, lower case, stemming
+def preprocess(text):
     p_words = []
     tokenization = re.sub('\W', ' ', text.lower()).split()
 
@@ -47,7 +37,7 @@ def preprocess_normal(text):
             if stem(word).strip() != "":
                 p_words.append(stem(word).strip())
     return p_words
-# tokenization, remove stopwords, lower case, stemming
+
 
 def generate_inverted_index(file_map):
     for key in file_map:
@@ -93,62 +83,74 @@ def update_inverted_index(file_map):
     for term in new_pos_index:
         for i in new_pos_index[term]:
             new_pos_index[term][0] = len(pos_index[term][1])
+    return new_pos_index
 
 
 
 
 def get_lyric_filemap():
-    db = myclient["trackInfo"]
-    tracks = db.tracks.find()
-    file_map = {}
-    for track in tracks:
-        if track['lyrics'] is not None:
-            file_map[track['track_spotify_idx']] = preprocess_lyric(track['lyrics'])
-            x = db.tracks.update_one({'_id': track['_id']},
-                                 {'$set':
-                                      {'lyric_filemap_length': len(preprocess_lyric(track['lyrics']))}
-                                  })
+    with client:
+        db = client.trackInfo
+        tracks = db.tracks.find().limit(100000)
+        file_map = {}
+        for track in tracks:
+            if track['lyrics'] is not None:
+                file_map[track['track_spotify_idx']] = preprocess(track['lyrics'])
+                x = db.tracks.update_one({'_id': track['_id']},
+                                     {'$set':
+                                          {'lyric_filemap_length': len(preprocess(track['lyrics']))}
+                                      })
+    with open('lyric_filemap.json', 'w') as fpl:
+        json.dump(file_map, fpl)
     return file_map
 
 
 def get_title_filemap():
-    db = myclient["trackInfo"]
-    tracks = db.tracks.find()
-    file_map = {}
-    for track in tracks:
-        file_map[track['track_spotify_idx']] = track['track_name']
-        x = db.tracks.update_one({'_id': track['_id']},
-                                 {'$set':
-                                      {'title_filemap_length': len(preprocess_normal(track['track_name']))}
-                                  })
+    with client:
+        db = client.trackInfo
+        tracks = db.tracks.find().limit(100000)
+        file_map = {}
+        for track in tracks:
+            file_map[track['track_spotify_idx']] = track['track_name']
+            x = db.tracks.update_one({'_id': track['_id']},
+                                     {'$set':
+                                          {'title_filemap_length': len(preprocess(track['track_name']))}
+                                      })
+    with open('title_filemap.json', 'w') as fpt:
+        json.dump(file_map, fpt)
+
     return file_map
 
 
 def get_artist_filemap():
-    db = myclient["trackInfo"]
-
-    artists = db.artists.find()
-    file_map = {}
-    for artist in artists:
-        file_map[artist['artist_spotify_idx']] = artist['artist_name']
-        x = db.artists.update_one({'_id': artist['_id']},
-                                 {'$set':
-                                      {'artist_filemap_length': len(preprocess_normal(artist['artist_name']))}
-                                  })
+    with client:
+        db = client.trackInfo
+        artists = db.artists.find().limit(100000)
+        file_map = {}
+        for artist in artists:
+            file_map[artist['artist_spotify_idx']] = artist['artist_name']
+            x = db.artists.update_one({'_id': artist['_id']},
+                                     {'$set':
+                                          {'artist_filemap_length': len(preprocess(artist['artist_name']))}
+                                   })
+    with open('artist_filemap.json', 'w') as fpa:
+        json.dump(file_map, fpa)
     return file_map
 
 
 def get_album_filemap():
-    db = myclient["trackInfo"]
-
-    albums = db.albums.find()
-    file_map = {}
-    for album in albums:
-        file_map[album['album_spotify_idx']] = album['album_name']
-        x = db.albums.update_one({'_id': album['_id']},
-                                 {'$set':
-                                      {'album_filemap_length': len(preprocess_normal(album['album_name']))}
-                                  })
+    with client:
+        db = client.trackInfo
+        albums = db.albums.find().limit(100000)
+        file_map = {}
+        for album in albums:
+            file_map[album['album_spotify_idx']] = album['album_name']
+            x = db.albums.update_one({'_id': album['_id']},
+                                     {'$set':
+                                          {'album_filemap_length': len(preprocess(album['album_name']))}
+                                      })
+    with open('album_filemap.json', 'w') as fpb:
+        json.dump(file_map, fpb)
     return file_map
 
 
@@ -165,52 +167,39 @@ def output_index_into_mongodb(pi, search_type):
         mycol = mydb["albumIndex"]
 
     for key in sorted(pi):
-        index_ids = []
+        index_songs = []
         index_location = []
         for doc_no in pi[key][1]:
             word_pos = pi[key][1][doc_no]
             real_pos = []
             for pos in word_pos:
                 real_pos.append(pos + 1)
-            index_ids.append(doc_no)
+            index_songs.append(doc_no)
             index_location.append(real_pos)
-        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_ids": index_ids,
+        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
                   "index_location": index_location}
         x = mycol.insert_one(mydict)
 
 
-def read_filemap_from_db():
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["song"]
-    mycol = mydb["details"]
-    filemap = {}
-    for x in mycol.find():
-        filemap[x["song_name"]] = x["song_filemap_length"]
 
-    return filemap
 
 def output_updated_index_into_mongodb(pi):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["song"]
     mycol = mydb["index"]
-    # myclient.drop_database('mycol')
 
     for key in sorted(pi):
-        index_ids = []
+        index_songs = []
         index_location = []
         for doc_no in pi[key][1]:
             word_pos = pi[key][1][doc_no]
-            # real_pos = []
-            # for pos in word_pos:
-            #     # if pos not in real_pos:
-            #     real_pos.append(pos + 1)
-            index_ids.append(doc_no)
+            index_songs.append(doc_no)
             index_location.append(list(set(word_pos)))
 
         query = {"index_name": str(key)}
 
         # create the update parameter with the fields to update
-        update = {"index_times": str(pi[key][0]), "index_ids": index_ids, "index_location": index_location}
+        update = {"index_times": str(pi[key][0]), "index_songs": index_songs, "index_location": index_location}
 
         # check if a document with the same index_name already exists in the collection
         result = mycol.find_one(query)
@@ -220,13 +209,13 @@ def output_updated_index_into_mongodb(pi):
             x = mycol.update_one(query, {"$set": update})
         else:
             # if no matching document exists, insert a new document
-            mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_ids": index_ids,
+            mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
                       "index_location": index_location}
             x = mycol.insert_one(mydict)
 
 
 
-def read_index_from_mongodb(search_type, query):
+def read_index_from_mongodb(search_type):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["indices"]
     if (search_type == "lyric"):
@@ -239,24 +228,15 @@ def read_index_from_mongodb(search_type, query):
         mycol = mydb["albumIndex"]
 
     ii = {}
-    real_query = []
-    #?????????
-    query = preprocess_normal(query)
-    for term in query:
-        myquery = {"index_name": term}
-        x = mycol.find_one(myquery)
+    for x in mycol.find():
         i = 0
         inner_dict = {}
-        if x is not None:
-            for song in x["index_songs"]:
-                inner_dict[song] = x["index_location"][i]
-                i = i + 1
-            ii[x["index_name"]] = [x["index_times"], inner_dict]
-            real_query.append(x["index_name"])
+        for song in x["index_songs"]:
+            inner_dict[song] = x["index_location"][i]
+            i = i + 1
+        ii[x["index_name"]] = [x["index_times"], inner_dict]
 
-    realquery_string = " ".join(real_query)
-
-    return ii, realquery_string
+    return ii
 
 
 def read_related_info_from_mongodb(spotify_id, search_type):
@@ -280,17 +260,55 @@ def read_related_info_from_mongodb(spotify_id, search_type):
 
 if __name__ == "__main__":
     stop = stopwords("englishST.txt")
-    #read_index_from_mongodb("artist",preprocess_normal("Five Finger Death Punch"))
-    #lyricii = generate_inverted_index(get_lyric_filemap())
-    #output_index_into_mongodb(lyricii, "lyric")
 
-    titleii = generate_inverted_index(get_title_filemap())
+    file1 = "lyric_filemap.json"
+    file_exists1 = exists(file1)
+    file2 = "title_filemap.json"
+    file_exists2 = exists(file2)
+    file3 = "album_filemap.json"
+    file_exists3 = exists(file3)
+    file4 = "artist_filemap.json"
+    file_exists4 = exists(file4)
+    if file_exists1:
+        with open('lyric_filemap.json', 'r') as fp1:
+            lyric_filemap = json.load(fp1)
+    else:
+        lyric_filemap =get_lyric_filemap()
+    if file_exists2:
+        with open('title_filemap.json', 'r') as fp2:
+            title_filemap = json.load(fp2)
+    else:
+        title_filemap =get_title_filemap()
+    if file_exists3:
+        with open('album_filemap.json', 'r') as fp3:
+            album_filemap = json.load(fp3)
+    else:
+        album_filemap =get_album_filemap()
+    if file_exists4:
+        with open('artist_filemap.json', 'r') as fp4:
+            artist_filemap = json.load(fp4)
+    else:
+        artist_filemap =get_artist_filemap()
+
+
+    lyricii = generate_inverted_index(lyric_filemap)
+    with open('lyricii.json', 'w') as fp5:
+        json.dump(lyricii, fp5)
+    output_index_into_mongodb(lyricii, "lyric")
+
+    titleii = generate_inverted_index(title_filemap)
+    with open('titleii.json', 'w') as fp6:
+        json.dump(titleii, fp6)
     output_index_into_mongodb(titleii, "title")
 
-    artistii = generate_inverted_index(get_artist_filemap())
+    artistii = generate_inverted_index(artist_filemap)
+    with open('artistii.json', 'w') as fp7:
+        json.dump(artistii, fp7)
     output_index_into_mongodb(artistii, "artist")
 
-    albumii = generate_inverted_index(get_album_filemap())
+    albumii = generate_inverted_index(album_filemap)
+    with open('albumii.json', 'w') as fp8:
+        json.dump(albumii, fp8)
     output_index_into_mongodb(albumii, "album")
 
-    #read_related_info_from_mongodb("3zaoqD3kMrSPW3l10XJumX","track")'''
+    #read_related_info_from_mongodb("3zaoqD3kMrSPW3l10XJumX","track")
