@@ -43,17 +43,17 @@ def output_index_into_mongodb(pi):
     mycol = mydb["index"]
 
     for key in sorted(pi):
-        index_songs = []
+        index_ids = []
         index_location = []
         for doc_no in pi[key][1]:
             word_pos = pi[key][1][doc_no]
             real_pos = []
             for pos in word_pos:
                 real_pos.append(pos + 1)
-            index_songs.append(doc_no)
+            index_ids.append(doc_no)
             index_location.append(real_pos)
 
-        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
+        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_ids": index_ids,
                   "index_location": index_location}
         x = mycol.insert_one(mydict)
 
@@ -145,17 +145,17 @@ def output_index_into_mongodb(pi):
     mycol = mydb["index"]
 
     for key in sorted(pi):
-        index_songs = []
+        index_ids = []
         index_location = []
         for doc_no in pi[key][1]:
             word_pos = pi[key][1][doc_no]
             real_pos = []
             for pos in word_pos:
                 real_pos.append(pos + 1)
-            index_songs.append(doc_no)
+            index_ids.append(doc_no)
             index_location.append(real_pos)
 
-        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
+        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_ids": index_ids,
                   "index_location": index_location}
         x = mycol.insert_one(mydict)
 
@@ -169,7 +169,7 @@ def read_from_mongodb():
     for x in mycol.find():
         i = 0
         inner_dict = {}
-        for song in x["index_songs"]:
+        for song in x["index_ids"]:
             inner_dict[song] = x["index_location"][i]
             i = i + 1
         ii[x["index_name"]] = [x["index_times"], inner_dict]
@@ -493,6 +493,29 @@ def long_query_handling(query):
     return top_10
 
 
+def read_index_from_mongodb(search_type, query):
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["song"]
+    mycol = mydb["index"]
+    ii = {}
+    real_query = []
+    query = preprocess(query)
+    for term in query:
+        myquery = {"index_name": term}
+        x = mycol.find_one(myquery)
+        i = 0
+        inner_dict = {}
+        if x is not None:
+            for song in x["index_songs"]:
+                inner_dict[song] = x["index_location"][i]
+                i = i + 1
+            ii[x["index_name"]] = [x["index_times"], inner_dict]
+            real_query.append(x["index_name"])
+
+    realquery_string = " ".join(real_query)
+    return ii, realquery_string
+
+
 def main():
     global stop
     global pos_index
@@ -508,6 +531,16 @@ def main():
     output_index_into_txt(ii)
     output_index_into_mongodb(ii)
     pos_index = ii  # if index file doesn't exist then initialising and creating it
+    similarities = tfidf_cosine_similarity(query)
+    sorted_similarities = sort_similarities(similarities)
+    costfidf_result = []
+    for rank, (song, similarity) in enumerate(sorted_similarities, start=1, count=10):
+        costfidf_result.append(f"{rank}. {song} - Similarity: {similarity}")
+
+    print("Tfidf_cossine: ", costfidf_result)
+    print("Tfidf: ", tfidf(query))
+    print("BM25: ", bm25(query))
+    print("phase search", phase_search(query))
 '''
 
     query = long_query_handling("You gotta Prada bag with a lotta stuff in it (uh, uh, uh) Give it to friend, let's spin Every lookin' at me, glancin' the kid")
@@ -547,4 +580,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    read_index_from_mongodb("","i really dsafghajsgfj you")

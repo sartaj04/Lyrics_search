@@ -3,7 +3,6 @@ import math
 import re
 import warnings
 from itertools import combinations
-
 from stemming.porter2 import stem
 import pandas as pd
 import pymongo
@@ -20,26 +19,6 @@ stop = []
 pos_index = {}
 spotify_id = []
 filemap = {}
-
-
-# for test
-def csv_parser(path):
-    data = pd.read_csv(path)
-    song_names = data["title"].values
-    Lyrics = data["lyrics"].values
-    file_map = dict(map(lambda i, j: (i, preprocess_lyric(j)), song_names, Lyrics))
-    mongo_file_map = dict(map(lambda i, j: (i, j), song_names, Lyrics))
-
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["song"]
-    mycol = mydb["details"]
-
-    for i in mongo_file_map:
-        mydict = {"song_name": i, "song_lyrics": mongo_file_map[i],
-                  "song_filemap_length": len(preprocess_lyric(mongo_file_map[i]))}
-        x = mycol.insert_one(mydict)
-
-    return file_map, song_names
 
 
 def preprocess_lyric(text):
@@ -64,27 +43,6 @@ def preprocess_normal(text):
     return p_words
 
 
-def output_index_into_mongodb(pi):
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["song"]
-    mycol = mydb["index"]
-
-    for key in sorted(pi):
-        index_songs = []
-        index_location = []
-        for doc_no in pi[key][1]:
-            word_pos = pi[key][1][doc_no]
-            real_pos = []
-            for pos in word_pos:
-                real_pos.append(pos + 1)
-            index_songs.append(doc_no)
-            index_location.append(real_pos)
-
-        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
-                  "index_location": index_location}
-        x = mycol.insert_one(mydict)
-
-
 def stopwords(path):
     global stop
     with open(path, 'r') as f_s:
@@ -93,149 +51,11 @@ def stopwords(path):
 
     return stop
 
-'''
-# tokenization, remove stopwords, lower case, stemming
-def preprocess(text):
-    p_words = []
-    tokenization = re.sub('\W', ' ', text.lower()).split()
-
-    for word in tokenization:
-        # if word not in stop:
-        if stem(word).strip() != "":
-            p_words.append(stem(word).strip())
-    return p_words
-'''
-
-# generate inverted index
-def inverted_index(file_map):
-    for key in file_map:
-        wordlist = file_map[key]
-        for pos, word in enumerate(wordlist):
-            if word in pos_index:
-                if key in pos_index[word][1]:
-                    pos_index[word][1][key].append(pos)
-                else:
-                    pos_index[word][1][key] = [pos]
-            else:
-                pos_index[word] = []
-                pos_index[word].append(1)
-                pos_index[word].append({})
-                pos_index[word][1][key] = [pos]
-
-    for term in pos_index:
-        for i in pos_index[term]:
-            pos_index[term][0] = len(pos_index[term][1])
-
-    return pos_index
-
-
-# generate index file
-def output_index_into_txt(pi):
-    filename = 'index.txt'
-    with open(filename, 'w') as f:
-        for key in sorted(pi):
-            f.write(str(key) + ': ' + str(pi[key][0]) + '\n')
-            for doc_no in pi[key][1]:
-                word_pos = pi[key][1][doc_no]
-                f.write('\t' + str(doc_no) + ': ' + ','.join(str(pos + 1) for pos in word_pos) + '\n')
-            # f.write('\n')
-
-
-def output_index_delta_encoding(pi):
-    filename = 'index_delta1.txt'
-    with open(filename, 'w') as f:
-        for key in sorted(pi):
-            f.write(str(key) + ': ' + str(pi[key][0]) + '\n')
-            for doc_no in pi[key][1]:
-                word_pos = pi[key][1][doc_no]
-                f.write('\t' + str(doc_no) + ': ')
-                last_pos = -1
-                for v, pos in enumerate(word_pos):
-                    if v == 0:
-                        if len(word_pos) == 1:
-                            f.write((str(pos + 1)))
-                        else:
-                            f.write((str(pos + 1)) + ',')
-                        last_pos = pos + 1
-                    elif v == len(word_pos) - 1:
-                        f.write((str(pos + 1 - last_pos)))
-                    else:
-                        f.write((str(pos + 1 - last_pos)) + ',')
-                        last_pos = pos + 1
-                f.write('\n')
-
-
-def read_index_from_mongodb(term):
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["song"]
-    mycol = mydb["index"]
-    myquery = {"index_name": term}
-
-    ii = {}
-    x = mycol.find_one(myquery)
-    i = 0
-    inner_dict = {}
-    for song in x["index_songs"]:
-        inner_dict[song] = x["index_location"][i]
-        i = i + 1
-    ii[x["index_name"]] = [x["index_times"], inner_dict]
-
-    return ii
-
-
-def output_index_into_mongodb(pi):
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["song"]
-    mycol = mydb["index"]
-
-    for key in sorted(pi):
-        index_songs = []
-        index_location = []
-        for doc_no in pi[key][1]:
-            word_pos = pi[key][1][doc_no]
-            real_pos = []
-            for pos in word_pos:
-                real_pos.append(pos + 1)
-            index_songs.append(doc_no)
-            index_location.append(real_pos)
-
-        mydict = {"index_name": str(key), "index_times": str(pi[key][0]), "index_songs": index_songs,
-                  "index_location": index_location}
-        x = mycol.insert_one(mydict)
-
-
-def read_from_mongodb():
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["song"]
-    mycol = mydb["index"]
-
-    ii = {}
-    for x in mycol.find():
-        i = 0
-        inner_dict = {}
-        for song in x["index_songs"]:
-            inner_dict[song] = x["index_location"][i]
-            i = i + 1
-        ii[x["index_name"]] = [x["index_times"], inner_dict]
-
-    return ii
-
-
-def read_filemap_from_db():
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["song"]
-    mycol = mydb["details"]
-    filemap = {}
-    for x in mycol.find():
-        filemap[x["song_name"]] = x["song_filemap_length"]
-
-    return filemap
-
 
 def bm25(query,search_type):
-    terms = preprocess(query)
+    terms = preprocess_normal(query)
     score = {}
-    filemap = read_filemap_from_db(search_type)
+    filemap = interact_mongo.read_filemap_from_db(search_type)
 
     l = 0
     for sid1 in spotify_id:
@@ -300,15 +120,6 @@ def tfidf(query):
 
     return result_list
 
-'''
-def read_songs_from_db():
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["song"]
-    mycol = mydb["details"]
-    for x in mycol.find():
-        song_names.append(x["song_name"])
-    return song_names
-'''
 
 #tfidf cosine
 def build_vocabulary(pos_index):
@@ -500,14 +311,9 @@ def normalize(scores):
     return {song: (score - min_score) / (max_score - min_score) for song, score in scores.items()}
 
 
-
-
-def tfidf_score_b(query):
+def tfidf_score_other(query):
     terms = preprocess_normal(query)
     score = {}
-    # print(song_names)
-    # print(pos_index)
-    # print(terms)
     for sid in spotify_id:
         weight = 0
         for term in terms:
@@ -522,7 +328,7 @@ def tfidf_score_b(query):
     return score
 
 
-def combine_search(query_a, query_b, search_type, search_a = lyric_search, search_b = tfidf_score_b, num_top_search = 20,
+def combine_search(query_a, query_b, search_type, search_a = lyric_search, search_b = tfidf_score_other, num_top_search = 20,
                    coefficient_a = .7, coefficient_b =.3):
     result_list = []
 
@@ -581,34 +387,27 @@ def ir_from_index(query_a, query_b, search_type):
     global spotify_ids
     stop = stopwords("englishST.txt")
 
-    if search_type != "":
+    if query_a == "":
+
+        if len(query_b.split()) > 10:
+            query_b = long_query_handling(query_b)
         spotify_ids = interact_mongo.read_from_db(search_type)
-
-    ii = read_index_from_mongodb(search_type)
-    pos_index = ii
-
-    combine_search("you are my sunshine","","")
-
-
-    similarities = tfidf_cosine_similarity(query)
-    sorted_similarities = sort_similarities(similarities)
-    costfidf_result = []
-    for rank, (song, similarity) in enumerate(sorted_similarities, start=1, count=10):
-        costfidf_result.append(f"{rank}. {song} - Similarity: {similarity}")
-
-    print("Tfidf_cossine: ", costfidf_result)
-    print("Tfidf: ", tfidf(query))
-    print("BM25: ", bm25(query))
-    print("phase search", phase_search(query))
-
-
-def search_input(query, search_type):
-    if len(query.split()) > 10:
-        query = long_query_handling(query)
-    print(query)
-
-    query = long_query_handling(query)
-    ir_from_index(query, search_type)
-
-
-search_input("you are my sunshine", "lyric")
+        pos_index, real_query = interact_mongo.read_index_from_mongodb(search_type, preprocess_normal(query_b))
+        score_b = tfidf_score_other(query_b)
+        #cs
+    else:
+        if len(query_a.split()) > 10:
+            query_a = long_query_handling(query_a)
+        spotify_ids = interact_mongo.read_from_db('lyric')
+        pos_index, real_query = interact_mongo.read_index_from_mongodb('lyric',preprocess_normal(query_a))
+        score_a = lyric_search(query_a)
+        # cs
+        if query_b == "":
+            print()
+        else:
+            if search_type != "":
+                if len(query_b.split()) > 10:
+                    query_b = long_query_handling(query_b)
+                spotify_ids = interact_mongo.read_from_db(search_type)
+                pos_index, real_query = interact_mongo.read_index_from_mongodb(search_type,preprocess_normal(query_b))
+                #score_b = search_b(query_b)
