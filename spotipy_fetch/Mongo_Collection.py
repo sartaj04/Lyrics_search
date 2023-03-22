@@ -1,6 +1,6 @@
 import json
 import pandas as pd
-from pymongo import MongoClient
+from pymongo import MongoClient, UpdateMany
 
 
 class MongoCollection:
@@ -69,5 +69,41 @@ class MongoCollection:
                     ),
                     ordered=False,
                 )
+            except Exception as e:
+                print(idx, e)
+
+    def update_image_url(self, file_dir="temp.json", page_range=None):
+        sublist_len = 5000
+        if page_range == None:
+            with open(file_dir, "r", encoding="utf-8") as f:
+                data_df = pd.read_csv(f, index_col=False, usecols=["title"])
+            max_page = -(-len(data_df) // sublist_len)
+            print(f"Total pages : {max_page}")
+            page_range = range(max_page)
+        for idx in page_range:
+            try:
+
+                with open(file_dir, "r", encoding="utf-8") as f:
+                    update_df = pd.read_csv(
+                        f,
+                        index_col=False,
+                        usecols=["title", "artist", "image"],
+                        skiprows=range(1, idx * sublist_len + 1) if idx > 0 else None,
+                        nrows=sublist_len,
+                    )
+                update_df = update_df.loc[(update_df["image"] != "No image found")]
+                updates = []
+                for _, row in update_df.iterrows():
+                    updates.append(
+                        UpdateMany(
+                            {
+                                "track_name": row.get("title"),
+                                "artists.artist_name": row.get("artist"),
+                            },
+                            {"$set": {"image_url": row.get("image")}},
+                            upsert=False,
+                        )
+                    )
+                self.col.bulk_write(updates)
             except Exception as e:
                 print(idx, e)
