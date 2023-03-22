@@ -8,32 +8,35 @@ client_id = "5288959a7fcf4531bddf261d0b010485"
 client_secret = "bdccb523f6d044ecb06fe698f9fc0391"
 
 
-def get_5M_artists():
+def get_5M_artists(
+    input_file_dir="../dataset/ds2.csv", output_file_dir="5M_artists.csv"
+):
     # Generate list of artists in 5M Dataset
-    genius_artist_df = pd.read_csv("../dataset/ds2.csv", usecols=["artist"], header=0)
+    genius_artist_df = pd.read_csv(input_file_dir, usecols=["artist"], header=0)
     unique_artist_df = genius_artist_df["artist"].unique()
     extra_search_artists = [a.strip() for a in unique_artist_df]
     export_df = pd.DataFrame(extra_search_artists)
-    export_df.to_csv("5M_artists.csv", index=False)
+    print(f"Total number of pages: {-(-len(export_df) // 1000)}")
+    export_df.to_csv(output_file_dir, index=False, header=None)
 
-    col = MongoCollection("mongodb://34.171.116.112:27017/", "lyricsDataset", "artists")
-    db_artists = col.col.find({}, {"artist_name": 1})
-    db_artist_df = pd.DataFrame(list(db_artists))
-    unique_artist_df2 = pd.DataFrame(unique_artist_df, columns=["artist"])
-    df_all = unique_artist_df2.merge(
-        db_artist_df,
-        left_on="artist",
-        right_on="artist_name",
-        how="left",
-        indicator=True,
-    )
-    unfound_artists = df_all[df_all["_merge"] == "left_only"]
-    unfound_artists["artist"].to_csv("5M_unfound_artists.csv", index=False)
+    # col = MongoCollection(collection="artists")
+    # db_artists = col.col.find({}, {"artist_name": 1})
+    # db_artist_df = pd.DataFrame(list(db_artists))
+    # unique_artist_df2 = pd.DataFrame(unique_artist_df, columns=["artist"])
+    # df_all = unique_artist_df2.merge(
+    #     db_artist_df,
+    #     left_on="artist",
+    #     right_on="artist_name",
+    #     how="left",
+    #     indicator=True,
+    # )
+    # unfound_artists = df_all[df_all["_merge"] == "left_only"]
+    # unfound_artists["artist"].to_csv("5M_unfound_artists.csv", index=False)
 
-    found_artists = df_all[df_all["_merge"] == "both"]
-    found_artists.drop(["artist_name", "_merge"], axis=1).to_csv(
-        "5M_found_artists.csv", index=False
-    )
+    # found_artists = df_all[df_all["_merge"] == "both"]
+    # found_artists.drop(["artist_name", "_merge"], axis=1).to_csv(
+    #     "5M_found_artists.csv", index=False
+    # )
 
 
 def clean_df():
@@ -43,12 +46,16 @@ def clean_df():
     gdf.to_csv("../dataset/ds2_ENGLISH.csv", index=False)
 
 
-def get_basic_track_info(page=0, display_404=False):
+def get_basic_track_info(
+    page=0, display_404=False, artist_csv="5M_artists_ENGLISH.csv", with_image=False
+):
     page_limit = 1000
     rows_skip = 1000 * page
+    if with_image:
+        page += 1000  # for new data
     stf = create_spotipy(client_id, client_secret)
     artists_df = pd.read_csv(
-        "5M_artists_ENGLISH.csv",
+        artist_csv,
         sep=",",
         header=None,
         skiprows=rows_skip,
@@ -181,16 +188,18 @@ def get_basic_track_info(page=0, display_404=False):
         output_tracks.extend(tracks)
 
     with open(
-        f"track_extra_dataset/track_data_{page:02d}.json", "w", encoding="utf-8"
+        f"track_extra_dataset/track_data_{page:03d}.json", "w", encoding="utf-8"
     ) as f:
         json.dump(output_tracks, f, ensure_ascii=False)
 
 
-def get_basic_track_infos(start_page=0, end_page=57):
+def get_basic_track_infos(
+    start_page=0, end_page=57, artist_csv="5M_artists_ENGLISH.csv", with_image=False
+):
     for i in range(start_page, end_page + 1):
         print(f"====Page {i} ====")
         try:
-            get_basic_track_info(i)
+            get_basic_track_info(i, artist_csv=artist_csv, with_image=with_image)
         except Exception as e:
             print(e)
 
@@ -199,17 +208,20 @@ def unify_str(str):
     return str.lower().replace("'", "’")
 
 
-def merge_with_lyrics(start_page=0, end_page=0):
+def merge_with_lyrics(
+    start_page=0,
+    end_page=0,
+    genius_data_dir="../dataset/ds2_ENGLISH.csv",
+    with_image=False,
+):
     print("Loading data...")
-    df_5M = pd.read_csv(
-        "../dataset/ds2_ENGLISH.csv",
-        usecols=["title", "artist", "lyrics"],
-        header=0,
-    )
-    # df_tracks = pd.read_json(f"track_extra_dataset/track_data_{start_page:02d}.json")
+    usecols = ["title", "artist", "lyrics"]
+    if with_image:
+        usecols.append("image")
+    df_5M = pd.read_csv(genius_data_dir, usecols=usecols, header=0)
     df_tracks = pd.concat(
         [
-            pd.read_json(f"track_extra_dataset/track_data_{page:02d}.json")
+            pd.read_json(f"track_extra_dataset/track_data_{page:03d}.json")
             for page in range(start_page, end_page + 1)
         ]
     )
@@ -235,7 +247,7 @@ def merge_with_lyrics(start_page=0, end_page=0):
 
     print("Exporting ...")
     with open(
-        f"track_extra_dataset/filtered_data_{start_page:02d}_{end_page:02d}.json",
+        f"track_extra_dataset/filtered_data_{start_page:03d}_{end_page:03d}.json",
         "w",
         encoding="utf-8",
     ) as f:
@@ -243,11 +255,17 @@ def merge_with_lyrics(start_page=0, end_page=0):
 
 
 if __name__ == "__main__":
-    # TODO
-    # for single one
-    # get_basic_track_info(0)
-    # for multiple pages
+    # For 5M dataset
+    # get_5M_artists()
     # get_basic_track_infos(1, 2)
+    # merge_with_lyrics(4, 4)
 
-    # get intersection
-    merge_with_lyrics(4, 4)
+    # For New data
+    genius_data_dir = (
+        "../web_scraping_ywang/tutorial/tutorial/spiders/artists/temp2.csv"
+    )
+    # get_5M_artists(genius_data_dir, "new_genius_artist.csv")
+    # for single one
+    # get_basic_track_infos(0, 0, artist_csv="new_genius_artist.csv", with_image=True)
+    # add 1000 for the new data page index
+    merge_with_lyrics(1000, 1000, genius_data_dir, True)
